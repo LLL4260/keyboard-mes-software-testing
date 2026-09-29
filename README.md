@@ -19,4 +19,9 @@
 
 本仓库包含课程实验材料、`program/code` 中的 Keyboard MES 源码，以及 `program/docs` 中的项目文档。组员克隆本仓库即可获取这些内容。
 
+```bash
+git clone https://github.com/LLL4260/keyboard-mes-software-testing.git
+cd keyboard-mes-software-testing
+```
+
 每次修改前先拉取远程更新；提交时只暂存自己确认过的文件，再推送到远程。若多人修改同一文件，按 Git 的冲突提示协商合并。`node_modules`、构建产物、本机配置、账号凭据和快捷方式由 `.gitignore` 排除，组员需在各自机器上准备运行环境。
