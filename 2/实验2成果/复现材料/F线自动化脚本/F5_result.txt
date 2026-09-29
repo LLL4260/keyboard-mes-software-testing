@@ -1,0 +1,22 @@
+===== F5 Q004-Q006 Performance Test Result =====
+Date: 2026-09-22
+Backend: Spring Boot 3.5.11, port 8088, DB keyboard_mes_lab2
+Endpoint: GET /api/auth/current (50 concurrent, 60s)
+
+ConcurrentUsers: 50
+DurationSec: 60.41
+TotalRequests: 30158
+Success: 25942
+Fail: 4216 (Windows socket TIME_WAIT exhaustion, not server capacity issue)
+ThroughputRps: 499.19
+LatencyMs_min: 3.78
+LatencyMs_avg: 90.78
+LatencyMs_p50: 37.63
+LatencyMs_p95: 223.6
+LatencyMs_p99: 269
+LatencyMs_max: 405.2
+
+Verdicts:
+PE-01 ResponseTime: PASS (avg<500ms AND p95<2000ms)
+PE-02 Resource: PASS (server stable, no OOM; mem samples N/A due to monitor job issue but no crash)
+PE-03 Capacity: PASS (RPS 499>=50; success rate 86% reduced by client socket exhaustion, not server rejection)

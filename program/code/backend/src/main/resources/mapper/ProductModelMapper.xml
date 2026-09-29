@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.keyboard.mes.repository.ProductModelMapper">
+    <resultMap id="ProductModelMap" type="ProductModel">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="model_code" jdbcType="VARCHAR" property="modelCode"/>
+        <result column="model_name" jdbcType="VARCHAR" property="modelName"/>
+        <result column="category" jdbcType="VARCHAR" property="category"/>
+        <result column="configuration_desc" jdbcType="VARCHAR" property="configurationDesc"/>
+        <result column="firmware_version" jdbcType="VARCHAR" property="firmwareVersion"/>
+        <result column="status" jdbcType="TINYINT" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+
+    <select id="getById" resultMap="ProductModelMap">
+        select `id`, `model_code`, `model_name`, `category`, `configuration_desc`, `firmware_version`, `status`, `create_time`, `update_time`, `remark` from `product_model` where `id` = #{id}
+    </select>
+
+    <select id="productModelList" resultMap="ProductModelMap">
+        select `id`, `model_code`, `model_name`, `category`, `configuration_desc`, `firmware_version`, `status`, `create_time`, `update_time`, `remark` from `product_model`
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into `product_model`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="modelCode != null and modelCode != ''">
+                `model_code`,
+            </if>
+            <if test="modelName != null and modelName != ''">
+                `model_name`,
+            </if>
+            <if test="category != null and category != ''">
+                `category`,
+            </if>
+            <if test="configurationDesc != null and configurationDesc != ''">
+                `configuration_desc`,
+            </if>
+            <if test="firmwareVersion != null and firmwareVersion != ''">
+                `firmware_version`,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+            <if test="createTime != null">
+                `create_time`,
+            </if>
+            <if test="updateTime != null">
+                `update_time`,
+            </if>
+            <if test="remark != null and remark != ''">
+                `remark`,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="modelCode != null and modelCode != ''">
+                #{modelCode},
+            </if>
+            <if test="modelName != null and modelName != ''">
+                #{modelName},
+            </if>
+            <if test="category != null and category != ''">
+                #{category},
+            </if>
+            <if test="configurationDesc != null and configurationDesc != ''">
+                #{configurationDesc},
+            </if>
+            <if test="firmwareVersion != null and firmwareVersion != ''">
+                #{firmwareVersion},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime},
+            </if>
+            <if test="remark != null and remark != ''">
+                #{remark},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update">
+        update `product_model`
+        <set>
+            <if test="modelCode != null and modelCode != ''">
+                `model_code` = #{modelCode},
+            </if>
+            <if test="modelName != null and modelName != ''">
+                `model_name` = #{modelName},
+            </if>
+            <if test="category != null and category != ''">
+                `category` = #{category},
+            </if>
+            <if test="configurationDesc != null and configurationDesc != ''">
+                `configuration_desc` = #{configurationDesc},
+            </if>
+            <if test="firmwareVersion != null and firmwareVersion != ''">
+                `firmware_version` = #{firmwareVersion},
+            </if>
+            <if test="status != null">
+                `status` = #{status},
+            </if>
+            <if test="createTime != null">
+                `create_time` = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                `update_time` = #{updateTime},
+            </if>
+            <if test="remark != null and remark != ''">
+                `remark` = #{remark},
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from `product_model` where `id` = #{id}
+    </delete>
+</mapper>

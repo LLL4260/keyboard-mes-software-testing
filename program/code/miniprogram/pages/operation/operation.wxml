@@ -1,0 +1,109 @@
+<view class="container">
+  <view class="user-strip">
+    <view>
+      <text class="label">当前人员</text>
+      <text class="name">{{currentUserName}}</text>
+    </view>
+    <view class="role">{{currentUserRole}}</view>
+  </view>
+
+  <view class="mode-bar">
+    <view class="mode {{mode === 'report' ? 'active' : ''}}" data-mode="report" bindtap="switchMode">报工</view>
+    <view class="mode {{mode === 'inspection' ? 'active' : ''}}" data-mode="inspection" bindtap="switchMode">质检</view>
+    <view class="mode {{mode === 'rework' ? 'active' : ''}}" data-mode="rework" bindtap="switchMode">返修</view>
+  </view>
+
+  <view class="form-card" wx:if="{{mode === 'report'}}">
+    <view class="section-title">移动报工</view>
+    <view class="grid">
+      <view class="field">
+        <text>工单编号</text>
+        <picker range="{{reportOrderOptions}}" range-key="orderNo" value="{{reportOrderIndex}}" bindchange="selectReportOrder">
+          <view class="picker-value {{report.orderId ? '' : 'placeholder'}}">{{reportOrderLabel}}</view>
+        </picker>
+      </view>
+      <view class="field">
+        <text>任务编号</text>
+        <picker range="{{reportTaskOptions}}" range-key="taskNo" value="{{reportTaskIndex}}" bindchange="selectReportTask">
+          <view class="picker-value {{report.taskId ? '' : 'placeholder'}}">{{reportTaskLabel}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="hint" wx:if="{{reportTaskHint}}">{{reportTaskHint}}</view>
+    <view class="field scan-field">
+      <text>产品SN</text>
+      <view class="input-action">
+        <input placeholder="扫码或手动输入" value="{{report.productSn}}" data-field="productSn" bindinput="updateReport" />
+        <button size="mini" bindtap="scanProductSn">扫码</button>
+      </view>
+    </view>
+    <view class="field"><text>工位</text><input placeholder="默认使用任务工位" value="{{report.stationCode}}" data-field="stationCode" bindinput="updateReport" /></view>
+    <view class="grid">
+      <view class="field"><text>报工数量</text><input type="number" value="{{report.reportQuantity}}" data-field="reportQuantity" bindinput="updateReport" /></view>
+      <view class="field"><text>合格数量</text><input type="number" value="{{report.qualifiedQuantity}}" data-field="qualifiedQuantity" bindinput="updateReport" /></view>
+    </view>
+    <view class="field"><text>不良数量</text><input type="number" value="{{report.defectQuantity}}" data-field="defectQuantity" bindinput="updateReport" /></view>
+    <view class="field"><text>不良原因</text><input placeholder="无不良可不填" value="{{report.defectReason}}" data-field="defectReason" bindinput="updateReport" /></view>
+  </view>
+
+  <view class="form-card" wx:elif="{{mode === 'inspection'}}">
+    <view class="section-title">移动质检</view>
+    <view class="grid">
+      <view class="field">
+        <text>工单编号</text>
+        <picker range="{{inspectionOrderOptions}}" range-key="orderNo" value="{{inspectionOrderIndex}}" bindchange="selectInspectionOrder">
+          <view class="picker-value {{inspection.orderId ? '' : 'placeholder'}}">{{inspectionOrderLabel}}</view>
+        </picker>
+      </view>
+      <view class="field">
+        <text>任务编号</text>
+        <picker range="{{inspectionTaskOptions}}" range-key="taskNo" value="{{inspectionTaskIndex}}" bindchange="selectInspectionTask">
+          <view class="picker-value {{inspection.taskId ? '' : 'placeholder'}}">{{inspectionTaskLabel}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="field scan-field">
+      <text>产品SN</text>
+      <view class="input-action">
+        <input placeholder="扫码或手动输入" value="{{inspection.productSn}}" data-field="productSn" bindinput="updateInspection" />
+        <button size="mini" bindtap="scanProductSn">扫码</button>
+      </view>
+    </view>
+    <view class="field"><text>检验类型</text><input value="{{inspection.inspectionType}}" data-field="inspectionType" bindinput="updateInspection" /></view>
+    <view class="field">
+      <text>检验结果</text>
+      <picker range="{{inspectionResultOptions}}" range-key="label" value="{{inspectionResultIndex}}" bindchange="selectInspectionResult">
+        <view class="picker-value">{{inspectionResultLabel}}</view>
+      </picker>
+    </view>
+    <view class="field">
+      <text>处置方式</text>
+      <picker range="{{handlingMethodOptions}}" range-key="label" value="{{handlingMethodIndex}}" bindchange="selectHandlingMethod">
+        <view class="picker-value">{{handlingMethodLabel}}</view>
+      </picker>
+    </view>
+    <view class="field"><text>不合格原因</text><input placeholder="不合格时必填" value="{{inspection.defectReason}}" data-field="defectReason" bindinput="updateInspection" /></view>
+  </view>
+
+  <view class="form-card" wx:else>
+    <view class="section-title">移动返修</view>
+    <view class="field">
+      <text>返修单编号</text>
+      <picker range="{{reworkOptions}}" range-key="reworkNo" value="{{reworkIndex}}" bindchange="selectReworkOrder">
+        <view class="picker-value {{rework.id ? '' : 'placeholder'}}">{{reworkLabel}}</view>
+      </picker>
+    </view>
+    <view class="field">
+      <text>处理状态</text>
+      <picker range="{{reworkStatusOptions}}" range-key="label" value="{{reworkStatusIndex}}" bindchange="selectReworkStatus">
+        <view class="picker-value">{{reworkStatusLabel}}</view>
+      </picker>
+    </view>
+    <view class="field"><text>维修措施</text><input placeholder="例如：更换轴体、重新焊接" value="{{rework.repairAction}}" data-field="repairAction" bindinput="updateRework" /></view>
+    <view class="field"><text>维修结果</text><input placeholder="例如：已修复，待复检" value="{{rework.repairResult}}" data-field="repairResult" bindinput="updateRework" /></view>
+    <view class="field"><text>更换物料</text><input placeholder="无更换可不填" value="{{rework.replacedMaterial}}" data-field="replacedMaterial" bindinput="updateRework" /></view>
+    <view class="field"><text>维修工时</text><input type="digit" placeholder="小时" value="{{rework.repairHours}}" data-field="repairHours" bindinput="updateRework" /></view>
+  </view>
+
+  <button class="submit-btn" bindtap="submitCurrent">提交</button>
+</view>

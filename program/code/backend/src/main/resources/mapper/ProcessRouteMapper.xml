@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.keyboard.mes.repository.ProcessRouteMapper">
+    <resultMap id="ProcessRouteMap" type="ProcessRoute">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="product_model_id" jdbcType="BIGINT" property="productModelId"/>
+        <result column="route_version" jdbcType="VARCHAR" property="routeVersion"/>
+        <result column="sequence_no" jdbcType="INTEGER" property="sequenceNo"/>
+        <result column="process_code" jdbcType="VARCHAR" property="processCode"/>
+        <result column="process_name" jdbcType="VARCHAR" property="processName"/>
+        <result column="process_type" jdbcType="TINYINT" property="processType"/>
+        <result column="station_code" jdbcType="VARCHAR" property="stationCode"/>
+        <result column="station_name" jdbcType="VARCHAR" property="stationName"/>
+        <result column="standard_hours" jdbcType="DECIMAL" property="standardHours"/>
+        <result column="is_quality_gate" jdbcType="TINYINT" property="qualityGate"/>
+        <result column="inspection_type" jdbcType="VARCHAR" property="inspectionType"/>
+        <result column="inspection_config" jdbcType="LONGVARCHAR" property="inspectionConfig"/>
+        <result column="sop_file" jdbcType="VARCHAR" property="sopFile"/>
+        <result column="status" jdbcType="TINYINT" property="status"/>
+    </resultMap>
+
+    <select id="getById" resultMap="ProcessRouteMap">
+        select `id`, `product_model_id`, `route_version`, `sequence_no`, `process_code`, `process_name`, `process_type`, `station_code`, `station_name`, `standard_hours`, `is_quality_gate`, `inspection_type`, `inspection_config`, `sop_file`, `status` from `process_route` where `id` = #{id}
+    </select>
+
+    <select id="processRouteList" resultMap="ProcessRouteMap">
+        select `id`, `product_model_id`, `route_version`, `sequence_no`, `process_code`, `process_name`, `process_type`, `station_code`, `station_name`, `standard_hours`, `is_quality_gate`, `inspection_type`, `inspection_config`, `sop_file`, `status` from `process_route`
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into `process_route`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productModelId != null">
+                `product_model_id`,
+            </if>
+            <if test="routeVersion != null and routeVersion != ''">
+                `route_version`,
+            </if>
+            <if test="sequenceNo != null">
+                `sequence_no`,
+            </if>
+            <if test="processCode != null and processCode != ''">
+                `process_code`,
+            </if>
+            <if test="processName != null and processName != ''">
+                `process_name`,
+            </if>
+            <if test="processType != null">
+                `process_type`,
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                `station_code`,
+            </if>
+            <if test="stationName != null and stationName != ''">
+                `station_name`,
+            </if>
+            <if test="standardHours != null">
+                `standard_hours`,
+            </if>
+            <if test="qualityGate != null">
+                `is_quality_gate`,
+            </if>
+            <if test="inspectionType != null and inspectionType != ''">
+                `inspection_type`,
+            </if>
+            <if test="inspectionConfig != null and inspectionConfig != ''">
+                `inspection_config`,
+            </if>
+            <if test="sopFile != null and sopFile != ''">
+                `sop_file`,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="productModelId != null">
+                #{productModelId},
+            </if>
+            <if test="routeVersion != null and routeVersion != ''">
+                #{routeVersion},
+            </if>
+            <if test="sequenceNo != null">
+                #{sequenceNo},
+            </if>
+            <if test="processCode != null and processCode != ''">
+                #{processCode},
+            </if>
+            <if test="processName != null and processName != ''">
+                #{processName},
+            </if>
+            <if test="processType != null">
+                #{processType},
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                #{stationCode},
+            </if>
+            <if test="stationName != null and stationName != ''">
+                #{stationName},
+            </if>
+            <if test="standardHours != null">
+                #{standardHours},
+            </if>
+            <if test="qualityGate != null">
+                #{qualityGate},
+            </if>
+            <if test="inspectionType != null and inspectionType != ''">
+                #{inspectionType},
+            </if>
+            <if test="inspectionConfig != null and inspectionConfig != ''">
+                #{inspectionConfig},
+            </if>
+            <if test="sopFile != null and sopFile != ''">
+                #{sopFile},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update">
+        update `process_route`
+        <set>
+            <if test="productModelId != null">
+                `product_model_id` = #{productModelId},
+            </if>
+            <if test="routeVersion != null and routeVersion != ''">
+                `route_version` = #{routeVersion},
+            </if>
+            <if test="sequenceNo != null">
+                `sequence_no` = #{sequenceNo},
+            </if>
+            <if test="processCode != null and processCode != ''">
+                `process_code` = #{processCode},
+            </if>
+            <if test="processName != null and processName != ''">
+                `process_name` = #{processName},
+            </if>
+            <if test="processType != null">
+                `process_type` = #{processType},
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                `station_code` = #{stationCode},
+            </if>
+            <if test="stationName != null and stationName != ''">
+                `station_name` = #{stationName},
+            </if>
+            <if test="standardHours != null">
+                `standard_hours` = #{standardHours},
+            </if>
+            <if test="qualityGate != null">
+                `is_quality_gate` = #{qualityGate},
+            </if>
+            <if test="inspectionType != null and inspectionType != ''">
+                `inspection_type` = #{inspectionType},
+            </if>
+            <if test="inspectionConfig != null and inspectionConfig != ''">
+                `inspection_config` = #{inspectionConfig},
+            </if>
+            <if test="sopFile != null and sopFile != ''">
+                `sop_file` = #{sopFile},
+            </if>
+            <if test="status != null">
+                `status` = #{status},
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from `process_route` where `id` = #{id}
+    </delete>
+</mapper>

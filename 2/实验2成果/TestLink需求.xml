@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='utf-8'?>
+<requirements>
+  <requirement>
+    <docid>FR-01</docid>
+    <title>登录与会话</title>
+    <node_order>1</node_order>
+    <description>用户以工号和密码登录；系统在 Redis 保存会话，支持当前用户查询和退出。未登录请求返回 401。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>3</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-02</docid>
+    <title>岗位权限</title>
+    <node_order>2</node_order>
+    <description>前端按岗位裁剪菜单，后端按角色、资源和动作校验。越权请求返回 403；系统用户仅管理员维护。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>3</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-03</docid>
+    <title>基础资料</title>
+    <node_order>3</node_order>
+    <description>维护人员、产品型号、物料、产品 BOM 和工艺路线，支持列表、新增、详情、修改和删除。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>3</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-04</docid>
+    <title>生产工单</title>
+    <node_order>4</node_order>
+    <description>计划员创建工单并绑定型号、BOM 版本、路线版本、批次、数量、时间、产线、负责人及齐套状态。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>3</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-05</docid>
+    <title>任务生成与执行</title>
+    <node_order>5</node_order>
+    <description>系统按工单绑定的工艺路线生成顺序任务；支持开工、暂停、完工，记录实际时间和完成/不良数量。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>4</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-06</docid>
+    <title>现场报工</title>
+    <node_order>6</node_order>
+    <description>操作员提交任务、工单、SN、工位、数量、合格数、不良数和工时；系统联动任务及工单状态。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>4</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-07</docid>
+    <title>质量检验</title>
+    <node_order>7</node_order>
+    <description>质检员记录检验类型、标准快照、实测数据、结果和处置方式；不合格且需返修时自动创建返修单。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>3</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-08</docid>
+    <title>返修与复检</title>
+    <node_order>8</node_order>
+    <description>返修员记录维修措施、换料、工时和结果，状态进入待复检；质检员复检通过后关闭返修并恢复相关任务/工单状态。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>3</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-09</docid>
+    <title>产品追溯</title>
+    <node_order>9</node_order>
+    <description>输入产品 SN，聚合返回相关工单、任务、报工、检验和返修记录，并支持业务分组及时间线展示。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>3</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-10</docid>
+    <title>统计报表</title>
+    <node_order>10</node_order>
+    <description>提供生产概览及质量/产量分析，支持周/月周期和可选产品型号，展示目标量、报工量、合格率、不良分布、趋势与工位产出。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>3</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-11</docid>
+    <title>多端应用</title>
+    <node_order>11</node_order>
+    <description>Web 提供完整管理与业务操作；小程序提供登录、看板、分析、追溯及轻量报工/质检/返修。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>2</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FR-12</docid>
+    <title>通用数据维护</title>
+    <node_order>12</node_order>
+    <description>10 类资源采用统一 CRUD 契约；新增不传系统字段，更新优先传完整对象，删除受外键一致性约束。
+来源：需求规约 第3章</description>
+    <status>D</status>
+    <type>2</type>
+    <expected_coverage>2</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FS-01</docid>
+    <title>功能完整性</title>
+    <node_order>13</node_order>
+    <description>质量需求：系统应覆盖登录与权限、5 类基础资料、工单与任务、报工、质检、返修复检、SN 追溯、周月报表及小程序轻量操作。FR-01 至 FR-12 均应有可执行入口、成功路径和至少一个异常路径，覆盖率达到 100%。
+
+验证方法：建立功能需求与页面、API、测试用例的对应表，以 5 类角色分别走通完整生产与质量流程。小程序只按 FR-11 的轻量范围验收。
+来源：上机1质量需求 FS-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FS-02</docid>
+    <title>功能正确性</title>
+    <node_order>14</node_order>
+    <description>质量需求包含以下 5 条独立规则，每条均要求正常、边界和非法输入测试全部符合预期。
+
+- FS-02-1 任务生成：工单只能使用本型号、指定版本且启用的工艺路线；启用工序有 n 道时，应生成 n 条按工序号排列的任务。每条任务的计划数量等于工单数量；无匹配路线时不生成任务；同一工单重复生成不得产生第二批任务。
+- FS-02-2 报工计算：报工数量必须大于 0，合格数和不良数均不得为负，且合格数与不良数之和等于报工数量。任务累计完成数不得超过计划数。例如计划 100、已完成 60 时，报工 30 且合格 28、不良 2，应累计为 90；报工 41 或数量不守恒时，应拒绝并保持原数据。
+- FS-02-3 质量闭环：需返修的不合格检验应生成且只生成一张关联返修单；维修完成后进入待复检。只有获授权的质检员或管理员完成合格复检，且相关质量问题全部闭合，任务和工单才可进入相应完成状态；报废不得按合格完成处理。
+- FS-02-4 SN 追溯：查询 SN-A 时，只返回该 SN 及其合法关联的工单、任务、报工、检验和返修记录；不得混入同工单下 SN-B 的单件履历。空白或不存在的 SN 应有明确提示，时间线按业务时间一致排序。
+- FS-02-5 报表计算：只纳入状态 status=1 的有效报工，按 reportTime 归属统计周期，使用 Asia/Shanghai 时区。自然周为周一 00:00 至下周一 00:00，自然月为当月 1 日 00:00 至次月 1 日 00:00，均为左闭右开区间。合格率为有效报工合格数之和除以有效报工数量之和，百分比保留两位小数；分母为 0 时展示“暂无数据”。例如有效报工 100、合格 95，合格率应为 95.00%；切换型号和周期后汇总值应与独立 SQL 计算一致。
+
+验证方法：使用可手算的数据集，对接口响应、数据库记录、页面状态和报表数值四处核对。重复提交、跨型号路线、跨 SN、零分母和月末跨周都应单独设置用例。
+来源：上机1质量需求 FS-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FS-03</docid>
+    <title>功能适当性</title>
+    <node_order>15</node_order>
+    <description>质量需求：操作员进入现场报工后，应可从候选任务带出工单、工位和剩余数量，避免再次填写已确定的关联信息；一次报工无需跳转到基础资料维护页面。计划员生成任务与质检员提交检验应由对应业务动作直接完成关联处理。
+
+验证方法：分别执行报工、任务生成和不合格送修；检查无需手工重复维护系统已经掌握的数据，且关联单据可从当前业务上下文查看。
+来源：上机1质量需求 FS-03</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>PE-01</docid>
+    <title>时间特性</title>
+    <node_order>16</node_order>
+    <description>质量需求：常规负载下，登录、任务查询、报工和质检接口的 P95 响应时间不超过 2 秒，SN 追溯及周月分析接口的 P95 不超过 3 秒；整体成功吞吐量不低于 29.85 请求每秒，系统错误率不超过 0.5%。
+
+设置原因：现场录入需要及时反馈，2 秒目标可减少等待及重复点击；追溯和报表涉及多表聚合，允许增加至 3 秒。29.85 请求每秒等于计划负载 30 乘以 99.5% 的成功比例。
+
+验证方法：按接口类型输出独立响应时间分布、成功吞吐量和错误明细；只统计达到目标发压速率的有效采样区间。
+来源：上机1质量需求 PE-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>PE-02</docid>
+    <title>资源利用率</title>
+    <node_order>17</node_order>
+    <description>质量需求：常规负载期间，服务端总 CPU 的 1 分钟平均利用率不超过 75%，总物理内存占用不超过 6.4 GB，交换空间无持续增长，磁盘可用空间保持在 20 GB 以上。另以相同负载运行 2 小时，应用 JVM 每次完整 GC 后的堆使用量，最后 10 分钟中位值不得较最初稳定 10 分钟增长超过 10%。
+
+设置原因：为同机 MySQL、Redis 和业务峰值保留资源；长期运行时检查回收后的堆占用可帮助发现持续泄漏，单次瞬时内存峰值不能代表泄漏。
+
+验证方法：每 5 秒采集 CPU、物理内存、交换空间、磁盘和 JVM 指标；若观察不到可比较的完整 GC 样本，则该项结论记为证据不足，不能直接判定通过。
+来源：上机1质量需求 PE-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>PE-03</docid>
+    <title>容量</title>
+    <node_order>18</node_order>
+    <description>质量需求：基线数据量全部导入后，系统应能正确存储和检索记录。峰值验收提高为 100 个虚拟用户、50 请求每秒、持续 10 分钟，全部受测接口 P95 不超过 5 秒，系统错误率不超过 1%，不出现丢单、重复有效报工或数量越界。
+
+设置原因：1 万工单、10 万报工用于覆盖课程项目逐步积累的数据规模；100 个用户用于模拟交接班集中操作。超过常规负载时适度放宽时延，但保留数据正确性底线。
+
+验证方法：逐级增加数据量和并发数，核对提交前后记录数与业务汇总；容量结论同时记录数据规模、并发数及请求速率，不只写“支持 100 用户”。
+来源：上机1质量需求 PE-03</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>CO-01</docid>
+    <title>共存性</title>
+    <node_order>19</node_order>
+    <description>质量需求：Web 管理端应与 Chrome、Edge 中的普通办公页面同时打开并正常操作；后端、MySQL 和 Redis 在基线服务端共存时，应使用独立端口与各自的数据目录。运行本系统不得修改其他软件配置或覆盖其文件；共存前后同一办公页面操作的 P95 耗时增幅不超过 10%。
+
+验证方法：记录共存前后页面操作耗时，检查应用端口与数据目录，并在启动、停止本系统后验证数据库、会话服务和办公页面状态。基线页面、网络和缓存条件保持一致。
+来源：上机1质量需求 CO-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>CO-02</docid>
+    <title>互操作性</title>
+    <node_order>20</node_order>
+    <description>质量需求：Web 与小程序通过同一 JSON 接口契约交换业务数据，字段名、状态码、日期和枚举含义一致；MySQL 应正确读写中文、数值和时间，Redis 应正确保存、读取和失效会话。对下表各对象执行约定用例，必测业务断言通过率为 100%。
+
+验证方法：同一测试数据分别由两个客户端读写并交叉查询，对比关键字段；测试 Redis 会话超时和退出后失效，以及 MySQL 外键、唯一单号和中文往返一致性。
+
+| 兼容软件 | 必要性 | 验收范围 |
+| --- | --- | --- |
+| Google Chrome | 计划员和管理员通过桌面浏览器完成管理与生产操作 | 登录、表单、报表、追溯；记录测试当日主版本 |
+| Microsoft Edge | 适配 Windows 电脑自带浏览器，降低使用门槛 | 与 Chrome 使用相同业务用例，无影响操作的错位或功能差异 |
+| 微信客户端及微信开发者工具 | 操作员和质检员需要小程序现场操作，开发者工具用于联调 | 工具模拟器及至少一台 Android、一台 iOS 真机完成登录和各自岗位轻量流程；记录微信及系统版本 |
+| MySQL 8.x | 保存 10 张核心业务表，是生产与质量数据持久化基础 | 建表、事务、外键、中文字段、时间和数值读写正确 |
+| Redis 5 或以上 | 保存登录会话，Web 和小程序均依赖其认证状态 | 登录、读取、续期策略、1800 秒超时、退出失效符合约定 |
+
+至少兼容 3 个软件的要求已通过上述 5 项覆盖。真实 ERP 和 PLC 不在本轮兼容性范围内。
+来源：上机1质量需求 CO-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>IN-01</docid>
+    <title>可识别性</title>
+    <node_order>21</node_order>
+    <description>质量需求：登录页和工作台应明确显示系统名称、当前角色及其业务入口；“报工”“质检”“返修”等名称与需求规约一致。10 名首次接触系统、已接受岗位介绍的用户中，至少 9 人应在 30 秒内找到本岗位核心任务入口。
+
+验证方法：给定岗位和任务，仅观察入口识别，不事先演示点击位置；记录完成时间和错误入口。
+来源：上机1质量需求 IN-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>IN-02</docid>
+    <title>易学习性</title>
+    <node_order>22</node_order>
+    <description>质量需求：提供不超过 10 分钟的岗位操作说明后，10 名未使用过系统的受试者中，至少 9 人能在 5 分钟内独立完成其岗位的一次报工、检验或返修处理，无需指导者代为操作。
+
+验证方法：操作员、质检员、返修员各至少 3 人，记录任务结果、耗时与求助次数；登录故障等环境问题单独记录。
+来源：上机1质量需求 IN-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>IN-03</docid>
+    <title>易操作性</title>
+    <node_order>23</node_order>
+    <description>质量需求：Web 表单应支持键盘顺序导航、明确的提交与取消操作；列表查询、表单关闭和错误返回后应保留用户仍有效的筛选条件。小程序主要操作控件不得重叠，在所测屏幕上均可触达。
+
+验证方法：以键盘完成登录和一笔报工，以触控完成一笔检验；逐项确认焦点顺序、按钮状态及返回后的筛选条件。
+来源：上机1质量需求 IN-03</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>IN-04</docid>
+    <title>用户错误防止</title>
+    <node_order>24</node_order>
+    <description>质量需求：提交前检查必填、非负数量、数量守恒和关联对象一致性；删除、关闭工单等高影响操作需确认。请求未结束时同一按钮不可连续发起相同提交，后端仍须独立校验，避免绕过界面后写入错误数据。
+
+验证方法：覆盖空值、负值、超计划、错误关联、双击和直接 API 请求；所有非法输入均应被拒绝，且不产生部分写入。
+来源：上机1质量需求 IN-04</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>IN-05</docid>
+    <title>用户参与度</title>
+    <node_order>25</node_order>
+    <description>质量需求：业务提交成功或失败后，页面应在收到响应后 1 秒内给出明确反馈；工作台应展示与岗位有关的待办状态及处理结果。10 名用户完成岗位任务后，对反馈清晰度和继续使用意愿的 5 分制评分平均不低于 4 分。
+
+验证方法：检查成功、业务失败和网络失败反馈；记录用户评分及原始意见，不能由开发者代填。生产场景以明确反馈维持使用意愿，不引入无关娱乐任务。
+来源：上机1质量需求 IN-05</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>IN-06</docid>
+    <title>包容性</title>
+    <node_order>26</node_order>
+    <description>质量需求：基础操作使用清晰中文，不要求用户理解英文状态码；关键状态同时用文字与视觉提示表达，不只靠颜色区分。Web 在 1280×720、1920×1080 及 200% 缩放下核心操作仍可完成。
+
+验证方法：由不同软件熟练度的用户执行相同任务，检查缩放后的按钮、标签和错误提示；允许表格区域滚动，但不能遮住核心操作。
+来源：上机1质量需求 IN-06</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>IN-07</docid>
+    <title>用户帮助</title>
+    <node_order>27</node_order>
+    <description>质量需求：报工数量、检验结果和返修状态等关键字段应有就近解释；需要时可查阅岗位步骤说明。输入控件应具备可识别标签，错误信息能够通过文字和辅助技术获取；仅使用键盘的用户应能完成 Web 核心表单。
+
+验证方法：检查键盘焦点、控件标签和错误提示的辅助技术可读性，模拟首次报工求助；用户无需退出当前未提交表单即可获取帮助。
+来源：上机1质量需求 IN-07</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>IN-08</docid>
+    <title>自描述性</title>
+    <node_order>28</node_order>
+    <description>质量需求：页面应在操作发生处说明当前任务、工单、状态、数量单位及允许的下一步；加载、空数据、无权限和提交失败应分别显示明确含义。业务字段使用可理解名称，不能只显示内部 ID 或数字枚举。
+
+验证方法：构造四类页面状态，核查提示能回答“当前是什么情况、可以做什么”；跨页面检查同一字段名称和单位一致。
+来源：上机1质量需求 IN-08</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>RE-01</docid>
+    <title>无错性</title>
+    <node_order>29</node_order>
+    <description>质量需求：在基线环境完成 1 万次预先判定为合法的业务操作，其中至少 100 次覆盖完整的工单至返修复检流程，非预期业务失败数为 0，数据不一致数为 0。拒绝非法输入属于正确行为，不计为此项故障。
+
+设置原因：生产履历中的一条错误即可影响质量判断，因此功能与数据一致性采用零缺陷验收门槛；1 万次仅是课程验收样本，不能据此推断长期绝对无故障。
+
+验证方法：保存可复放的操作序列、响应和数据库断言，独立核对单据数量、状态及关联关系。
+来源：上机1质量需求 RE-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>RE-02</docid>
+    <title>可用性</title>
+    <node_order>30</node_order>
+    <description>质量需求：以连续 22 个工作日、每日约定 8 小时为服务窗口，关键业务可用率不低于 99.5%，即 176 小时中不可用累计不超过 52.8 分钟。窗口内计划维护也计入不可用；窗口外时间不计入分母。
+
+设置原因：课程项目采用单机部署，99.5% 体现基本连续服务要求，同时允许必要维护；将统计窗口和维护口径固定，避免通过排除故障时间提高结果。
+
+验证方法：每 30 秒执行一次登录、查询及隔离测试工单的可回滚业务探测。失败区间按相邻探测时间保守计入；探测本身故障需有独立证据，否则按不可用计。未完成整个观察窗口前只报告已观察数据。
+来源：上机1质量需求 RE-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>RE-03</docid>
+    <title>容错性</title>
+    <node_order>31</node_order>
+    <description>质量需求：对 MySQL 写入中断、Redis 不可用、客户端响应丢失三类故障，各执行至少 20 次注入。业务不得部分提交，无法校验会话时不得开放受限接口；同一报工或检验重复请求最多产生一次有效业务结果，恢复后数量保持一致。
+
+设置原因：网络和依赖异常容易造成用户重试及重复计数。该项目不要求 Redis 中断时继续允许写入，而要求拒绝不确定的认证状态，保护已有数据。
+
+验证方法：在事务不同阶段注入失败，以相同业务单号重试并查询最终结果；检查无孤立返修单、无重复报工和无越权放行。
+来源：上机1质量需求 RE-03</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>RE-04</docid>
+    <title>易恢复性</title>
+    <node_order>32</node_order>
+    <description>质量需求：对应用崩溃或单节点数据库故障，恢复关键业务的 RTO 不超过 10 分钟，已确认业务数据的 RPO 不超过 5 分钟；恢复后 10 张核心表的关联和关键数量校验通过。会话失效时允许重新登录，但不能把业务数据丢失当作会话问题。
+
+设置原因：10 分钟限制现场业务中断；5 分钟限制需要人工核对和补录的业务范围。达到该目标需要可用备份、事务日志或等效恢复措施，演示数据重置脚本不能替代生产数据备份。
+
+验证方法：在隔离环境至少演练 3 次，保存故障发生、最近可恢复提交点和业务恢复时间；以带时间戳的连续写入测量 RPO，并检查恢复前已确认记录。
+来源：上机1质量需求 RE-04</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SE-01</docid>
+    <title>保密性</title>
+    <node_order>33</node_order>
+    <description>质量需求：密码及密码摘要不得出现在任何响应中；会话凭据仅经认证成功响应或安全 Cookie 交付，不得出现在普通业务响应、错误提示和日志中。受限数据必须由后端按角色校验；正式网络部署时使用 HTTPS，演示账号不得用于对外服务。
+
+验证与风险：检查用户列表、登录响应、日志和传输配置，对每类角色执行越权读取；泄露会导致账号冒用、人员信息暴露及生产配置外泄。当前本地 HTTP 联调配置不代表已经满足正式网络传输要求。
+来源：上机1质量需求 SE-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SE-02</docid>
+    <title>完整性</title>
+    <node_order>34</node_order>
+    <description>质量需求：所有写入口，包括通用新增、修改和业务动作，必须执行同等的角色、字段及关联一致性校验。客户端不能伪造记录归属人或直接写入未经业务验证的完成状态；越权修改返回 403，数据库内容保持不变。
+
+验证与风险：通过修改请求体、直接调用 CRUD 和更换资源 ID 测试绕过；失守会造成虚增产量、篡改检验结论和不合格品被错误视为合格。
+来源：上机1质量需求 SE-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SE-03</docid>
+    <title>不可否认性</title>
+    <node_order>35</node_order>
+    <description>质量需求：报工、检验、维修和复检完成时，应形成包含服务端确认的操作人、时间、业务编号、动作与结果的确认记录，并向操作者返回一致的业务凭据。确认记录不能经普通 CRUD 覆盖或删除，更正应追加记录并保留原结果；普通业务角色不能修改证据记录。
+
+验证与风险：抽取 20 条关键操作核对请求确认、业务记录和受保护留痕；尝试更换操作者、覆盖原记录及删除凭据。缺少完整证据时，责任人可能否认放行或报工行为，无法复核争议。本项是补充质量要求，现有普通日志不能直接作为已满足的证明。
+来源：上机1质量需求 SE-03</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SE-04</docid>
+    <title>可追踪性</title>
+    <node_order>36</node_order>
+    <description>质量需求：关键写操作必须关联已认证的用户身份、业务单号及请求关联标识，形成从接口请求到报工、检验或返修记录的可检索链路。抽取 100 次写操作，应全部唯一对应发起主体和业务结果。
+
+验证与风险：从业务记录反向查到用户与请求，并从请求正向查到影响记录；若操作人仅取自可任意填写的请求字段，可能出现冒名记录及质量责任无法定位。
+来源：上机1质量需求 SE-04</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SE-05</docid>
+    <title>真实性</title>
+    <node_order>37</node_order>
+    <description>质量需求：登录必须校验工号、密码和启用状态；伪造、过期及已退出的会话不得通过。默认会话超时按 1800 秒配置，超时策略应明确为空闲超时或绝对超时；本报告按当前读取后续期方式验收为空闲超时，退出后下次请求立即失效。
+
+验证与风险：使用错误密码、停用账号和伪造会话；通过可控时钟或缩短测试配置检查超时边界。真实性失效会允许冒用质检员或管理员身份进行敏感操作。
+来源：上机1质量需求 SE-05</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SE-06</docid>
+    <title>防御性</title>
+    <node_order>38</node_order>
+    <description>质量需求：认证入口应限制连续失败尝试，同一账号 5 分钟内失败达到 10 次时应临时限制 5 分钟，并避免只凭账号触发永久锁定。面对脚本注入、SQL 注入和高频错误请求时，不执行注入内容、不泄露内部异常，合法会话的关键操作仍有可用反馈。
+
+验证与风险：在隔离环境回放恶意参数，并以 30 个错误请求每秒持续 5 分钟，同时发送 10 个合法请求每秒；合法请求成功率不低于 99%。失守可能导致口令被试出、数据泄露或服务中断。该负载是限定场景，不等于抵御任意规模攻击。
+来源：上机1质量需求 SE-06</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>MA-01</docid>
+    <title>模块性</title>
+    <node_order>39</node_order>
+    <description>质量需求：保持 Controller、Service、Mapper 分层；Controller 不直接编写 SQL，核心状态流转集中在业务层。调整返修处理规则时，改动应集中于返修业务及明确依赖，不要求同时修改无关的物料维护模块。
+
+验证方法：检查依赖方向和一次受控变更的差异清单，确认不存在因复制业务规则而必须同步修改的无关实现。[S3 §6，S4 §3]
+来源：上机1质量需求 MA-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>MA-02</docid>
+    <title>可复用性</title>
+    <node_order>40</node_order>
+    <description>质量需求：Web 与小程序应复用同一报工、质检和返修 API；统一响应、日期格式、角色编码及错误处理应有共同定义，不在两端分别实现不同的业务计算。
+
+验证方法：检查两个客户端的请求路径和数据契约，以相同输入比较结果；新增同类表单时复用现有接口封装，无需复制服务端业务逻辑。
+来源：上机1质量需求 MA-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>MA-03</docid>
+    <title>易分析性</title>
+    <node_order>41</node_order>
+    <description>质量需求：业务失败应包含可理解错误信息和可定位的请求标识，服务端日志应能追踪异常位置与关联业务。开发人员对预设的 5 类故障，应在获得日志和请求标识后各 15 分钟内定位到责任模块及触发条件。
+
+验证方法：注入无路线、数量非法、数据库失败、会话失效、追溯异常等问题，计时完成定位；日志不得为方便排查而泄露密码或会话凭据。
+来源：上机1质量需求 MA-03</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>MA-04</docid>
+    <title>可变更性</title>
+    <node_order>42</node_order>
+    <description>质量需求：一次业务规则变更必须同步相关用例、接口契约及必要的前端字段定义；受影响用例和关键流程回归全部通过。以“修改报工数量上限规则”为样例，变更后不得破坏既有检验和追溯结果。
+
+验证方法：审查影响范围，运行变更前后对比用例；核查实体、SQL、接口与前端仍一致，不以“编译通过”代替行为回归。
+来源：上机1质量需求 MA-04</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>MA-05</docid>
+    <title>易测试性</title>
+    <node_order>43</node_order>
+    <description>质量需求：核心 Service 能通过模拟 Mapper、Redis 等依赖进行隔离测试；时间、单号和故障结果应可控制。工单生成、报工、质检及返修服务的单元测试目标为语句覆盖率不低于 85%、分支覆盖率不低于 80%，并单独覆盖全部已识别关键状态转换。
+
+验证方法：检查隔离测试及覆盖率报告；通过接口测试和数据库断言补充事务、权限与集成行为。覆盖率不能替代对正确性、安全及异常路径的断言。
+来源：上机1质量需求 MA-05</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FL-01</docid>
+    <title>适应性</title>
+    <node_order>44</node_order>
+    <description>质量需求：数据库地址、端口、账号、Redis 地址及会话时限应通过配置调整；由开发机迁移到测试服务端时，无需修改 Java 业务源码。Web 和小程序的服务地址变化应有明确配置入口。
+
+验证方法：准备两套隔离环境，以不同地址、端口启动并完成登录、报工及追溯；核对源码差异为空，配置差异可记录。[S6 配置文件]
+来源：上机1质量需求 FL-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FL-02</docid>
+    <title>可扩展性</title>
+    <node_order>45</node_order>
+    <description>质量需求：当资源由 4 vCPU、8 GB 扩至 8 vCPU、16 GB，固定数据和请求比例下，满足 PE-01 时延及错误率约束的最大稳定吞吐量应提升至少 30%；资源缩回后，原常规负载仍应达标。不得因应用重新部署而丢失业务数据。
+
+验证方法：分别递增负载测得两套资源的最大稳定吞吐量，再执行缩容回归。该项检查资源变化的适应能力；PE-03 检查固定资源的容量上限，两者不能混同。
+来源：上机1质量需求 FL-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FL-03</docid>
+    <title>易替换性</title>
+    <node_order>46</node_order>
+    <description>质量需求：兼容的新版本应能接替旧版本，保留用户、工单及质量履历。更换兼容的数据库实例时，应通过标准 SQL 迁移并保持 10 张表的记录数、关键字段和关联一致；两个客户端无需因后端内部重构改变业务流程。
+
+验证方法：导出、导入隔离实例后比对记录数、字段校验值及 20 个 SN 履历，执行接口契约回归；本项不要求兼容当前范围外的数据库产品。
+来源：上机1质量需求 FL-03</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>FL-04</docid>
+    <title>易安装性</title>
+    <node_order>47</node_order>
+    <description>质量需求：在 JDK、Maven、Node、MySQL 和 Redis 已安装且依赖可获得的环境中，新成员按文档应在 30 分钟内完成配置、建表、后端启动、Web 启动及登录。卸载应用时应能保留数据库和备份，不误删共用服务的数据。
+
+验证方法：由未参与搭建的人员在干净应用目录按步骤计时操作，记录阻塞点；检查重新安装后仍能读取原有工单与追溯记录。
+来源：上机1质量需求 FL-04</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SA-01</docid>
+    <title>操作约束</title>
+    <node_order>48</node_order>
+    <description>质量需求：报工不得超过计划数量，停用工艺不得用于新任务；存在未完成质检、未闭合返修或报废结论时，不得通过直接完工或通用更新将其标记为正常合格完成。高影响变更应保留确认与责任信息。
+
+验证与风险：对各写入口尝试绕过约束，结果均应被拒绝；避免错误数量及质量状态引导后续加工，造成材料浪费或不合格品流转。
+来源：上机1质量需求 SA-01</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SA-02</docid>
+    <title>风险识别</title>
+    <node_order>49</node_order>
+    <description>质量需求：系统应识别数量不一致、工艺版本失配、待复检误完工、同 SN 履历矛盾及关键依赖故障等风险条件，并给出明确风险类型和涉及的业务编号。
+
+验证与风险：针对第 4 章每种风险构造至少一个触发场景，识别率达到 100%。该结论仅针对已定义场景，不表示系统能识别全部未知危险。
+来源：上机1质量需求 SA-02</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SA-03</docid>
+    <title>故障安全</title>
+    <node_order>50</node_order>
+    <description>质量需求：认证依赖、数据库或检验结果不可用时，受影响的写操作不得默认成功，合格状态不得自动放行；已确认的数据保持一致。响应丢失时，应提示结果待核对，并支持按业务编号确认结果后再决定是否重试。
+
+验证与风险：中断依赖或丢弃响应，确认页面不显示未经确认的完成状态、后台不产生不完整记录；避免用户依据错误成功提示进行后续生产。
+来源：上机1质量需求 SA-03</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SA-04</docid>
+    <title>危险警告</title>
+    <node_order>51</node_order>
+    <description>质量需求：发现不合格、超量、返修逾期或关键服务不可用时，应在触发操作收到响应后 1 秒内给出文字警告；返修逾期指未闭合的返修单已超过其 deadline 截止时间，未设置 deadline 时不能凭空判定逾期。警告包含业务编号、风险原因和下一步操作，不能只改变颜色。风险未解除时，相关操作页面应持续可见其状态。
+
+验证与风险：分别触发对应条件，确认用户在进行下一关键动作前可以看到警告；避免短暂提示消失导致错误继续加工或漏处理返修。
+来源：上机1质量需求 SA-04</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+  <requirement>
+    <docid>SA-05</docid>
+    <title>安全集成</title>
+    <node_order>52</node_order>
+    <description>质量需求：集成 Web、小程序和后端，或升级任一组件后，数量校验、岗位权限、质量门和返修复检约束必须保持一致。一个客户端拒绝的危险业务输入不得经另一客户端或通用 API 被接受。
+
+验证与风险：两个客户端及直接 API 对同一危险输入执行对照测试，全部应被统一阻止；检查升级回归后仍满足 SA-01 至 SA-04。本项目的安全集成限于软件组件，不推定连接实体设备后的安全性。
+来源：上机1质量需求 SA-05</description>
+    <status>D</status>
+    <type>5</type>
+    <expected_coverage>1</expected_coverage>
+  </requirement>
+</requirements>

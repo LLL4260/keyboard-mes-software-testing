@@ -1,0 +1,72 @@
+@startuml Keyboard_MES_Module_Structure_Current
+top to bottom direction
+
+skinparam defaultFontName Microsoft YaHei
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam linetype ortho
+skinparam ArrowColor #334155
+skinparam rectangle {
+  BorderColor #334155
+  BackgroundColor #FFFFFF
+  RoundCorner 8
+}
+skinparam package {
+  BorderColor #94A3B8
+  RoundCorner 10
+}
+
+title Keyboard Assembly MES - 当前项目模块结构图
+
+package "用户与权限" as Roles #EEF2FF {
+  rectangle "Admin\n全部资源" as Admin
+  rectangle "Planner\n基础资料 / 工单 / 任务" as Planner
+  rectangle "Operator\n任务执行 / 报工" as Operator
+  rectangle "Inspector\n检验 / 返修发起" as Inspector
+  rectangle "Repair\n返修处理 / 复检" as Repair
+}
+
+package "前端入口" as Clients #ECFEFF {
+  rectangle "Vue Web Console\nVue 3 + Vue Router + Vite\n工作台 / 生产 / 质量 / 追溯" as Web
+  rectangle "WeChat Mini Program\n轻量现场端\n看板 / 报工 / 检验 / 返修" as Mini
+}
+
+package "后端业务能力" as Backend #F8FAFC {
+  rectangle "登录与权限\nAuthController\nAuthInterceptor\nAuthSessionService" as Security #EFF6FF
+  rectangle "基础资料\n用户 / 产品 / 物料\nBOM / 工艺路线" as MasterData #F0F9FF
+  rectangle "生产执行\n生产工单\n生产任务\n报工记录" as Production #ECFDF5
+  rectangle "质量返修\n检验记录\n返修工单" as Quality #FDF2F8
+  rectangle "追溯报表\nSN 追溯\n生产概览\n质量分析" as TraceReport #FEFCE8
+}
+
+package "数据与验收支撑" as Support #F1F5F9 {
+  database "MySQL\n10 张核心业务表" as MySQL
+  rectangle "Redis\n登录状态" as Redis
+  rectangle "SQL Scripts\nschema / mock / demo / reset" as SqlScripts
+  rectangle "Tests\nController / Session / Service" as Tests
+}
+
+Roles -down-> Clients : 按角色进入
+Clients -down-> Backend : 调用 /api
+Backend -down-> Support : 持久化与验收
+
+Security -down-> Redis
+MasterData -down-> MySQL
+Production -down-> MySQL
+Quality -down-> MySQL
+TraceReport -down-> MySQL
+SqlScripts -down-> MySQL
+
+note right of Backend
+  当前只展示代码中已存在的模块。
+  不加入 production_plan、dispatch_order、
+  product_barcode、trace_record 等未实现模块。
+end note
+
+note bottom of Roles
+  前端按角色裁剪视图；
+  后端按 roleCode、资源和动作返回 401 / 403。
+end note
+
+@enduml

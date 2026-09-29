@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.keyboard.mes.repository.ProductionTaskMapper">
+    <resultMap id="ProductionTaskMap" type="ProductionTask">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="task_no" jdbcType="VARCHAR" property="taskNo"/>
+        <result column="order_id" jdbcType="BIGINT" property="orderId"/>
+        <result column="process_route_id" jdbcType="BIGINT" property="processRouteId"/>
+        <result column="sequence_no" jdbcType="INTEGER" property="sequenceNo"/>
+        <result column="station_code" jdbcType="VARCHAR" property="stationCode"/>
+        <result column="assigned_user_id" jdbcType="BIGINT" property="assignedUserId"/>
+        <result column="planned_quantity" jdbcType="INTEGER" property="plannedQuantity"/>
+        <result column="completed_quantity" jdbcType="INTEGER" property="completedQuantity"/>
+        <result column="defect_quantity" jdbcType="INTEGER" property="defectQuantity"/>
+        <result column="abnormal_type" jdbcType="TINYINT" property="abnormalType"/>
+        <result column="abnormal_desc" jdbcType="VARCHAR" property="abnormalDesc"/>
+        <result column="abnormal_solution" jdbcType="VARCHAR" property="abnormalSolution"/>
+        <result column="status" jdbcType="TINYINT" property="status"/>
+        <result column="start_time" jdbcType="TIMESTAMP" property="startTime"/>
+        <result column="finish_time" jdbcType="TIMESTAMP" property="finishTime"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+
+    <select id="getById" resultMap="ProductionTaskMap">
+        select `id`, `task_no`, `order_id`, `process_route_id`, `sequence_no`, `station_code`, `assigned_user_id`, `planned_quantity`, `completed_quantity`, `defect_quantity`, `abnormal_type`, `abnormal_desc`, `abnormal_solution`, `status`, `start_time`, `finish_time`, `remark` from `production_task` where `id` = #{id}
+    </select>
+
+    <select id="productionTaskList" resultMap="ProductionTaskMap">
+        select `id`, `task_no`, `order_id`, `process_route_id`, `sequence_no`, `station_code`, `assigned_user_id`, `planned_quantity`, `completed_quantity`, `defect_quantity`, `abnormal_type`, `abnormal_desc`, `abnormal_solution`, `status`, `start_time`, `finish_time`, `remark` from `production_task`
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into `production_task`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="taskNo != null and taskNo != ''">
+                `task_no`,
+            </if>
+            <if test="orderId != null">
+                `order_id`,
+            </if>
+            <if test="processRouteId != null">
+                `process_route_id`,
+            </if>
+            <if test="sequenceNo != null">
+                `sequence_no`,
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                `station_code`,
+            </if>
+            <if test="assignedUserId != null">
+                `assigned_user_id`,
+            </if>
+            <if test="plannedQuantity != null">
+                `planned_quantity`,
+            </if>
+            <if test="completedQuantity != null">
+                `completed_quantity`,
+            </if>
+            <if test="defectQuantity != null">
+                `defect_quantity`,
+            </if>
+            <if test="abnormalType != null">
+                `abnormal_type`,
+            </if>
+            <if test="abnormalDesc != null and abnormalDesc != ''">
+                `abnormal_desc`,
+            </if>
+            <if test="abnormalSolution != null and abnormalSolution != ''">
+                `abnormal_solution`,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+            <if test="startTime != null">
+                `start_time`,
+            </if>
+            <if test="finishTime != null">
+                `finish_time`,
+            </if>
+            <if test="remark != null and remark != ''">
+                `remark`,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="taskNo != null and taskNo != ''">
+                #{taskNo},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="processRouteId != null">
+                #{processRouteId},
+            </if>
+            <if test="sequenceNo != null">
+                #{sequenceNo},
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                #{stationCode},
+            </if>
+            <if test="assignedUserId != null">
+                #{assignedUserId},
+            </if>
+            <if test="plannedQuantity != null">
+                #{plannedQuantity},
+            </if>
+            <if test="completedQuantity != null">
+                #{completedQuantity},
+            </if>
+            <if test="defectQuantity != null">
+                #{defectQuantity},
+            </if>
+            <if test="abnormalType != null">
+                #{abnormalType},
+            </if>
+            <if test="abnormalDesc != null and abnormalDesc != ''">
+                #{abnormalDesc},
+            </if>
+            <if test="abnormalSolution != null and abnormalSolution != ''">
+                #{abnormalSolution},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="startTime != null">
+                #{startTime},
+            </if>
+            <if test="finishTime != null">
+                #{finishTime},
+            </if>
+            <if test="remark != null and remark != ''">
+                #{remark},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update">
+        update `production_task`
+        <set>
+            <if test="taskNo != null and taskNo != ''">
+                `task_no` = #{taskNo},
+            </if>
+            <if test="orderId != null">
+                `order_id` = #{orderId},
+            </if>
+            <if test="processRouteId != null">
+                `process_route_id` = #{processRouteId},
+            </if>
+            <if test="sequenceNo != null">
+                `sequence_no` = #{sequenceNo},
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                `station_code` = #{stationCode},
+            </if>
+            <if test="assignedUserId != null">
+                `assigned_user_id` = #{assignedUserId},
+            </if>
+            <if test="plannedQuantity != null">
+                `planned_quantity` = #{plannedQuantity},
+            </if>
+            <if test="completedQuantity != null">
+                `completed_quantity` = #{completedQuantity},
+            </if>
+            <if test="defectQuantity != null">
+                `defect_quantity` = #{defectQuantity},
+            </if>
+            <if test="abnormalType != null">
+                `abnormal_type` = #{abnormalType},
+            </if>
+            <if test="abnormalDesc != null and abnormalDesc != ''">
+                `abnormal_desc` = #{abnormalDesc},
+            </if>
+            <if test="abnormalSolution != null and abnormalSolution != ''">
+                `abnormal_solution` = #{abnormalSolution},
+            </if>
+            <if test="status != null">
+                `status` = #{status},
+            </if>
+            <if test="startTime != null">
+                `start_time` = #{startTime},
+            </if>
+            <if test="finishTime != null">
+                `finish_time` = #{finishTime},
+            </if>
+            <if test="remark != null and remark != ''">
+                `remark` = #{remark},
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from `production_task` where `id` = #{id}
+    </delete>
+</mapper>

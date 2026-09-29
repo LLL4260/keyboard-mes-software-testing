@@ -1,0 +1,308 @@
+{
+  "version": "1.0.0",
+  "service": "keyboard-mes",
+  "baseUrl": "/api",
+  "contentType": "application/json",
+  "dateFormat": "yyyy-MM-dd",
+  "dateTimeFormat": "yyyy-MM-ddTHH:mm:ss",
+  "fieldNaming": "lowerCamelCase",
+  "response": {
+    "successCode": 200,
+    "fields": {
+      "code": "number，200 表示成功，400 表示参数或业务错误，401 表示未登录，403 表示无权限，500 表示系统异常",
+      "msg": "string，接口提示信息",
+      "data": "any，接口返回数据"
+    }
+  },
+  "operations": {
+    "list": { "method": "GET", "path": "{path}/list" },
+    "add": { "method": "POST", "path": "{path}/add" },
+    "detail": { "method": "GET", "path": "{path}/{id}" },
+    "update": { "method": "PUT", "path": "{path}/{id}" },
+    "updateCompat": { "method": "POST", "path": "{path}/update" },
+    "delete": { "method": "DELETE", "path": "{path}/{id}" }
+  },
+  "businessActions": {
+    "generateTasks": {
+      "title": "工单生成任务",
+      "method": "POST",
+      "path": "/api/productionOrder/{id}/generateTasks",
+      "description": "按工单绑定的工艺路线生成生产任务"
+    },
+    "taskStart": {
+      "title": "任务开工",
+      "method": "POST",
+      "path": "/api/productionTask/{id}/start",
+      "description": "任务状态进入生产中"
+    },
+    "taskPause": {
+      "title": "任务暂停",
+      "method": "POST",
+      "path": "/api/productionTask/{id}/pause",
+      "description": "任务状态进入暂停"
+    },
+    "taskFinish": {
+      "title": "任务完工",
+      "method": "POST",
+      "path": "/api/productionTask/{id}/finish",
+      "description": "任务状态进入已完工"
+    },
+    "submitWorkReport": {
+      "title": "报工提交",
+      "method": "POST",
+      "path": "/api/workReport/submit",
+      "description": "保存报工并联动更新任务数量、任务状态和工单状态"
+    },
+    "submitInspection": {
+      "title": "质检提交",
+      "method": "POST",
+      "path": "/api/inspectionRecord/submit",
+      "description": "保存质检；不合格或需返修时自动生成返修单"
+    },
+    "repairRework": {
+      "title": "返修处理",
+      "method": "POST",
+      "path": "/api/reworkOrder/{id}/repair",
+      "description": "记录维修措施、用料、工时和维修结果，状态进入待复检"
+    },
+    "recheckRework": {
+      "title": "返修复检",
+      "method": "POST",
+      "path": "/api/reworkOrder/{id}/recheck",
+      "description": "保存复检记录；复检通过后关闭返修并恢复任务/工单状态"
+    }
+  },
+  "auth": {
+    "login": { "method": "POST", "path": "/api/auth/login", "body": ["employeeNo", "password"] },
+    "logout": { "method": "POST", "path": "/api/auth/logout" },
+    "current": { "method": "GET", "path": "/api/auth/current" },
+    "session": "登录会话保存到 Redis，前端请求需要携带 Cookie 或 Authorization sessionId"
+  },
+  "resources": [
+    {
+      "name": "sysUser",
+      "title": "系统用户",
+      "table": "sys_user",
+      "path": "/api/sysUser",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "employeeNo", "type": "String", "required": true, "description": "工号/登录账号" },
+        { "name": "passwordHash", "type": "String", "required": true, "description": "登录密码密文" },
+        { "name": "name", "type": "String", "required": true, "description": "姓名" },
+        { "name": "roleCode", "type": "String", "required": true, "description": "角色编码" },
+        { "name": "roleName", "type": "String", "required": true, "description": "角色名称" },
+        { "name": "department", "type": "String", "required": false, "description": "部门/班组" },
+        { "name": "position", "type": "String", "required": false, "description": "岗位" },
+        { "name": "phone", "type": "String", "required": false, "description": "手机号" },
+        { "name": "skillLevel", "type": "String", "required": false, "description": "技能等级" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=停用，1=启用" },
+        { "name": "createTime", "type": "LocalDateTime", "required": false, "description": "创建时间" },
+        { "name": "updateTime", "type": "LocalDateTime", "required": false, "description": "更新时间" }
+      ]
+    },
+    {
+      "name": "productModel",
+      "title": "产品型号",
+      "table": "product_model",
+      "path": "/api/productModel",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "modelCode", "type": "String", "required": true, "description": "型号编码" },
+        { "name": "modelName", "type": "String", "required": true, "description": "型号名称" },
+        { "name": "category", "type": "String", "required": false, "description": "产品类别" },
+        { "name": "configurationDesc", "type": "String", "required": false, "description": "配置摘要" },
+        { "name": "firmwareVersion", "type": "String", "required": false, "description": "固件/功能版本" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=停用，1=启用" },
+        { "name": "createTime", "type": "LocalDateTime", "required": false, "description": "创建时间" },
+        { "name": "updateTime", "type": "LocalDateTime", "required": false, "description": "更新时间" },
+        { "name": "remark", "type": "String", "required": false, "description": "备注" }
+      ]
+    },
+    {
+      "name": "material",
+      "title": "物料",
+      "table": "material",
+      "path": "/api/material",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "materialCode", "type": "String", "required": true, "description": "物料编码" },
+        { "name": "materialName", "type": "String", "required": true, "description": "物料名称" },
+        { "name": "specification", "type": "String", "required": false, "description": "规格型号" },
+        { "name": "materialType", "type": "Integer", "required": true, "description": "1=零部件，2=辅料，3=半成品，4=成品" },
+        { "name": "unit", "type": "String", "required": false, "description": "计量单位" },
+        { "name": "supplier", "type": "String", "required": false, "description": "供应商/来源" },
+        { "name": "barcode", "type": "String", "required": false, "description": "条码" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=停用，1=启用" },
+        { "name": "createTime", "type": "LocalDateTime", "required": false, "description": "创建时间" },
+        { "name": "updateTime", "type": "LocalDateTime", "required": false, "description": "更新时间" }
+      ]
+    },
+    {
+      "name": "productBom",
+      "title": "产品BOM",
+      "table": "product_bom",
+      "path": "/api/productBom",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "productModelId", "type": "Long", "required": true, "description": "产品型号ID" },
+        { "name": "bomVersion", "type": "String", "required": true, "description": "BOM版本" },
+        { "name": "materialId", "type": "Long", "required": true, "description": "物料ID" },
+        { "name": "quantity", "type": "BigDecimal", "required": true, "description": "标准用量" },
+        { "name": "unit", "type": "String", "required": false, "description": "计量单位" },
+        { "name": "sequenceNo", "type": "Integer", "required": false, "description": "BOM行序号" },
+        { "name": "effectiveDate", "type": "LocalDate", "required": false, "description": "生效日期" },
+        { "name": "expireDate", "type": "LocalDate", "required": false, "description": "失效日期" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=停用，1=启用" },
+        { "name": "remark", "type": "String", "required": false, "description": "备注" }
+      ]
+    },
+    {
+      "name": "processRoute",
+      "title": "工艺路线",
+      "table": "process_route",
+      "path": "/api/processRoute",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "productModelId", "type": "Long", "required": true, "description": "产品型号ID" },
+        { "name": "routeVersion", "type": "String", "required": true, "description": "工艺路线版本" },
+        { "name": "sequenceNo", "type": "Integer", "required": true, "description": "工序顺序" },
+        { "name": "processCode", "type": "String", "required": true, "description": "工序编码" },
+        { "name": "processName", "type": "String", "required": true, "description": "工序名称" },
+        { "name": "processType", "type": "Integer", "required": true, "description": "1=组装，2=检测，3=包装，4=返修" },
+        { "name": "stationCode", "type": "String", "required": false, "description": "默认工位编码" },
+        { "name": "stationName", "type": "String", "required": false, "description": "默认工位名称" },
+        { "name": "standardHours", "type": "BigDecimal", "required": false, "description": "标准工时" },
+        { "name": "qualityGate", "type": "Integer", "required": true, "description": "0=否，1=是" },
+        { "name": "inspectionType", "type": "String", "required": false, "description": "process/final/AOI/ICT/FCT/recheck" },
+        { "name": "inspectionConfig", "type": "String", "required": false, "description": "检验配置JSON字符串" },
+        { "name": "sopFile", "type": "String", "required": false, "description": "作业指导书路径" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=停用，1=启用" }
+      ]
+    },
+    {
+      "name": "productionOrder",
+      "title": "生产工单",
+      "table": "production_order",
+      "path": "/api/productionOrder",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "orderNo", "type": "String", "required": true, "description": "生产工单编号" },
+        { "name": "productModelId", "type": "Long", "required": true, "description": "产品型号ID" },
+        { "name": "bomVersion", "type": "String", "required": true, "description": "绑定BOM版本" },
+        { "name": "routeVersion", "type": "String", "required": true, "description": "绑定工艺路线版本" },
+        { "name": "batchNo", "type": "String", "required": false, "description": "生产批次号" },
+        { "name": "quantity", "type": "Integer", "required": true, "description": "工单数量" },
+        { "name": "plannedStartTime", "type": "LocalDateTime", "required": false, "description": "计划开始时间" },
+        { "name": "plannedEndTime", "type": "LocalDateTime", "required": false, "description": "计划结束时间" },
+        { "name": "deliveryDate", "type": "LocalDate", "required": false, "description": "交付日期" },
+        { "name": "lineName", "type": "String", "required": false, "description": "计划产线/班组" },
+        { "name": "source", "type": "String", "required": false, "description": "ERP/manual" },
+        { "name": "priority", "type": "Integer", "required": true, "description": "0=普通，1=加急" },
+        { "name": "plannerId", "type": "Long", "required": false, "description": "计划/派工负责人ID" },
+        { "name": "materialReadyStatus", "type": "Integer", "required": true, "description": "0=未齐套，1=齐套" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=待配置，1=已接受，2=生产中，3=待终检，4=完成，5=关闭" },
+        { "name": "createTime", "type": "LocalDateTime", "required": false, "description": "创建时间" },
+        { "name": "updateTime", "type": "LocalDateTime", "required": false, "description": "更新时间" }
+      ]
+    },
+    {
+      "name": "productionTask",
+      "title": "生产任务",
+      "table": "production_task",
+      "path": "/api/productionTask",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "taskNo", "type": "String", "required": true, "description": "任务单号" },
+        { "name": "orderId", "type": "Long", "required": true, "description": "生产工单ID" },
+        { "name": "processRouteId", "type": "Long", "required": true, "description": "工艺路线步骤ID" },
+        { "name": "sequenceNo", "type": "Integer", "required": true, "description": "工序顺序" },
+        { "name": "stationCode", "type": "String", "required": false, "description": "实际执行工位" },
+        { "name": "assignedUserId", "type": "Long", "required": false, "description": "指派操作员/班组长ID" },
+        { "name": "plannedQuantity", "type": "Integer", "required": true, "description": "计划数量" },
+        { "name": "completedQuantity", "type": "Integer", "required": true, "description": "已完工数量" },
+        { "name": "defectQuantity", "type": "Integer", "required": true, "description": "不良数量" },
+        { "name": "abnormalType", "type": "Integer", "required": false, "description": "1=缺料，2=设备，3=质量，4=其他" },
+        { "name": "abnormalDesc", "type": "String", "required": false, "description": "异常描述" },
+        { "name": "abnormalSolution", "type": "String", "required": false, "description": "异常处理措施" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=待开工，1=生产中，2=暂停，3=已完工，4=待质检，5=异常" },
+        { "name": "startTime", "type": "LocalDateTime", "required": false, "description": "实际开始时间" },
+        { "name": "finishTime", "type": "LocalDateTime", "required": false, "description": "实际完成时间" },
+        { "name": "remark", "type": "String", "required": false, "description": "备注" }
+      ]
+    },
+    {
+      "name": "workReport",
+      "title": "报工记录",
+      "table": "work_report",
+      "path": "/api/workReport",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "reportNo", "type": "String", "required": true, "description": "报工单号" },
+        { "name": "taskId", "type": "Long", "required": true, "description": "生产任务ID" },
+        { "name": "orderId", "type": "Long", "required": true, "description": "生产工单ID" },
+        { "name": "productSn", "type": "String", "required": false, "description": "产品条码/SN" },
+        { "name": "operatorId", "type": "Long", "required": true, "description": "操作员ID" },
+        { "name": "stationCode", "type": "String", "required": false, "description": "报工工位" },
+        { "name": "reportQuantity", "type": "Integer", "required": true, "description": "报工数量" },
+        { "name": "qualifiedQuantity", "type": "Integer", "required": true, "description": "合格数量" },
+        { "name": "defectQuantity", "type": "Integer", "required": true, "description": "不良数量" },
+        { "name": "actualHours", "type": "BigDecimal", "required": false, "description": "实际工时" },
+        { "name": "defectReason", "type": "String", "required": false, "description": "不良原因" },
+        { "name": "reportTime", "type": "LocalDateTime", "required": true, "description": "报工时间" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=撤销，1=有效，2=待审核" }
+      ]
+    },
+    {
+      "name": "inspectionRecord",
+      "title": "检验记录",
+      "table": "inspection_record",
+      "path": "/api/inspectionRecord",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "inspectionNo", "type": "String", "required": true, "description": "检验单号" },
+        { "name": "inspectionType", "type": "String", "required": true, "description": "process/final/recheck/AOI/ICT/FCT" },
+        { "name": "taskId", "type": "Long", "required": false, "description": "生产任务ID" },
+        { "name": "orderId", "type": "Long", "required": true, "description": "生产工单ID" },
+        { "name": "productSn", "type": "String", "required": false, "description": "产品条码/SN" },
+        { "name": "processRouteId", "type": "Long", "required": false, "description": "工艺路线步骤ID" },
+        { "name": "standardSnapshot", "type": "String", "required": false, "description": "检验标准快照JSON字符串" },
+        { "name": "inspectorId", "type": "Long", "required": false, "description": "检验员ID" },
+        { "name": "sourceType", "type": "String", "required": true, "description": "manual/equipment" },
+        { "name": "equipmentNo", "type": "String", "required": false, "description": "检测设备编号" },
+        { "name": "inspectionTime", "type": "LocalDateTime", "required": true, "description": "检验时间" },
+        { "name": "result", "type": "Integer", "required": true, "description": "0=不合格，1=合格，2=让步接收，3=报废" },
+        { "name": "measuredData", "type": "String", "required": false, "description": "实测数据或设备报告JSON字符串" },
+        { "name": "defectReason", "type": "String", "required": false, "description": "不合格原因" },
+        { "name": "handlingMethod", "type": "Integer", "required": false, "description": "1=返修，2=报废，3=让步接收" },
+        { "name": "approvalStatus", "type": "Integer", "required": true, "description": "0=无需/待审，1=通过，2=驳回" },
+        { "name": "remark", "type": "String", "required": false, "description": "备注" }
+      ]
+    },
+    {
+      "name": "reworkOrder",
+      "title": "返修工单",
+      "table": "rework_order",
+      "path": "/api/reworkOrder",
+      "fields": [
+        { "name": "id", "type": "Long", "required": false, "description": "主键ID" },
+        { "name": "reworkNo", "type": "String", "required": true, "description": "返修工单号" },
+        { "name": "sourceInspectionId", "type": "Long", "required": true, "description": "来源检验记录ID" },
+        { "name": "orderId", "type": "Long", "required": true, "description": "原生产工单ID" },
+        { "name": "taskId", "type": "Long", "required": false, "description": "来源任务ID" },
+        { "name": "productSn", "type": "String", "required": false, "description": "产品条码/SN" },
+        { "name": "defectReason", "type": "String", "required": false, "description": "不合格原因" },
+        { "name": "reworkRequirement", "type": "String", "required": false, "description": "返修要求" },
+        { "name": "assigneeId", "type": "Long", "required": false, "description": "维修责任人ID" },
+        { "name": "deadline", "type": "LocalDateTime", "required": false, "description": "返修截止时间" },
+        { "name": "status", "type": "Integer", "required": true, "description": "0=待分发，1=返修中，2=待复检，3=完成，4=关闭" },
+        { "name": "repairAction", "type": "String", "required": false, "description": "维修措施" },
+        { "name": "replacedMaterial", "type": "String", "required": false, "description": "更换物料摘要" },
+        { "name": "repairHours", "type": "BigDecimal", "required": false, "description": "维修工时" },
+        { "name": "repairResult", "type": "String", "required": false, "description": "维修结果" },
+        { "name": "repairTime", "type": "LocalDateTime", "required": false, "description": "维修完成时间" },
+        { "name": "recheckInspectionId", "type": "Long", "required": false, "description": "复检记录ID" },
+        { "name": "createTime", "type": "LocalDateTime", "required": false, "description": "创建时间" }
+      ]
+    }
+  ]
+}

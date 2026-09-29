@@ -1,0 +1,149 @@
+<view class="container">
+  <view class="search-box">
+    <input
+      class="input"
+      placeholder="请输入产品 SN"
+      value="{{snCode}}"
+      confirm-type="search"
+      cursor-spacing="16"
+      bindinput="onSnInput"
+      bindconfirm="searchTrace"
+    />
+    <view class="search-actions">
+      <button class="scan-btn" bindtap="scanCode">扫码</button>
+      <button class="search-btn" bindtap="searchTrace">查询</button>
+    </view>
+  </view>
+
+  <view class="mode-switch">
+    <button class="mode-btn {{traceMode === 'timeline' ? 'active' : ''}}" bindtap="switchMode" data-mode="timeline">时间线</button>
+    <button class="mode-btn {{traceMode === 'group' ? 'active' : ''}}" bindtap="switchMode" data-mode="group">分组</button>
+  </view>
+
+  <view class="timeline" wx:if="{{traceMode === 'timeline' && traceList.length > 0}}">
+    <block wx:for="{{traceList}}" wx:key="key">
+      <view class="timeline-item" bindtap="showDetail" data-item="{{item}}">
+        <view class="timeline-left">
+          <view class="dot {{item.isActive ? 'dot-active' : ''}}"></view>
+          <view class="line" wx:if="{{index !== traceList.length - 1}}"></view>
+        </view>
+        <view class="timeline-content">
+          <view class="time">{{item.time}}</view>
+          <view class="title">{{item.nodeName}}</view>
+          <view class="desc">
+            <text class="operator">{{item.operator}}</text>
+            <text class="result">{{item.result}}</text>
+          </view>
+          <view class="arrow">›</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="groups" wx:if="{{traceMode === 'group' && traceGroups.length > 0}}">
+    <block wx:for="{{traceGroups}}" wx:key="title">
+      <view class="group-card">
+        <view class="group-header">
+          <text class="group-title">{{item.title}}</text>
+          <text class="group-count">{{item.items.length}}条</text>
+        </view>
+        <view class="group-list">
+          <view class="group-item" wx:for="{{item.items}}" wx:key="key" wx:for-item="record" bindtap="showDetail" data-item="{{record}}">
+            <view class="item-header">
+              <text class="item-id">{{record.id || record.nodeName}}</text>
+              <text class="item-arrow">›</text>
+            </view>
+            <view class="item-desc">{{record.operator}}</view>
+            <view class="item-result">{{record.result}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="empty" wx:if="{{(traceMode === 'timeline' && traceList.length === 0) || (traceMode === 'group' && traceGroups.length === 0)}}">
+    <view class="empty-icon">SN</view>
+    <text class="empty-title">暂无追溯记录</text>
+    <text class="empty-desc">请扫描产品条码或输入 SN 查询生产与质量记录</text>
+    <button class="empty-btn" bindtap="scanCode">扫码查询</button>
+  </view>
+
+  <view class="modal-mask" wx:if="{{showModal}}" bindtap="closeModal"></view>
+  <view class="modal-container" wx:if="{{showModal}}">
+    <view class="modal-content" catchtap="stopPropagation">
+      <view class="modal-header">
+        <text class="modal-title">{{modalData.nodeName}}</text>
+        <view class="modal-close" bindtap="closeModal">✕</view>
+      </view>
+      <view class="modal-body">
+        <view class="detail-row">
+          <text class="detail-label">时间</text>
+          <text class="detail-value">{{modalData.time}}</text>
+        </view>
+        <view class="detail-row">
+          <text class="detail-label">操作人员</text>
+          <text class="detail-value">{{modalData.operator}}</text>
+        </view>
+        <view class="detail-row">
+          <text class="detail-label">结果</text>
+          <text class="detail-value">{{modalData.result}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.orderNo}}">
+          <text class="detail-label">工单编号</text>
+          <text class="detail-value">{{modalData.orderNo}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.taskNo}}">
+          <text class="detail-label">任务编号</text>
+          <text class="detail-value">{{modalData.taskNo}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.reportNo}}">
+          <text class="detail-label">报工编号</text>
+          <text class="detail-value">{{modalData.reportNo}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.inspectionNo}}">
+          <text class="detail-label">检验编号</text>
+          <text class="detail-value">{{modalData.inspectionNo}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.reworkNo}}">
+          <text class="detail-label">返修编号</text>
+          <text class="detail-value">{{modalData.reworkNo}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.stationCode}}">
+          <text class="detail-label">工位</text>
+          <text class="detail-value">{{modalData.stationCode}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.qualifiedQuantity}}">
+          <text class="detail-label">合格数量</text>
+          <text class="detail-value">{{modalData.qualifiedQuantity}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.defectQuantity}}">
+          <text class="detail-label">不良数量</text>
+          <text class="detail-value">{{modalData.defectQuantity}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.defectReason}}">
+          <text class="detail-label">不良原因</text>
+          <text class="detail-value">{{modalData.defectReason}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.repairAction}}">
+          <text class="detail-label">维修措施</text>
+          <text class="detail-value">{{modalData.repairAction}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.repairResult}}">
+          <text class="detail-label">维修结果</text>
+          <text class="detail-value">{{modalData.repairResult}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.handlingMethod}}">
+          <text class="detail-label">处置方式</text>
+          <text class="detail-value">{{modalData.handlingMethod}}</text>
+        </view>
+        <view class="detail-row" wx:if="{{modalData.status}}">
+          <text class="detail-label">状态</text>
+          <text class="detail-value">{{modalData.status}}</text>
+        </view>
+      </view>
+      <view class="modal-footer">
+        <button class="modal-btn" bindtap="closeModal">关闭</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+# 教材及本机专用入口
+/中文教材电子版..pdf
+*.lnk
+
+# 账号凭据和本机配置
+/2/实验2成果/TestLink本机账号.txt
+**/.env
+**/.env.local
+**/.env.*.local
+**/*.secret
+**/*.secrets
+**/credentials.json
+**/credentials.yaml
+**/credentials.yml
+**/secrets.json
+**/secrets.yaml
+**/secrets.yml
+**/application-local.yml
+**/application-local.yaml
+**/*.pem
+**/*.key
+
+# 个人/代理交接记录，不属于小组作业成果
+/Agent改动记录.md
+/CODEX交接总结.md
+/TRAE工作记录.md
+/3/TRAE工作记录.md
+/AGENTS.md
+/AGENTS-全文更新稿.md
+/项目Git上传方案.md
+/.local-git-backups/
+
+# 依赖、构建产物和运行数据
+**/node_modules/
+**/target/
+**/dist/
+**/build/
+**/release/
+**/logs/
+**/*.log
+**/*.sql.gz
+**/*.dump
+
+# IDE、自动化工具和临时产物
+**/.idea/
+**/.vscode/
+**/.run/
+**/.playwright-cli/
+**/.codex-artifacts/
+**/Thumbs.db
+**/.DS_Store
+**/*.swp

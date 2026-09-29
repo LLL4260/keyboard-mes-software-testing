@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/trace/trace",
+    "pages/dashboard/dashboard",
+    "pages/analysis/analysis",
+    "pages/operation/operation"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "定制键盘 MES",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F4F6F8",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#7B8493",
+    "selectedColor": "#1769E0",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/dashboard/dashboard",
+        "text": "实时看板",
+        "iconPath": "images/dashboard.png",
+        "selectedIconPath": "images/dashboard-active.png"
+      },
+      {
+        "pagePath": "pages/analysis/analysis",
+        "text": "生产分析",
+        "iconPath": "images/analysis.png",
+        "selectedIconPath": "images/analysis-active.png"
+      },
+      {
+        "pagePath": "pages/trace/trace",
+        "text": "产品追溯",
+        "iconPath": "images/trace.png",
+        "selectedIconPath": "images/trace-active.png"
+      },
+      {
+        "pagePath": "pages/operation/operation",
+        "text": "现场处理",
+        "iconPath": "images/operation.png",
+        "selectedIconPath": "images/operation-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

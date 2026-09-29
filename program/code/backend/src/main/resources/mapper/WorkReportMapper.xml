@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.keyboard.mes.repository.WorkReportMapper">
+    <resultMap id="WorkReportMap" type="WorkReport">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="report_no" jdbcType="VARCHAR" property="reportNo"/>
+        <result column="task_id" jdbcType="BIGINT" property="taskId"/>
+        <result column="order_id" jdbcType="BIGINT" property="orderId"/>
+        <result column="product_sn" jdbcType="VARCHAR" property="productSn"/>
+        <result column="operator_id" jdbcType="BIGINT" property="operatorId"/>
+        <result column="station_code" jdbcType="VARCHAR" property="stationCode"/>
+        <result column="report_quantity" jdbcType="INTEGER" property="reportQuantity"/>
+        <result column="qualified_quantity" jdbcType="INTEGER" property="qualifiedQuantity"/>
+        <result column="defect_quantity" jdbcType="INTEGER" property="defectQuantity"/>
+        <result column="actual_hours" jdbcType="DECIMAL" property="actualHours"/>
+        <result column="defect_reason" jdbcType="VARCHAR" property="defectReason"/>
+        <result column="report_time" jdbcType="TIMESTAMP" property="reportTime"/>
+        <result column="status" jdbcType="TINYINT" property="status"/>
+    </resultMap>
+
+    <select id="getById" resultMap="WorkReportMap">
+        select `id`, `report_no`, `task_id`, `order_id`, `product_sn`, `operator_id`, `station_code`, `report_quantity`, `qualified_quantity`, `defect_quantity`, `actual_hours`, `defect_reason`, `report_time`, `status` from `work_report` where `id` = #{id}
+    </select>
+
+    <select id="workReportList" resultMap="WorkReportMap">
+        select `id`, `report_no`, `task_id`, `order_id`, `product_sn`, `operator_id`, `station_code`, `report_quantity`, `qualified_quantity`, `defect_quantity`, `actual_hours`, `defect_reason`, `report_time`, `status` from `work_report`
+    </select>
+
+    <select id="findByProductSn" resultMap="WorkReportMap">
+        select `id`, `report_no`, `task_id`, `order_id`, `product_sn`, `operator_id`, `station_code`, `report_quantity`, `qualified_quantity`, `defect_quantity`, `actual_hours`, `defect_reason`, `report_time`, `status` from `work_report` where `product_sn` = #{productSn}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into `work_report`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="reportNo != null and reportNo != ''">
+                `report_no`,
+            </if>
+            <if test="taskId != null">
+                `task_id`,
+            </if>
+            <if test="orderId != null">
+                `order_id`,
+            </if>
+            <if test="productSn != null and productSn != ''">
+                `product_sn`,
+            </if>
+            <if test="operatorId != null">
+                `operator_id`,
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                `station_code`,
+            </if>
+            <if test="reportQuantity != null">
+                `report_quantity`,
+            </if>
+            <if test="qualifiedQuantity != null">
+                `qualified_quantity`,
+            </if>
+            <if test="defectQuantity != null">
+                `defect_quantity`,
+            </if>
+            <if test="actualHours != null">
+                `actual_hours`,
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                `defect_reason`,
+            </if>
+            <if test="reportTime != null">
+                `report_time`,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="reportNo != null and reportNo != ''">
+                #{reportNo},
+            </if>
+            <if test="taskId != null">
+                #{taskId},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="productSn != null and productSn != ''">
+                #{productSn},
+            </if>
+            <if test="operatorId != null">
+                #{operatorId},
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                #{stationCode},
+            </if>
+            <if test="reportQuantity != null">
+                #{reportQuantity},
+            </if>
+            <if test="qualifiedQuantity != null">
+                #{qualifiedQuantity},
+            </if>
+            <if test="defectQuantity != null">
+                #{defectQuantity},
+            </if>
+            <if test="actualHours != null">
+                #{actualHours},
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                #{defectReason},
+            </if>
+            <if test="reportTime != null">
+                #{reportTime},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update">
+        update `work_report`
+        <set>
+            <if test="reportNo != null and reportNo != ''">
+                `report_no` = #{reportNo},
+            </if>
+            <if test="taskId != null">
+                `task_id` = #{taskId},
+            </if>
+            <if test="orderId != null">
+                `order_id` = #{orderId},
+            </if>
+            <if test="productSn != null and productSn != ''">
+                `product_sn` = #{productSn},
+            </if>
+            <if test="operatorId != null">
+                `operator_id` = #{operatorId},
+            </if>
+            <if test="stationCode != null and stationCode != ''">
+                `station_code` = #{stationCode},
+            </if>
+            <if test="reportQuantity != null">
+                `report_quantity` = #{reportQuantity},
+            </if>
+            <if test="qualifiedQuantity != null">
+                `qualified_quantity` = #{qualifiedQuantity},
+            </if>
+            <if test="defectQuantity != null">
+                `defect_quantity` = #{defectQuantity},
+            </if>
+            <if test="actualHours != null">
+                `actual_hours` = #{actualHours},
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                `defect_reason` = #{defectReason},
+            </if>
+            <if test="reportTime != null">
+                `report_time` = #{reportTime},
+            </if>
+            <if test="status != null">
+                `status` = #{status},
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from `work_report` where `id` = #{id}
+    </delete>
+</mapper>

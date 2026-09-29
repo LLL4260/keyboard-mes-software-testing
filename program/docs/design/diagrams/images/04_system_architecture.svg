@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .title{font:700 34px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .sub{font:18px "Microsoft YaHei",Arial,sans-serif;fill:#475569}
+      .layer-title{font:700 22px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .head{font:700 18px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .txt{font:15px "Microsoft YaHei",Arial,sans-serif;fill:#334155}
+      .small{font:13px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}
+      .layer{stroke:#94a3b8;stroke-width:1.4;fill:#f8fafc}
+      .box{fill:#ffffff;stroke:#334155;stroke-width:1.15}
+      .line{stroke:#334155;stroke-width:2.1;fill:none;marker-end:url(#arrow)}
+      .soft{stroke:#64748b;stroke-width:1.7;fill:none;marker-end:url(#arrow-soft)}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#334155"/>
+    </marker>
+    <marker id="arrow-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <text x="52" y="62" class="title">Keyboard MES 当前系统架构图</text>
+  <text x="52" y="94" class="sub">按运行链路分层展示：客户端 → API → 权限边界 → 业务服务 → 数据访问 → 基础设施</text>
+
+  <rect x="70" y="138" width="1460" height="92" rx="16" class="layer" fill="#eef2ff"/>
+  <text x="104" y="176" class="layer-title">客户端</text>
+  <rect x="310" y="156" width="320" height="56" rx="10" class="box"/>
+  <text x="332" y="179" class="head">Vue Web Console</text><text x="332" y="201" class="small">Vue 3 + Vue Router + Vite</text>
+  <rect x="790" y="156" width="320" height="56" rx="10" class="box"/>
+  <text x="812" y="179" class="head">WeChat Mini Program</text><text x="812" y="201" class="small">现场轻量端</text>
+
+  <rect x="70" y="278" width="1460" height="116" rx="16" class="layer" fill="#e0f2fe"/>
+  <text x="104" y="321" class="layer-title">HTTP API</text>
+  <rect x="310" y="300" width="244" height="72" rx="10" class="box"/>
+  <text x="332" y="328" class="head">AuthController</text><text x="332" y="351" class="small">/api/auth</text>
+  <rect x="590" y="300" width="244" height="72" rx="10" class="box"/>
+  <text x="612" y="328" class="head">Resource Controllers</text><text x="612" y="351" class="small">主数据与生产资源</text>
+  <rect x="870" y="300" width="244" height="72" rx="10" class="box"/>
+  <text x="892" y="328" class="head">Workflow Controllers</text><text x="892" y="351" class="small">任务、报工、检验、返修</text>
+  <rect x="1150" y="300" width="244" height="72" rx="10" class="box"/>
+  <text x="1172" y="328" class="head">Trace / Report</text><text x="1172" y="351" class="small">追溯与统计</text>
+
+  <rect x="70" y="442" width="1460" height="104" rx="16" class="layer" fill="#fef3c7"/>
+  <text x="104" y="484" class="layer-title">权限边界</text>
+  <rect x="310" y="464" width="314" height="60" rx="10" class="box"/>
+  <text x="332" y="489" class="head">AuthInterceptor</text><text x="332" y="511" class="small">登录状态、角色、资源动作控制</text>
+  <rect x="790" y="464" width="314" height="60" rx="10" class="box"/>
+  <text x="812" y="489" class="head">MesShiroRealm</text><text x="812" y="511" class="small">账号密码认证</text>
+
+  <rect x="70" y="594" width="1460" height="116" rx="16" class="layer" fill="#ecfdf5"/>
+  <text x="104" y="637" class="layer-title">业务服务</text>
+  <rect x="310" y="616" width="244" height="72" rx="10" class="box"/>
+  <text x="332" y="644" class="head">Master Data</text><text x="332" y="667" class="small">产品、物料、BOM、工艺</text>
+  <rect x="590" y="616" width="244" height="72" rx="10" class="box"/>
+  <text x="612" y="644" class="head">Production</text><text x="612" y="667" class="small">工单、任务、报工联动</text>
+  <rect x="870" y="616" width="244" height="72" rx="10" class="box"/>
+  <text x="892" y="644" class="head">Quality</text><text x="892" y="667" class="small">检验、返修、复检</text>
+  <rect x="1150" y="616" width="244" height="72" rx="10" class="box"/>
+  <text x="1172" y="644" class="head">Trace / Report</text><text x="1172" y="667" class="small">SN 追溯、生产质量分析</text>
+
+  <rect x="70" y="758" width="1460" height="86" rx="16" class="layer" fill="#f8fafc"/>
+  <text x="104" y="810" class="layer-title">数据访问与基础设施</text>
+  <rect x="430" y="775" width="210" height="52" rx="10" class="box"/>
+  <text x="452" y="807" class="head">MyBatis Mapper</text>
+  <rect x="704" y="775" width="210" height="52" rx="10" class="box"/>
+  <text x="738" y="807" class="head">MySQL</text>
+  <rect x="978" y="775" width="210" height="52" rx="10" class="box"/>
+  <text x="1016" y="807" class="head">Redis</text>
+  <rect x="1252" y="775" width="210" height="52" rx="10" class="box"/>
+  <text x="1276" y="807" class="head">SQL / Contract</text>
+
+  <line x1="800" y1="230" x2="800" y2="278" class="line"/>
+  <line x1="800" y1="394" x2="800" y2="442" class="line"/>
+  <line x1="800" y1="546" x2="800" y2="594" class="line"/>
+  <line x1="800" y1="710" x2="800" y2="758" class="line"/>
+  <line x1="914" y1="801" x2="978" y2="801" class="soft"/>
+
+  <rect x="70" y="852" width="1460" height="34" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="92" y="875" class="small">当前前端是 Vite 项目；vendor/vue.global.js 只作为本地依赖文件存在，不作为主要架构入口。</text>
+</svg>

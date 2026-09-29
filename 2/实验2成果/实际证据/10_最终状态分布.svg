@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">Keyboard MES实验2最终测试状态分布</title>
+  <desc id="desc">76项用例中59项通过、0项失败、17项阻塞；功能用例通过率91.7%，质量专项通过率65.0%。</desc>
+  <rect width="1200" height="500" rx="24" fill="#f5f7fb"/>
+  <text x="54" y="62" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="700" fill="#172b4d">实验2最终执行状态</text>
+  <text x="54" y="99" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#596579">TestLink 共执行记录 76 项｜截至 2026-09-23 交接状态</text>
+  <rect x="54" y="132" width="1092" height="68" rx="13" fill="#e4eaf2"/>
+  <rect x="54" y="132" width="848" height="68" rx="13" fill="#27864a"/>
+  <rect x="902" y="132" width="244" height="68" rx="13" fill="#8792a2"/>
+  <text x="78" y="176" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#fff">PASS 59  (77.6%)</text>
+  <text x="935" y="176" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="700" fill="#fff">BLOCKED 17</text>
+  <text x="54" y="238" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#596579">FAIL 0</text>
+  <text x="1138" y="238" text-anchor="end" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#596579">总计 76 项</text>
+  <line x1="54" y1="264" x2="1146" y2="264" stroke="#d7deea" stroke-width="2"/>
+  <text x="54" y="312" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="700" fill="#172b4d">分组通过率</text>
+  <text x="54" y="357" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#35445b">功能测试  33 / 36</text>
+  <rect x="270" y="336" width="590" height="25" rx="12" fill="#e1e7ef"/>
+  <rect x="270" y="336" width="541" height="25" rx="12" fill="#3273b9"/>
+  <text x="890" y="357" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#245d97">91.7%</text>
+  <text x="54" y="414" font-family="Microsoft YaHei, sans-serif" font-size="17" fill="#35445b">质量专项  26 / 40</text>
+  <rect x="270" y="393" width="590" height="25" rx="12" fill="#e1e7ef"/>
+  <rect x="270" y="393" width="384" height="25" rx="12" fill="#7357a6"/>
+  <text x="890" y="414" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#654993">65.0%</text>
+  <text x="54" y="466" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#68758a">17项 BLOCKED 保留条件限制说明；未执行专项不计为通过。</text>
+</svg>

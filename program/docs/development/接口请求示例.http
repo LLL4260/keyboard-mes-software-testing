@@ -1,0 +1,436 @@
+@baseUrl = http://localhost:8088/api
+@id = 1
+@demoOrderId = 0
+@demoAssemblyTaskId = 0
+@demoQcTaskId = 0
+@demoReworkId = 0
+@operatorId = 0
+@inspectorId = 0
+@repairId = 0
+@demoProductSn = SN-DEMO-LIVE-001
+
+### 前置条件
+# 1. CRUD 请求需要先执行登录请求，REST Client / IntelliJ HTTP Client 会保留 Cookie。
+# 2. 如果客户端不保留 Cookie，可在请求头增加：Authorization: 登录返回的 sessionId
+# 3. reset_rich_mock_data.sql 已内置 U001-U007，默认密码均为 123456。
+# 4. 推荐先执行 reset_rich_mock_data.sql；可用于业务动作联调、产品追溯和报表展示。
+# 5. 重复跑业务闭环前，重新执行 reset_rich_mock_data.sql 即可恢复演示数据。
+# 6. 执行列表接口后，将工单 ID、任务 ID、用户 ID、返修 ID 填到上方变量。
+# 7. 先调用“生产工单-生成任务”，再从生产任务列表中取装配任务和质检任务 ID。
+# 8. 提交不合格质检后，从返修工单列表中取 demo_rework_id。
+
+### 健康检查
+GET {{baseUrl}}/health
+
+### API 元信息
+GET {{baseUrl}}/endpoints
+
+### 静态接口契约
+GET http://localhost:8088/api-contract.json
+
+### 登录
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "employeeNo": "U001",
+  "password": "123456"
+}
+
+### 登录-生产计划员
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "employeeNo": "U002",
+  "password": "123456"
+}
+
+### 登录-操作员
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "employeeNo": "U003",
+  "password": "123456"
+}
+
+### 登录-质检员
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "employeeNo": "U005",
+  "password": "123456"
+}
+
+### 登录-返修员
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "employeeNo": "U007",
+  "password": "123456"
+}
+
+### 当前登录用户
+GET {{baseUrl}}/auth/current
+
+### 退出登录
+POST {{baseUrl}}/auth/logout
+
+### 系统用户-列表
+GET {{baseUrl}}/sysUser/list
+
+### 系统用户-新增
+POST {{baseUrl}}/sysUser/add
+Content-Type: application/json
+
+{
+  "employeeNo": "U011",
+  "passwordHash": "123456",
+  "name": "测试计划员",
+  "roleCode": "planner",
+  "roleName": "计划员",
+  "department": "生产部",
+  "position": "计划",
+  "phone": "13800000009",
+  "skillLevel": "L1",
+  "status": 1
+}
+
+### 产品型号-列表
+GET {{baseUrl}}/productModel/list
+
+### 产品型号-新增
+POST {{baseUrl}}/productModel/add
+Content-Type: application/json
+
+{
+  "modelCode": "KB-001",
+  "modelName": "热插拔机械键盘",
+  "category": "机械键盘",
+  "configurationDesc": "87键、RGB、热插拔、蓝牙/2.4G/有线",
+  "firmwareVersion": "v1.0.0",
+  "status": 1,
+  "remark": "课程项目测试数据"
+}
+
+### 产品型号-详情
+GET {{baseUrl}}/productModel/{{id}}
+
+### 产品型号-更新
+PUT {{baseUrl}}/productModel/{{id}}
+Content-Type: application/json
+
+{
+  "modelCode": "KB-001",
+  "modelName": "热插拔机械键盘-更新",
+  "category": "机械键盘",
+  "configurationDesc": "87键、RGB、热插拔",
+  "firmwareVersion": "v1.0.1",
+  "status": 1,
+  "remark": "更新测试"
+}
+
+### 产品型号-删除
+DELETE {{baseUrl}}/productModel/{{id}}
+
+### 物料-列表
+GET {{baseUrl}}/material/list
+
+### 物料-新增
+POST {{baseUrl}}/material/add
+Content-Type: application/json
+
+{
+  "materialCode": "MAT-SWITCH-001",
+  "materialName": "线性轴体",
+  "specification": "45g",
+  "materialType": 1,
+  "unit": "pcs",
+  "supplier": "默认供应商",
+  "barcode": "MAT-SWITCH-001",
+  "status": 1
+}
+
+### 产品BOM-列表
+GET {{baseUrl}}/productBom/list
+
+### 产品BOM-新增
+POST {{baseUrl}}/productBom/add
+Content-Type: application/json
+
+{
+  "productModelId": 1,
+  "bomVersion": "V1.0",
+  "materialId": 1,
+  "quantity": 87,
+  "unit": "pcs",
+  "sequenceNo": 1,
+  "effectiveDate": "2026-07-13",
+  "expireDate": null,
+  "status": 1,
+  "remark": "轴体用量"
+}
+
+### 工艺路线-列表
+GET {{baseUrl}}/processRoute/list
+
+### 工艺路线-新增
+POST {{baseUrl}}/processRoute/add
+Content-Type: application/json
+
+{
+  "productModelId": 1,
+  "routeVersion": "R1.0",
+  "sequenceNo": 10,
+  "processCode": "ASSEMBLY",
+  "processName": "总装",
+  "processType": 1,
+  "stationCode": "ST-01",
+  "stationName": "一号工位",
+  "standardHours": 1.5,
+  "qualityGate": 0,
+  "inspectionType": null,
+  "inspectionConfig": null,
+  "sopFile": null,
+  "status": 1
+}
+
+### 生产工单-列表
+GET {{baseUrl}}/productionOrder/list
+
+### 生产工单-新增
+POST {{baseUrl}}/productionOrder/add
+Content-Type: application/json
+
+{
+  "orderNo": "MO-20260713-001",
+  "productModelId": 1,
+  "bomVersion": "V1.0",
+  "routeVersion": "R1.0",
+  "batchNo": "BATCH-001",
+  "quantity": 100,
+  "plannedStartTime": "2026-07-13T09:00:00",
+  "plannedEndTime": "2026-07-14T18:00:00",
+  "deliveryDate": "2026-07-20",
+  "lineName": "一号线",
+  "source": "manual",
+  "priority": 0,
+  "plannerId": 1,
+  "materialReadyStatus": 0,
+  "status": 0
+}
+
+### 生产工单-生成任务
+POST {{baseUrl}}/productionOrder/{{demoOrderId}}/generateTasks
+
+### 生产任务-列表
+GET {{baseUrl}}/productionTask/list
+
+### 生产任务-开工
+POST {{baseUrl}}/productionTask/{{demoAssemblyTaskId}}/start
+
+### 生产任务-暂停
+POST {{baseUrl}}/productionTask/{{demoAssemblyTaskId}}/pause
+
+### 生产任务-完工
+POST {{baseUrl}}/productionTask/{{demoAssemblyTaskId}}/finish
+
+### 生产任务-新增
+POST {{baseUrl}}/productionTask/add
+Content-Type: application/json
+
+{
+  "taskNo": "TASK-20260713-001",
+  "orderId": 1,
+  "processRouteId": 1,
+  "sequenceNo": 10,
+  "stationCode": "ST-01",
+  "assignedUserId": 1,
+  "plannedQuantity": 100,
+  "completedQuantity": 0,
+  "defectQuantity": 0,
+  "abnormalType": null,
+  "abnormalDesc": null,
+  "abnormalSolution": null,
+  "status": 0,
+  "startTime": null,
+  "finishTime": null,
+  "remark": "测试任务"
+}
+
+### 报工记录-列表
+GET {{baseUrl}}/workReport/list
+
+### 报工记录-新增
+POST {{baseUrl}}/workReport/add
+Content-Type: application/json
+
+{
+  "reportNo": "WR-20260713-001",
+  "taskId": 1,
+  "orderId": 1,
+  "productSn": "SN-001",
+  "operatorId": 1,
+  "stationCode": "ST-01",
+  "reportQuantity": 10,
+  "qualifiedQuantity": 9,
+  "defectQuantity": 1,
+  "actualHours": 1.2,
+  "defectReason": "按键异响",
+  "reportTime": "2026-07-13T10:00:00",
+  "status": 1
+}
+
+### 报工记录-总装报工并更新任务进度
+POST {{baseUrl}}/workReport/submit
+Content-Type: application/json
+
+{
+  "reportNo": "WR-DEMO-ASM-001",
+  "taskId": {{demoAssemblyTaskId}},
+  "orderId": {{demoOrderId}},
+  "productSn": "{{demoProductSn}}",
+  "operatorId": {{operatorId}},
+  "stationCode": "ST-ASM-01",
+  "reportQuantity": 20,
+  "qualifiedQuantity": 20,
+  "defectQuantity": 0,
+  "actualHours": 1.5,
+  "defectReason": null,
+  "status": 1
+}
+
+### 报工记录-检测工位报工并进入待质检
+POST {{baseUrl}}/workReport/submit
+Content-Type: application/json
+
+{
+  "reportNo": "WR-DEMO-QC-001",
+  "taskId": {{demoQcTaskId}},
+  "orderId": {{demoOrderId}},
+  "productSn": "{{demoProductSn}}",
+  "operatorId": {{operatorId}},
+  "stationCode": "ST-QC-01",
+  "reportQuantity": 20,
+  "qualifiedQuantity": 19,
+  "defectQuantity": 1,
+  "actualHours": 1.2,
+  "defectReason": "按键异响",
+  "status": 1
+}
+
+### 检验记录-列表
+GET {{baseUrl}}/inspectionRecord/list
+
+### 检验记录-新增
+POST {{baseUrl}}/inspectionRecord/add
+Content-Type: application/json
+
+{
+  "inspectionNo": "QC-20260713-001",
+  "inspectionType": "process",
+  "taskId": 1,
+  "orderId": 1,
+  "productSn": "SN-001",
+  "processRouteId": 1,
+  "standardSnapshot": "{\"item\":\"按键测试\"}",
+  "inspectorId": 1,
+  "sourceType": "manual",
+  "equipmentNo": null,
+  "inspectionTime": "2026-07-13T11:00:00",
+  "result": 1,
+  "measuredData": "{\"pass\":true}",
+  "defectReason": null,
+  "handlingMethod": null,
+  "approvalStatus": 0,
+  "remark": "过程检"
+}
+
+### 检验记录-提交不合格并生成返修单
+POST {{baseUrl}}/inspectionRecord/submit
+Content-Type: application/json
+
+{
+  "inspectionNo": "QC-20260714-001",
+  "inspectionType": "process",
+  "taskId": {{demoQcTaskId}},
+  "orderId": {{demoOrderId}},
+  "productSn": "{{demoProductSn}}",
+  "processRouteId": null,
+  "standardSnapshot": "{\"item\":\"按键测试\"}",
+  "inspectorId": {{inspectorId}},
+  "sourceType": "manual",
+  "result": 0,
+  "measuredData": "{\"pass\":false}",
+  "defectReason": "按键异响",
+  "handlingMethod": 1,
+  "approvalStatus": 0,
+  "remark": "需返修"
+}
+
+### 返修工单-列表
+GET {{baseUrl}}/reworkOrder/list
+
+### 返修工单-新增
+POST {{baseUrl}}/reworkOrder/add
+Content-Type: application/json
+
+{
+  "reworkNo": "RW-20260713-001",
+  "sourceInspectionId": 1,
+  "orderId": 1,
+  "taskId": 1,
+  "productSn": "SN-001",
+  "defectReason": "按键异响",
+  "reworkRequirement": "更换轴体后复检",
+  "assigneeId": 1,
+  "deadline": "2026-07-14T18:00:00",
+  "status": 0,
+  "repairAction": null,
+  "replacedMaterial": null,
+  "repairHours": null,
+  "repairResult": null,
+  "repairTime": null,
+  "recheckInspectionId": null
+}
+
+### 产品追溯
+GET {{baseUrl}}/trace/SN-DEMO-001
+
+### 生产概览报表
+GET {{baseUrl}}/report/overview
+
+### 质量分析报表
+GET {{baseUrl}}/report/quality
+
+### 返修工单-记录维修结果
+POST {{baseUrl}}/reworkOrder/{{demoReworkId}}/repair
+Content-Type: application/json
+
+{
+  "assigneeId": {{repairId}},
+  "status": 2,
+  "repairAction": "更换异常轴体并复测",
+  "replacedMaterial": "MAT-SWITCH-001 x1",
+  "repairHours": 0.5,
+  "repairResult": "已修复，待复检",
+  "repairTime": "2026-07-14T15:30:00"
+}
+
+### 返修工单-复检通过并关闭返修
+POST {{baseUrl}}/reworkOrder/{{demoReworkId}}/recheck
+Content-Type: application/json
+
+{
+  "inspectionNo": "RQ-20260714-001",
+  "inspectorId": {{inspectorId}},
+  "sourceType": "manual",
+  "inspectionTime": "2026-07-14T16:00:00",
+  "result": 1,
+  "measuredData": "{\"pass\":true}",
+  "approvalStatus": 0,
+  "remark": "返修复检通过"
+}

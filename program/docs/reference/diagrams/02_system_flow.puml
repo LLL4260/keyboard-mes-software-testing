@@ -1,0 +1,66 @@
+@startuml Keyboard_MES_Main_Flow_Current
+top to bottom direction
+
+skinparam defaultFontName Microsoft YaHei
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam ArrowColor #334155
+skinparam activity {
+  BorderColor #334155
+  BackgroundColor #F8FAFC
+  DiamondBackgroundColor #FEF3C7
+  DiamondBorderColor #92400E
+}
+
+title Keyboard Assembly MES - 当前生产业务主流程
+
+start
+
+:用户登录;
+:后端校验账号密码并写入 Redis 会话;
+:按 roleCode 进入对应工作台;
+
+partition "计划与基础资料" {
+  :维护产品型号、物料、BOM、工艺路线;
+  :创建生产工单 production_order;
+  :生成生产任务 production_task;
+}
+
+if (工艺路线可用?) then (是)
+  :按 sequence_no 生成工序任务;
+else (否)
+  :返回业务错误;
+  stop
+endif
+
+partition "生产执行" {
+  :操作员领取任务;
+  :开工 / 暂停 / 完工;
+  :提交报工 work_report;
+  :系统累计完成数和不良数;
+}
+
+if (当前工序需要质检?) then (需要)
+  :进入待质检;
+else (不需要)
+  :任务进入已完成;
+endif
+
+partition "质量与返修" {
+  :检验员提交 inspection_record;
+  if (检验合格?) then (合格)
+    :更新任务和工单状态;
+  else (不合格)
+    :生成 rework_order;
+    :维修员记录返修结果;
+    :提交复检记录;
+  endif
+}
+
+partition "追溯与报表" {
+  :按 productSn 查询工单、任务、报工、检验、返修;
+  :查看生产概览和质量分析;
+}
+
+stop
+@enduml

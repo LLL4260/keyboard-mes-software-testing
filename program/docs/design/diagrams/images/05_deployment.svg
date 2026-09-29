@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .title{font:700 34px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .sub{font:18px "Microsoft YaHei",Arial,sans-serif;fill:#475569}
+      .head{font:700 21px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .txt{font:16px "Microsoft YaHei",Arial,sans-serif;fill:#334155}
+      .small{font:14px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}
+      .node{stroke:#94a3b8;stroke-width:1.4;fill:#f8fafc}
+      .box{fill:#ffffff;stroke:#334155;stroke-width:1.2}
+      .line{stroke:#334155;stroke-width:2.1;fill:none;marker-end:url(#arrow)}
+      .soft{stroke:#64748b;stroke-width:1.7;fill:none;marker-end:url(#arrow-soft)}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#334155"/>
+    </marker>
+    <marker id="arrow-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <text x="52" y="62" class="title">Keyboard MES 当前本地联调部署图</text>
+  <text x="52" y="94" class="sub">浏览器 / 小程序 → 前端开发服务 → Spring Boot 后端 → MySQL / Redis，本地数据库可复用，无需重复新建</text>
+
+  <rect x="70" y="160" width="250" height="330" rx="18" class="node" fill="#eef2ff"/>
+  <text x="100" y="202" class="head">访问端</text>
+  <rect x="100" y="245" width="190" height="76" rx="10" class="box"/>
+  <text x="124" y="276" class="txt">Web Browser</text>
+  <text x="124" y="300" class="small">http://localhost:5173</text>
+  <rect x="100" y="355" width="190" height="76" rx="10" class="box"/>
+  <text x="124" y="386" class="txt">WeChat DevTools</text>
+  <text x="124" y="410" class="small">Mini Program</text>
+
+  <rect x="430" y="160" width="260" height="330" rx="18" class="node" fill="#ecfeff"/>
+  <text x="460" y="202" class="head">前端服务</text>
+  <rect x="460" y="275" width="200" height="96" rx="10" class="box"/>
+  <text x="490" y="308" class="txt">Vite Dev Server</text>
+  <text x="490" y="333" class="small">frontend :5173</text>
+  <text x="490" y="357" class="small">Vue 3 + Router</text>
+
+  <rect x="800" y="160" width="280" height="330" rx="18" class="node" fill="#ecfdf5"/>
+  <text x="830" y="202" class="head">后端服务</text>
+  <rect x="830" y="258" width="220" height="130" rx="10" class="box"/>
+  <text x="860" y="292" class="txt">Spring Boot Backend</text>
+  <text x="860" y="318" class="small">backend :8088</text>
+  <text x="860" y="342" class="small">/api/auth、生产、质量、追溯</text>
+  <text x="860" y="366" class="small">CORS 允许 localhost:5173</text>
+
+  <rect x="1190" y="160" width="340" height="330" rx="18" class="node" fill="#fff7ed"/>
+  <text x="1220" y="202" class="head">本地数据服务</text>
+  <rect x="1220" y="255" width="250" height="78" rx="10" class="box" fill="#fef3c7"/>
+  <text x="1250" y="286" class="txt">MySQL keyboard_mes</text>
+  <text x="1250" y="310" class="small">localhost:3306</text>
+  <rect x="1220" y="365" width="250" height="78" rx="10" class="box"/>
+  <text x="1250" y="396" class="txt">Redis</text>
+  <text x="1250" y="420" class="small">localhost:6379</text>
+
+  <line x1="320" y1="323" x2="430" y2="323" class="line"/>
+  <line x1="690" y1="323" x2="800" y2="323" class="line"/>
+  <line x1="1080" y1="294" x2="1190" y2="294" class="line"/>
+  <line x1="1080" y1="404" x2="1190" y2="404" class="soft"/>
+
+  <rect x="70" y="590" width="1460" height="190" rx="18" class="node" fill="#f8fafc"/>
+  <text x="100" y="632" class="head">项目资料集中位置</text>
+  <rect x="100" y="660" width="390" height="78" rx="10" class="box"/>
+  <text x="130" y="692" class="txt">SQL Scripts</text>
+  <text x="130" y="716" class="small">backend/src/main/resources/sql</text>
+  <rect x="605" y="660" width="390" height="78" rx="10" class="box"/>
+  <text x="635" y="692" class="txt">Contracts &amp; Docs</text>
+  <text x="635" y="716" class="small">api-contract.json / docs/*.md</text>
+  <rect x="1110" y="660" width="390" height="78" rx="10" class="box"/>
+  <text x="1140" y="692" class="txt">PPT Assets</text>
+  <text x="1140" y="716" class="small">docs/ppt/diagrams + docs/ppt/images</text>
+
+  <text x="100" y="828" class="txt">前置步骤：启动 MySQL、Redis，确认 keyboard_mes 数据库和演示数据已存在，然后启动后端与前端开发服务。</text>
+</svg>

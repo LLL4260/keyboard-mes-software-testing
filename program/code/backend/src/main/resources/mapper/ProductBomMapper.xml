@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.keyboard.mes.repository.ProductBomMapper">
+    <resultMap id="ProductBomMap" type="ProductBom">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="product_model_id" jdbcType="BIGINT" property="productModelId"/>
+        <result column="bom_version" jdbcType="VARCHAR" property="bomVersion"/>
+        <result column="material_id" jdbcType="BIGINT" property="materialId"/>
+        <result column="quantity" jdbcType="DECIMAL" property="quantity"/>
+        <result column="unit" jdbcType="VARCHAR" property="unit"/>
+        <result column="sequence_no" jdbcType="INTEGER" property="sequenceNo"/>
+        <result column="effective_date" jdbcType="DATE" property="effectiveDate"/>
+        <result column="expire_date" jdbcType="DATE" property="expireDate"/>
+        <result column="status" jdbcType="TINYINT" property="status"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+
+    <select id="getById" resultMap="ProductBomMap">
+        select `id`, `product_model_id`, `bom_version`, `material_id`, `quantity`, `unit`, `sequence_no`, `effective_date`, `expire_date`, `status`, `remark` from `product_bom` where `id` = #{id}
+    </select>
+
+    <select id="productBomList" resultMap="ProductBomMap">
+        select `id`, `product_model_id`, `bom_version`, `material_id`, `quantity`, `unit`, `sequence_no`, `effective_date`, `expire_date`, `status`, `remark` from `product_bom`
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into `product_bom`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productModelId != null">
+                `product_model_id`,
+            </if>
+            <if test="bomVersion != null and bomVersion != ''">
+                `bom_version`,
+            </if>
+            <if test="materialId != null">
+                `material_id`,
+            </if>
+            <if test="quantity != null">
+                `quantity`,
+            </if>
+            <if test="unit != null and unit != ''">
+                `unit`,
+            </if>
+            <if test="sequenceNo != null">
+                `sequence_no`,
+            </if>
+            <if test="effectiveDate != null">
+                `effective_date`,
+            </if>
+            <if test="expireDate != null">
+                `expire_date`,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+            <if test="remark != null and remark != ''">
+                `remark`,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="productModelId != null">
+                #{productModelId},
+            </if>
+            <if test="bomVersion != null and bomVersion != ''">
+                #{bomVersion},
+            </if>
+            <if test="materialId != null">
+                #{materialId},
+            </if>
+            <if test="quantity != null">
+                #{quantity},
+            </if>
+            <if test="unit != null and unit != ''">
+                #{unit},
+            </if>
+            <if test="sequenceNo != null">
+                #{sequenceNo},
+            </if>
+            <if test="effectiveDate != null">
+                #{effectiveDate},
+            </if>
+            <if test="expireDate != null">
+                #{expireDate},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="remark != null and remark != ''">
+                #{remark},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update">
+        update `product_bom`
+        <set>
+            <if test="productModelId != null">
+                `product_model_id` = #{productModelId},
+            </if>
+            <if test="bomVersion != null and bomVersion != ''">
+                `bom_version` = #{bomVersion},
+            </if>
+            <if test="materialId != null">
+                `material_id` = #{materialId},
+            </if>
+            <if test="quantity != null">
+                `quantity` = #{quantity},
+            </if>
+            <if test="unit != null and unit != ''">
+                `unit` = #{unit},
+            </if>
+            <if test="sequenceNo != null">
+                `sequence_no` = #{sequenceNo},
+            </if>
+            <if test="effectiveDate != null">
+                `effective_date` = #{effectiveDate},
+            </if>
+            <if test="expireDate != null">
+                `expire_date` = #{expireDate},
+            </if>
+            <if test="status != null">
+                `status` = #{status},
+            </if>
+            <if test="remark != null and remark != ''">
+                `remark` = #{remark},
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from `product_bom` where `id` = #{id}
+    </delete>
+</mapper>

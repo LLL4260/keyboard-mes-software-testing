@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.keyboard.mes.repository.ProductionOrderMapper">
+    <resultMap id="ProductionOrderMap" type="ProductionOrder">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="order_no" jdbcType="VARCHAR" property="orderNo"/>
+        <result column="product_model_id" jdbcType="BIGINT" property="productModelId"/>
+        <result column="bom_version" jdbcType="VARCHAR" property="bomVersion"/>
+        <result column="route_version" jdbcType="VARCHAR" property="routeVersion"/>
+        <result column="batch_no" jdbcType="VARCHAR" property="batchNo"/>
+        <result column="quantity" jdbcType="INTEGER" property="quantity"/>
+        <result column="planned_start_time" jdbcType="TIMESTAMP" property="plannedStartTime"/>
+        <result column="planned_end_time" jdbcType="TIMESTAMP" property="plannedEndTime"/>
+        <result column="delivery_date" jdbcType="DATE" property="deliveryDate"/>
+        <result column="line_name" jdbcType="VARCHAR" property="lineName"/>
+        <result column="source" jdbcType="VARCHAR" property="source"/>
+        <result column="priority" jdbcType="TINYINT" property="priority"/>
+        <result column="planner_id" jdbcType="BIGINT" property="plannerId"/>
+        <result column="material_ready_status" jdbcType="TINYINT" property="materialReadyStatus"/>
+        <result column="status" jdbcType="TINYINT" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+
+    <select id="getById" resultMap="ProductionOrderMap">
+        select `id`, `order_no`, `product_model_id`, `bom_version`, `route_version`, `batch_no`, `quantity`, `planned_start_time`, `planned_end_time`, `delivery_date`, `line_name`, `source`, `priority`, `planner_id`, `material_ready_status`, `status`, `create_time`, `update_time` from `production_order` where `id` = #{id}
+    </select>
+
+    <select id="productionOrderList" resultMap="ProductionOrderMap">
+        select `id`, `order_no`, `product_model_id`, `bom_version`, `route_version`, `batch_no`, `quantity`, `planned_start_time`, `planned_end_time`, `delivery_date`, `line_name`, `source`, `priority`, `planner_id`, `material_ready_status`, `status`, `create_time`, `update_time` from `production_order`
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into `production_order`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="orderNo != null and orderNo != ''">
+                `order_no`,
+            </if>
+            <if test="productModelId != null">
+                `product_model_id`,
+            </if>
+            <if test="bomVersion != null and bomVersion != ''">
+                `bom_version`,
+            </if>
+            <if test="routeVersion != null and routeVersion != ''">
+                `route_version`,
+            </if>
+            <if test="batchNo != null and batchNo != ''">
+                `batch_no`,
+            </if>
+            <if test="quantity != null">
+                `quantity`,
+            </if>
+            <if test="plannedStartTime != null">
+                `planned_start_time`,
+            </if>
+            <if test="plannedEndTime != null">
+                `planned_end_time`,
+            </if>
+            <if test="deliveryDate != null">
+                `delivery_date`,
+            </if>
+            <if test="lineName != null and lineName != ''">
+                `line_name`,
+            </if>
+            <if test="source != null and source != ''">
+                `source`,
+            </if>
+            <if test="priority != null">
+                `priority`,
+            </if>
+            <if test="plannerId != null">
+                `planner_id`,
+            </if>
+            <if test="materialReadyStatus != null">
+                `material_ready_status`,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+            <if test="createTime != null">
+                `create_time`,
+            </if>
+            <if test="updateTime != null">
+                `update_time`,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="orderNo != null and orderNo != ''">
+                #{orderNo},
+            </if>
+            <if test="productModelId != null">
+                #{productModelId},
+            </if>
+            <if test="bomVersion != null and bomVersion != ''">
+                #{bomVersion},
+            </if>
+            <if test="routeVersion != null and routeVersion != ''">
+                #{routeVersion},
+            </if>
+            <if test="batchNo != null and batchNo != ''">
+                #{batchNo},
+            </if>
+            <if test="quantity != null">
+                #{quantity},
+            </if>
+            <if test="plannedStartTime != null">
+                #{plannedStartTime},
+            </if>
+            <if test="plannedEndTime != null">
+                #{plannedEndTime},
+            </if>
+            <if test="deliveryDate != null">
+                #{deliveryDate},
+            </if>
+            <if test="lineName != null and lineName != ''">
+                #{lineName},
+            </if>
+            <if test="source != null and source != ''">
+                #{source},
+            </if>
+            <if test="priority != null">
+                #{priority},
+            </if>
+            <if test="plannerId != null">
+                #{plannerId},
+            </if>
+            <if test="materialReadyStatus != null">
+                #{materialReadyStatus},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update">
+        update `production_order`
+        <set>
+            <if test="orderNo != null and orderNo != ''">
+                `order_no` = #{orderNo},
+            </if>
+            <if test="productModelId != null">
+                `product_model_id` = #{productModelId},
+            </if>
+            <if test="bomVersion != null and bomVersion != ''">
+                `bom_version` = #{bomVersion},
+            </if>
+            <if test="routeVersion != null and routeVersion != ''">
+                `route_version` = #{routeVersion},
+            </if>
+            <if test="batchNo != null and batchNo != ''">
+                `batch_no` = #{batchNo},
+            </if>
+            <if test="quantity != null">
+                `quantity` = #{quantity},
+            </if>
+            <if test="plannedStartTime != null">
+                `planned_start_time` = #{plannedStartTime},
+            </if>
+            <if test="plannedEndTime != null">
+                `planned_end_time` = #{plannedEndTime},
+            </if>
+            <if test="deliveryDate != null">
+                `delivery_date` = #{deliveryDate},
+            </if>
+            <if test="lineName != null and lineName != ''">
+                `line_name` = #{lineName},
+            </if>
+            <if test="source != null and source != ''">
+                `source` = #{source},
+            </if>
+            <if test="priority != null">
+                `priority` = #{priority},
+            </if>
+            <if test="plannerId != null">
+                `planner_id` = #{plannerId},
+            </if>
+            <if test="materialReadyStatus != null">
+                `material_ready_status` = #{materialReadyStatus},
+            </if>
+            <if test="status != null">
+                `status` = #{status},
+            </if>
+            <if test="createTime != null">
+                `create_time` = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                `update_time` = #{updateTime},
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from `production_order` where `id` = #{id}
+    </delete>
+</mapper>

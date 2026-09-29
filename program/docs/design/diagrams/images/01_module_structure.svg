@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .title{font:700 34px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .sub{font:18px "Microsoft YaHei",Arial,sans-serif;fill:#475569}
+      .head{font:700 21px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .txt{font:16px "Microsoft YaHei",Arial,sans-serif;fill:#334155}
+      .small{font:14px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}
+      .panel{stroke:#94a3b8;stroke-width:1.4;fill:#f8fafc}
+      .box{fill:#ffffff;stroke:#334155;stroke-width:1.2}
+      .line{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#64748b;stroke-width:1.6;stroke-dasharray:6 6;fill:none}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <text x="52" y="62" class="title">Keyboard MES 当前项目模块结构图</text>
+  <text x="52" y="94" class="sub">按实际代码整理：Vue Web、微信小程序、Spring Boot API、10 张核心业务表、P0 业务动作</text>
+
+  <rect x="52" y="135" width="260" height="560" rx="18" class="panel" fill="#eef2ff"/>
+  <text x="82" y="176" class="head">用户岗位</text>
+  <rect x="82" y="205" width="200" height="62" rx="10" class="box"/>
+  <text x="108" y="232" class="txt">Admin</text><text x="108" y="254" class="small">全部资源</text>
+  <rect x="82" y="286" width="200" height="62" rx="10" class="box"/>
+  <text x="108" y="313" class="txt">Planner</text><text x="108" y="335" class="small">基础资料 / 工单 / 任务</text>
+  <rect x="82" y="367" width="200" height="62" rx="10" class="box"/>
+  <text x="108" y="394" class="txt">Operator</text><text x="108" y="416" class="small">任务执行 / 报工</text>
+  <rect x="82" y="448" width="200" height="62" rx="10" class="box"/>
+  <text x="108" y="475" class="txt">Inspector</text><text x="108" y="497" class="small">检验 / 返修发起</text>
+  <rect x="82" y="529" width="200" height="62" rx="10" class="box"/>
+  <text x="108" y="556" class="txt">Repair</text><text x="108" y="578" class="small">返修处理 / 复检</text>
+
+  <rect x="382" y="135" width="300" height="560" rx="18" class="panel" fill="#ecfeff"/>
+  <text x="414" y="176" class="head">前端入口</text>
+  <rect x="414" y="222" width="236" height="122" rx="12" class="box"/>
+  <text x="438" y="253" class="head">Vue Web Console</text>
+  <text x="438" y="282" class="txt">Vue 3 + Router + Vite</text>
+  <text x="438" y="309" class="small">工作台 / 生产 / 质量 / 追溯</text>
+  <rect x="414" y="400" width="236" height="122" rx="12" class="box"/>
+  <text x="438" y="431" class="head">WeChat Mini Program</text>
+  <text x="438" y="460" class="txt">现场轻量端</text>
+  <text x="438" y="487" class="small">看板 / 报工 / 检验 / 返修</text>
+
+  <rect x="752" y="135" width="470" height="560" rx="18" class="panel" fill="#f8fafc"/>
+  <text x="784" y="176" class="head">后端业务能力</text>
+  <rect x="784" y="214" width="184" height="92" rx="12" class="box" fill="#eff6ff"/>
+  <text x="810" y="245" class="head">登录与权限</text>
+  <text x="810" y="274" class="small">认证、角色、动作边界</text>
+  <rect x="1006" y="214" width="184" height="92" rx="12" class="box" fill="#eff6ff"/>
+  <text x="1032" y="245" class="head">基础资料</text>
+  <text x="1032" y="274" class="small">用户、产品、物料、BOM</text>
+  <rect x="784" y="344" width="184" height="100" rx="12" class="box" fill="#ecfdf5"/>
+  <text x="810" y="376" class="head">生产执行</text>
+  <text x="810" y="405" class="small">工单、任务、报工</text>
+  <rect x="1006" y="344" width="184" height="100" rx="12" class="box" fill="#ecfdf5"/>
+  <text x="1032" y="376" class="head">工艺联动</text>
+  <text x="1032" y="405" class="small">生成任务、刷新状态</text>
+  <rect x="784" y="482" width="184" height="100" rx="12" class="box" fill="#fdf2f8"/>
+  <text x="810" y="514" class="head">质量返修</text>
+  <text x="810" y="543" class="small">检验、返修、复检</text>
+  <rect x="1006" y="482" width="184" height="100" rx="12" class="box" fill="#fefce8"/>
+  <text x="1032" y="514" class="head">追溯报表</text>
+  <text x="1032" y="543" class="small">SN 追溯、质量分析</text>
+
+  <rect x="1292" y="135" width="256" height="560" rx="18" class="panel" fill="#f1f5f9"/>
+  <text x="1322" y="176" class="head">数据与验收</text>
+  <rect x="1322" y="224" width="196" height="72" rx="10" class="box"/>
+  <text x="1348" y="253" class="txt">MySQL</text><text x="1348" y="276" class="small">10 张核心业务表</text>
+  <rect x="1322" y="326" width="196" height="72" rx="10" class="box"/>
+  <text x="1348" y="355" class="txt">Redis</text><text x="1348" y="378" class="small">用户登录状态</text>
+  <rect x="1322" y="428" width="196" height="72" rx="10" class="box"/>
+  <text x="1348" y="457" class="txt">SQL Scripts</text><text x="1348" y="480" class="small">schema / mock / demo</text>
+  <rect x="1322" y="530" width="196" height="72" rx="10" class="box"/>
+  <text x="1348" y="559" class="txt">Tests</text><text x="1348" y="582" class="small">Controller / Service</text>
+
+  <line x1="312" y1="415" x2="382" y2="415" class="line"/>
+  <line x1="682" y1="415" x2="752" y2="415" class="line"/>
+  <line x1="1222" y1="415" x2="1292" y2="415" class="line"/>
+
+  <rect x="52" y="740" width="1496" height="90" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="82" y="777" class="txt">权限边界：前端按岗位展示生产制造相关视图，后端仍按 roleCode、资源、动作做访问控制。</text>
+  <text x="82" y="807" class="small">图中不展示未实现模块：production_plan、dispatch_order、product_barcode、trace_record、独立设备接收服务。</text>
+</svg>

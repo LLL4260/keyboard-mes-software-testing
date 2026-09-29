@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .title{font:700 34px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .sub{font:18px "Microsoft YaHei",Arial,sans-serif;fill:#475569}
+      .area-title{font:700 22px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .table-title{font:700 17px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}
+      .field{font:14px "Microsoft YaHei",Arial,sans-serif;fill:#334155}
+      .small{font:13px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}
+      .panel{stroke:#94a3b8;stroke-width:1.4;fill:#f8fafc}
+      .table{fill:#ffffff;stroke:#334155;stroke-width:1.15}
+      .line{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#64748b;stroke-width:1.6;stroke-dasharray:6 6;fill:none;marker-end:url(#arrow-soft)}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#334155"/>
+    </marker>
+    <marker id="arrow-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <text x="52" y="62" class="title">Keyboard MES 当前核心数据模型图</text>
+  <text x="52" y="94" class="sub">保留 10 张已实现核心表，关系用数据域主链路和摘要表达，避免外键连线交叉</text>
+
+  <rect x="52" y="132" width="286" height="310" rx="18" class="panel" fill="#eef2ff"/>
+  <text x="82" y="174" class="area-title">用户岗位</text>
+  <rect x="82" y="210" width="226" height="172" rx="10" class="table"/>
+  <text x="106" y="242" class="table-title">sys_user</text>
+  <text x="106" y="270" class="field">PK id</text>
+  <text x="106" y="294" class="field">UK employee_no</text>
+  <text x="106" y="318" class="field">role_code / role_name</text>
+  <text x="106" y="342" class="field">department / position</text>
+  <text x="106" y="366" class="field">status</text>
+
+  <rect x="390" y="132" width="470" height="560" rx="18" class="panel" fill="#eff6ff"/>
+  <text x="420" y="174" class="area-title">基础资料</text>
+  <rect x="420" y="210" width="190" height="138" rx="10" class="table"/>
+  <text x="444" y="240" class="table-title">product_model</text>
+  <text x="444" y="268" class="field">PK id</text>
+  <text x="444" y="292" class="field">UK model_code</text>
+  <text x="444" y="316" class="field">firmware_version / status</text>
+  <rect x="640" y="210" width="190" height="138" rx="10" class="table"/>
+  <text x="664" y="240" class="table-title">material</text>
+  <text x="664" y="268" class="field">PK id</text>
+  <text x="664" y="292" class="field">UK material_code</text>
+  <text x="664" y="316" class="field">type / unit / barcode</text>
+  <rect x="420" y="390" width="190" height="156" rx="10" class="table"/>
+  <text x="444" y="420" class="table-title">product_bom</text>
+  <text x="444" y="448" class="field">PK id</text>
+  <text x="444" y="472" class="field">FK product_model_id</text>
+  <text x="444" y="496" class="field">FK material_id</text>
+  <text x="444" y="520" class="field">quantity / sequence_no</text>
+  <rect x="640" y="390" width="190" height="156" rx="10" class="table"/>
+  <text x="664" y="420" class="table-title">process_route</text>
+  <text x="664" y="448" class="field">PK id</text>
+  <text x="664" y="472" class="field">FK product_model_id</text>
+  <text x="664" y="496" class="field">sequence_no</text>
+  <text x="664" y="520" class="field">is_quality_gate</text>
+
+  <rect x="912" y="132" width="326" height="560" rx="18" class="panel" fill="#ecfdf5"/>
+  <text x="942" y="174" class="area-title">生产执行</text>
+  <rect x="942" y="210" width="266" height="128" rx="10" class="table"/>
+  <text x="966" y="240" class="table-title">production_order</text>
+  <text x="966" y="268" class="field">PK id / UK order_no</text>
+  <text x="966" y="292" class="field">FK product_model_id / planner_id</text>
+  <text x="966" y="316" class="field">quantity / status</text>
+  <rect x="942" y="372" width="266" height="138" rx="10" class="table"/>
+  <text x="966" y="402" class="table-title">production_task</text>
+  <text x="966" y="430" class="field">PK id / UK task_no</text>
+  <text x="966" y="454" class="field">FK order_id / process_route_id</text>
+  <text x="966" y="478" class="field">assigned_user_id / status</text>
+  <rect x="942" y="544" width="266" height="118" rx="10" class="table"/>
+  <text x="966" y="574" class="table-title">work_report</text>
+  <text x="966" y="602" class="field">FK task_id / order_id</text>
+  <text x="966" y="626" class="field">operator_id / product_sn</text>
+
+  <rect x="1290" y="132" width="258" height="560" rx="18" class="panel" fill="#fdf2f8"/>
+  <text x="1320" y="174" class="area-title">质量返修</text>
+  <rect x="1320" y="238" width="198" height="152" rx="10" class="table"/>
+  <text x="1344" y="268" class="table-title">inspection_record</text>
+  <text x="1344" y="296" class="field">PK id / UK inspection_no</text>
+  <text x="1344" y="320" class="field">FK task_id / order_id</text>
+  <text x="1344" y="344" class="field">inspector_id / result</text>
+  <text x="1344" y="368" class="field">product_sn</text>
+  <rect x="1320" y="464" width="198" height="152" rx="10" class="table"/>
+  <text x="1344" y="494" class="table-title">rework_order</text>
+  <text x="1344" y="522" class="field">PK id / UK rework_no</text>
+  <text x="1344" y="546" class="field">source_inspection_id</text>
+  <text x="1344" y="570" class="field">task_id / assignee_id</text>
+  <text x="1344" y="594" class="field">repair_result / status</text>
+
+  <line x1="860" y1="410" x2="912" y2="410" class="line"/>
+  <line x1="1238" y1="410" x2="1290" y2="410" class="line"/>
+  <rect x="52" y="730" width="1496" height="112" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="82" y="765" class="table-title">关系摘要</text>
+  <text x="82" y="794" class="small">product_model 关联 BOM、工艺路线、生产工单；production_order 生成生产任务，并关联报工、检验、返修。</text>
+  <text x="82" y="820" class="small">production_task 关联报工、检验、返修；inspection_record 不合格时生成 rework_order；sys_user 作为计划员、操作员、检验员、维修员参与业务。</text>
+</svg>

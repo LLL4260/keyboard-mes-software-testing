@@ -1,0 +1,113 @@
+@startuml Keyboard_MES_Core_ER_Current
+left to right direction
+hide circle
+
+skinparam defaultFontName Microsoft YaHei
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+skinparam ArrowColor #334155
+skinparam entity {
+  BorderColor #334155
+  BackgroundColor #FFFFFF
+}
+skinparam package {
+  BorderColor #94A3B8
+  RoundCorner 10
+}
+
+title Keyboard Assembly MES - 当前核心数据模型图
+
+package "用户岗位" as UserArea #EEF2FF {
+  entity "sys_user\n系统用户" as sys_user {
+    * id : bigint <<PK>>
+    --
+    employee_no : varchar <<UK>>
+    role_code : varchar
+    department : varchar
+    status : tinyint
+  }
+}
+
+package "基础资料" as MasterArea #EFF6FF {
+  entity "product_model\n产品型号" as product_model {
+    * id : bigint <<PK>>
+    model_code : varchar <<UK>>
+    status : tinyint
+  }
+  entity "material\n物料" as material {
+    * id : bigint <<PK>>
+    material_code : varchar <<UK>>
+    material_type : tinyint
+  }
+  entity "product_bom\n产品 BOM" as product_bom {
+    * id : bigint <<PK>>
+    product_model_id : bigint <<FK>>
+    material_id : bigint <<FK>>
+    quantity : decimal
+  }
+  entity "process_route\n工艺路线步骤" as process_route {
+    * id : bigint <<PK>>
+    product_model_id : bigint <<FK>>
+    sequence_no : int
+    is_quality_gate : tinyint
+  }
+}
+
+package "生产执行" as ProductionArea #ECFDF5 {
+  entity "production_order\n生产工单" as production_order {
+    * id : bigint <<PK>>
+    order_no : varchar <<UK>>
+    product_model_id : bigint <<FK>>
+    planner_id : bigint <<FK>>
+    status : tinyint
+  }
+  entity "production_task\n生产任务" as production_task {
+    * id : bigint <<PK>>
+    task_no : varchar <<UK>>
+    order_id : bigint <<FK>>
+    process_route_id : bigint <<FK>>
+    assigned_user_id : bigint <<FK>>
+  }
+  entity "work_report\n报工记录" as work_report {
+    * id : bigint <<PK>>
+    report_no : varchar <<UK>>
+    task_id : bigint <<FK>>
+    operator_id : bigint <<FK>>
+    product_sn : varchar
+  }
+}
+
+package "质量返修" as QualityArea #FDF2F8 {
+  entity "inspection_record\n检验记录" as inspection_record {
+    * id : bigint <<PK>>
+    inspection_no : varchar <<UK>>
+    task_id : bigint <<FK>>
+    inspector_id : bigint <<FK>>
+    result : tinyint
+  }
+  entity "rework_order\n返修工单" as rework_order {
+    * id : bigint <<PK>>
+    rework_no : varchar <<UK>>
+    source_inspection_id : bigint <<FK>>
+    assignee_id : bigint <<FK>>
+    status : tinyint
+  }
+}
+
+UserArea -right-> ProductionArea : 人员分派 / 报工 / 检验
+MasterArea -right-> ProductionArea : 产品、BOM、工艺驱动工单任务
+ProductionArea -right-> QualityArea : 报工后进入检验与返修
+
+note bottom
+  为避免 PPT 图面拥挤，图中不展开每条外键连线。
+  主要关联摘要：
+  product_model -> product_bom / process_route / production_order
+  production_order -> production_task / work_report / inspection_record / rework_order
+  production_task -> work_report / inspection_record / rework_order
+  inspection_record -> rework_order
+  sys_user -> planner / assignee / operator / inspector
+end note
+
+@enduml

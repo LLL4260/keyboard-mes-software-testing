@@ -1,0 +1,34 @@
+<view class="container">
+  <!-- 顶部系统头部 -->
+  <view class="header">
+    <view class="logo">MES</view>
+    <text class="title">定制键盘生产管理系统</text>
+    <text class="subtitle">MES · 智能制造执行系统</text>
+  </view>
+
+  <!-- 登录表单区 -->
+  <view class="form-area">
+    <view class="input-group">
+      <text class="label">员工工号/账号</text>
+      <input class="input" placeholder="请输入工号" value="{{username}}" bindinput="onUsernameInput" />
+    </view>
+
+    <view class="input-group">
+      <text class="label">登录密码</text>
+      <input class="input" type="password" placeholder="请输入密码" value="{{password}}" bindinput="onPasswordInput" />
+    </view>
+
+    <button class="login-btn" loading="{{loading}}" bindtap="handleLogin">登录</button>
+  </view>
+
+  <view class="demo-info">
+    <text class="demo-title">演示账号（密码均为 123456）</text>
+    <view class="demo-list">
+      <text class="demo-item">U001 · 系统管理员</text>
+      <text class="demo-item">U002 · 生产计划员</text>
+      <text class="demo-item">U003 · 装配操作员</text>
+      <text class="demo-item">U005 · 质检员</text>
+      <text class="demo-item">U007 · 返修员</text>
+    </view>
+  </view>
+</view>

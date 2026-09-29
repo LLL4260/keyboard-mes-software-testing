@@ -1,0 +1,72 @@
+<view class="container">
+  <view class="filter-panel">
+    <view class="tab-header">
+      <view class="tab {{currentTab === 'day' ? 'active' : ''}}" bindtap="switchTab" data-tab="day">本日</view>
+      <view class="tab {{currentTab === 'week' ? 'active' : ''}}" bindtap="switchTab" data-tab="week">本周</view>
+      <view class="tab {{currentTab === 'month' ? 'active' : ''}}" bindtap="switchTab" data-tab="month">本月</view>
+    </view>
+    <view class="model-filter">
+      <view>
+        <text class="filter-label">产品范围</text>
+        <text class="filter-hint">全部产品或单一型号</text>
+      </view>
+      <picker range="{{productModels}}" range-key="label" value="{{productModelIndex}}" bindchange="selectProductModel">
+        <view class="model-picker">{{productModelName}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="summary-grid">
+    <view class="summary-item primary"><text class="summary-label">总产量</text><text class="summary-value">{{totalQuantity}}</text><text class="summary-note">{{periodLabel}} · 把</text></view>
+    <view class="summary-item success"><text class="summary-label">合格产量</text><text class="summary-value">{{qualifiedQuantity}}</text><text class="summary-note">合格率 {{qualityRate}}%</text></view>
+    <view class="summary-item danger"><text class="summary-label">不良数量</text><text class="summary-value">{{defectQuantity}}</text><text class="summary-note">{{productModelName}}</text></view>
+  </view>
+
+  <view class="chart-section trend-section">
+    <view class="section-head">
+      <view>
+        <view class="sec-title">{{periodLabel}}产量趋势</view>
+        <view class="chart-desc">{{productModelName}} · {{dateRange}}</view>
+      </view>
+      <view class="total-badge">{{totalQuantity}} 把</view>
+    </view>
+    <view class="trend-chart">
+      <block wx:for="{{trendData}}" wx:key="day">
+        <view class="trend-col">
+          <text class="col-num">{{item.qty}}</text>
+          <view class="col-bar {{item.qty === 0 ? 'empty-bar' : ''}}" style="height: {{item.height}}px;"></view>
+          <text class="col-date">{{item.day}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="chart-section" wx:if="{{!productModelId && productBreakdown.length > 0}}">
+    <view class="sec-title">型号产量构成</view>
+    <view class="chart-desc">当前周期各产品型号的产量及占比</view>
+    <block wx:for="{{productBreakdown}}" wx:key="id">
+      <view class="model-row">
+        <view class="model-meta">
+          <view><text class="model-name">{{item.label}}</text><text class="model-category">{{item.category}}</text></view>
+          <text class="model-qty">{{item.quantity}} 把 · {{item.percent}}%</text>
+        </view>
+        <view class="model-track"><view class="model-fill" style="width: {{item.percent}}%;"></view></view>
+      </view>
+    </block>
+  </view>
+
+  <view class="chart-section">
+    <view class="sec-title">缺陷类型分布</view>
+    <view class="chart-desc">当前产品范围与周期内的不良原因排行</view>
+    <block wx:for="{{defectTypes}}" wx:key="name">
+      <view class="bar-item">
+        <view class="bar-label">{{item.name}} ({{item.count}}件)</view>
+        <view class="bar-track-wrap">
+          <view class="bar-track"><view class="bar-fill {{item.color}}" style="width: {{item.percent}}%;"></view></view>
+          <text class="bar-num">{{item.percent}}%</text>
+        </view>
+      </view>
+    </block>
+    <view class="chart-empty" wx:if="{{defectTypes.length === 0}}">当前范围暂无缺陷记录</view>
+  </view>
+</view>

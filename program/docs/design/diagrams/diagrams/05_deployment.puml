@@ -1,0 +1,65 @@
+@startuml Keyboard_MES_Deployment_Current
+left to right direction
+
+skinparam defaultFontName Microsoft YaHei
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam nodeStyle rectangle
+skinparam linetype ortho
+skinparam ArrowColor #334155
+skinparam rectangle {
+  BorderColor #334155
+  BackgroundColor #FFFFFF
+  RoundCorner 8
+}
+skinparam node {
+  BorderColor #94A3B8
+  BackgroundColor #F8FAFC
+}
+skinparam database {
+  BorderColor #92400E
+  BackgroundColor #FEF3C7
+}
+
+title Keyboard Assembly MES - 当前本地联调部署图
+
+node "访问端" as AccessSide #EEF2FF {
+  rectangle "Web Browser\nhttp://localhost:5173" as Browser
+  rectangle "WeChat DevTools / Mobile\nMini Program" as Mini
+}
+
+node "开发机服务" as DevMachine #ECFDF5 {
+  rectangle "Vite Dev Server\nfrontend :5173" as Vite
+  rectangle "Spring Boot Backend\nbackend :8088" as Backend
+}
+
+node "本地数据服务" as DataSide #FFF7ED {
+  database "MySQL\nkeyboard_mes :3306" as MySQL
+  rectangle "Redis\nSession :6379" as Redis
+}
+
+node "项目资料" as ProjectFiles #F8FAFC {
+  rectangle "SQL Scripts\nschema.sql / reset_rich_mock_data.sql" as SqlScripts
+  rectangle "Contracts & Docs\napi-contract.json / docs/*.md" as Docs
+  rectangle "PPT Assets\ndocs/ppt/diagrams + docs/ppt/images" as PptAssets
+}
+
+Browser -right-> Vite : HTTP 5173
+Vite -right-> Backend : /api 代理或 CORS
+Mini -right-> Backend : wx.request 8088
+Backend -right-> MySQL : JDBC
+Backend -right-> Redis : Session
+SqlScripts -up-> MySQL : 已有库可复用，不重复新建
+
+note bottom of DevMachine
+  backend 默认端口 8088；
+  frontend 默认端口 5173；
+  本地联调前确认 MySQL、Redis 已启动。
+end note
+
+note bottom of ProjectFiles
+  PPT、UML、图片已集中到 docs/ppt。
+  项目资料不再用多条跨图连线表达，避免图面交叉。
+end note
+
+@enduml
