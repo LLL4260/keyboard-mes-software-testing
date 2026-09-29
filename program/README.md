@@ -12,6 +12,7 @@
 - [需求规约](docs/requirements/需求规约.docx)
 - [项目概要设计书](docs/design/项目概要设计书.docx)
 - [项目运行说明](docs/development/项目说明.md)
+- [开发环境工具下载与配置](docs/development/开发环境工具下载.md)
 - [API 接口文档](docs/development/API接口文档.md)
 - [数据库契约](docs/development/数据库契约.md)
 

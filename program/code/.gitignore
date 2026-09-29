@@ -38,6 +38,7 @@ build/
 .vscode/
 
 ### Local tooling / delivery ###
+toolchain/.local/
 .playwright-cli/
 miniprogram/project.private.config.json
 release/
