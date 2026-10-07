@@ -1,0 +1,5 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1791387647205,33,http://127.0.0.1/badboy-lab6.html,200,,Thread Group 1-1,text,true,,1215,310,1,1,http://127.0.0.1:8088/badboy-lab6.html,28,0,16
+1791387647888,5,http://127.0.0.1/api/health,200,,Thread Group 1-1,text,true,,374,304,1,1,http://127.0.0.1:8088/api/health,4,0,0
+1791387648014,4,http://127.0.0.1/api/endpoints,200,,Thread Group 1-1,text,true,,5244,307,1,1,http://127.0.0.1:8088/api/endpoints,4,0,0
+1791387648036,5,http://127.0.0.1/api-contract.json,200,,Thread Group 1-1,text,true,,20399,311,1,1,http://127.0.0.1:8088/api-contract.json,5,0,0

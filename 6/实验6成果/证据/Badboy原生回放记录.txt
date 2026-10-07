@@ -1,0 +1,21 @@
+
+Badboy Command Line Runner Version 2.2.5
+Copyright (C) Badboy Software 2001-2007. All rights reserved.
+
+Loading archive...Loaded.
+
+Launching 1 threads...
+Url=http://127.0.0.1:8088/badboy-lab6.html:status=200:767 bytes
+Url=http://127.0.0.1:8088/api/health:status=200:112 bytes
+Url=http://127.0.0.1:8088/api/endpoints:status=200:815 bytes
+Url=http://127.0.0.1:8088/api-contract.json:status=200:758 bytes
+All threads finished
+
+============== Summary Statistics ======================
+
+Url                                   Response Time 	Responses 	Errors
+----------------------------------------------------------------------------------
+127.0.0.1:8088/api-contract.json (10)    61 		 1 		 0 	
+127.0.0.1:8088/api/endpoints (9)         61 		 1 		 0 	
+127.0.0.1:8088/api/health (8)            59 		 1 		 0 	
+127.0.0.1:8088/badboy-lab6.html (5)      22 		 1 		 0 	
