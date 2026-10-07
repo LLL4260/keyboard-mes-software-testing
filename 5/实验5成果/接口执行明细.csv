@@ -1,0 +1,11 @@
+﻿请求,方法,路径,HTTP状态,响应毫秒,断言数,失败断言数
+01 健康检查,GET,/api/health,200,904,2,0
+02 登录,POST,/api/auth/login,200,1018,2,0
+03 工单列表,GET,/api/productionOrder/list,200,79,2,0
+04 工单详情,GET,/api/productionOrder/1,200,18,2,0
+05 生产任务列表,GET,/api/productionTask/list,200,46,2,0
+06 生产概览,GET,/api/report/overview,200,63,2,0
+07 质量分析,GET,/api/report/quality,200,63,2,0
+08 不存在工单,GET,/api/productionOrder/9223372036854775807,200,9,2,0
+09 退出登录,POST,/api/auth/logout,200,7,2,0
+10 退出后会话失效,GET,/api/auth/current,200,5,2,0
