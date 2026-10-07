@@ -12,7 +12,7 @@
 | [实验3方案](3/实验3方案.md) | 测试范围、实施步骤与验收记录 |
 | [实验4静态分析方案](4/实验4方案.md) | P3C规约修正与复查；FindBugs有限分析，完整检测仍有兼容性限制 |
 | [实验5接口测试](5/README.md) | Postman集合、Newman实测和实验报告 |
-| [实验6性能测试](6/README.md) | JMeter实测及报告；Badboy录制尚未执行 |
+| [实验6性能测试](6/README.md) | JMeter实测及报告；Badboy已安装，录制仍受程序异常阻塞 |
 | [开发环境工具下载](program/docs/development/开发环境工具下载.md) | Maven、JDK 17 官方下载链接、校验和及配置说明 |
 | [项目](program/README.md) | Keyboard MES源码、数据库脚本及需求设计文档 |
 | [整体上机课程安排](课程资料/整体上机课程安排.pptx) | 课程实验要求 |

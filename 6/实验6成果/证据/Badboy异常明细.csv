@@ -1,0 +1,4 @@
+"时间","程序","故障模块","异常代码","程序路径","故障进程"
+"2026-10-07 20:06:06","badboy.exe","mfc90u.dll","c0000005","D:\Badboy\badboy.exe","0x3eb4"
+"2026-10-07 20:04:29","badboy.exe","mfc90u.dll","c000041d","D:\Badboy\badboy.exe","0x6864"
+"2026-10-07 20:04:24","badboy.exe","mfc90u.dll","c0000005","D:\Badboy\badboy.exe","0x6864"
