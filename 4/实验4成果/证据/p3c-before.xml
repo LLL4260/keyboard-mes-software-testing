@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2026-10-07T14:51:49.952">
+<file name="program\code\backend\src\main\java\com\keyboard\mes\KeyboardMesApplication.java">
+<violation beginline="14" endline="19" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes" class="KeyboardMesApplication" priority="3">
+【KeyboardMesApplication】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\config\AuthInterceptor.java">
+<violation beginline="26" endline="158" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.config" class="AuthInterceptor" priority="3">
+【AuthInterceptor】注释缺少@author信息
+</violation>
+<violation beginline="39" endline="39" begincolumn="13" endcolumn="21" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="preHandle" priority="3">
+魔法值【"OPTIONS"】
+</violation>
+<violation beginline="60" endline="60" begincolumn="13" endcolumn="19" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="isAllowed" priority="3">
+魔法值【"admin"】
+</violation>
+<violation beginline="81" endline="81" begincolumn="29" endcolumn="40" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="resolveResource" priority="3">
+魔法值【"/api/trace"】
+</violation>
+<violation beginline="92" endline="92" begincolumn="13" endcolumn="17" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="resolveAction" priority="3">
+魔法值【"GET"】
+</violation>
+<violation beginline="95" endline="95" begincolumn="13" endcolumn="20" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="resolveAction" priority="3">
+魔法值【"DELETE"】
+</violation>
+<violation beginline="98" endline="98" begincolumn="61" endcolumn="69" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="resolveAction" priority="3">
+魔法值【"/update"】
+</violation>
+<violation beginline="98" endline="98" begincolumn="13" endcolumn="17" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="resolveAction" priority="3">
+魔法值【"PUT"】
+</violation>
+<violation beginline="101" endline="101" begincolumn="26" endcolumn="71" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="resolveAction" priority="3">
+魔法值【".*/productionTask/\\d+/(start|pause|finish)$"】
+</violation>
+<violation beginline="104" endline="104" begincolumn="26" endcolumn="64" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="resolveAction" priority="3">
+魔法值【".*/reworkOrder/\\d+/(repair|recheck)$"】
+</violation>
+<violation beginline="107" endline="107" begincolumn="13" endcolumn="18" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="AuthInterceptor" method="resolveAction" priority="3">
+魔法值【"POST"】
+</violation>
+<violation beginline="121" endline="121" begincolumn="68" endcolumn="69" rule="CollectionInitShouldAssignCapacityRule" ruleset="AlibabaJavaSets" package="com.keyboard.mes.config" class="AuthInterceptor" method="buildRoleRules" priority="3">
+【HashMap】初始化时，尽量指定初始值大小
+</violation>
+<violation beginline="141" endline="141" begincolumn="100" endcolumn="101" rule="CollectionInitShouldAssignCapacityRule" ruleset="AlibabaJavaSets" package="com.keyboard.mes.config" class="AuthInterceptor" method="allow" priority="3">
+【HashMap】初始化时，尽量指定初始值大小
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\config\RedisStartupWaiter.java">
+<violation beginline="16" endline="67" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.config" class="RedisStartupWaiter" priority="3">
+【RedisStartupWaiter】注释缺少@author信息
+</violation>
+<violation beginline="49" endline="49" begincolumn="21" endcolumn="26" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.config" class="RedisStartupWaiter" method="run" priority="3">
+魔法值【"PONG"】
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\config\ShiroConfiguration.java">
+<violation beginline="23" endline="87" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.config" class="ShiroConfiguration" priority="3">
+【ShiroConfiguration】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\config\WebConfig.java">
+<violation beginline="15" endline="61" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.config" class="WebConfig" priority="3">
+【WebConfig】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\ApiInfoController.java">
+<violation beginline="21" endline="141" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="ApiInfoController" priority="3">
+【ApiInfoController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\AuthController.java">
+<violation beginline="26" endline="94" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="AuthController" priority="3">
+【AuthController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\InspectionRecordController.java">
+<violation beginline="21" endline="96" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="InspectionRecordController" priority="3">
+【InspectionRecordController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\MaterialController.java">
+<violation beginline="19" endline="81" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="MaterialController" priority="3">
+【MaterialController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\ProcessRouteController.java">
+<violation beginline="19" endline="81" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="ProcessRouteController" priority="3">
+【ProcessRouteController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\ProductBomController.java">
+<violation beginline="19" endline="81" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="ProductBomController" priority="3">
+【ProductBomController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\ProductModelController.java">
+<violation beginline="19" endline="81" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="ProductModelController" priority="3">
+【ProductModelController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\ProductionOrderController.java">
+<violation beginline="19" endline="87" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="ProductionOrderController" priority="3">
+【ProductionOrderController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\ProductionTaskController.java">
+<violation beginline="19" endline="99" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="ProductionTaskController" priority="3">
+【ProductionTaskController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\ReportController.java">
+<violation beginline="18" endline="49" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="ReportController" priority="3">
+【ReportController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\ReworkOrderController.java">
+<violation beginline="20" endline="94" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="ReworkOrderController" priority="3">
+【ReworkOrderController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\SysUserController.java">
+<violation beginline="19" endline="81" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="SysUserController" priority="3">
+【SysUserController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\TraceController.java">
+<violation beginline="17" endline="32" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="TraceController" priority="3">
+【TraceController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\controller\WorkReportController.java">
+<violation beginline="21" endline="96" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.controller" class="WorkReportController" priority="3">
+【WorkReportController】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\dto\LoginRequest.java">
+<violation beginline="8" endline="33" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.dto" class="LoginRequest" priority="3">
+【LoginRequest】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\dto\Result.java">
+<violation beginline="8" endline="63" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.dto" class="Result" priority="3">
+【Result】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\dto\TraceResult.java">
+<violation beginline="17" endline="30" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.dto" class="TraceResult" priority="3">
+【TraceResult】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\InspectionRecord.java">
+<violation beginline="18" endline="89" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="InspectionRecord" priority="3">
+【InspectionRecord】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\Material.java">
+<violation beginline="18" endline="62" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="Material" priority="3">
+【Material】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\ProcessRoute.java">
+<violation beginline="19" endline="84" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="ProcessRoute" priority="3">
+【ProcessRoute】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\ProductBom.java">
+<violation beginline="20" endline="67" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="ProductBom" priority="3">
+【ProductBom】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\ProductModel.java">
+<violation beginline="18" endline="56" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="ProductModel" priority="3">
+【ProductModel】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\ProductionOrder.java">
+<violation beginline="19" endline="92" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="ProductionOrder" priority="3">
+【ProductionOrder】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\ProductionTask.java">
+<violation beginline="18" endline="90" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="ProductionTask" priority="3">
+【ProductionTask】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\ReworkOrder.java">
+<violation beginline="20" endline="86" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="ReworkOrder" priority="3">
+【ReworkOrder】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\SysUser.java">
+<violation beginline="18" endline="68" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="SysUser" priority="3">
+【SysUser】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\entity\WorkReport.java">
+<violation beginline="20" endline="83" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.entity" class="WorkReport" priority="3">
+【WorkReport】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\exception\BusinessException.java">
+<violation beginline="8" endline="24" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.exception" class="BusinessException" priority="3">
+【BusinessException】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\exception\GlobalExceptionHandler.java">
+<violation beginline="23" endline="109" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.exception" class="GlobalExceptionHandler" priority="3">
+【GlobalExceptionHandler】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\InspectionRecordMapper.java">
+<violation beginline="15" endline="28" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="InspectionRecordMapper" priority="3">
+【InspectionRecordMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="54" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="InspectionRecordMapper" method="inspectionRecordList" priority="3">
+接口方法【inspectionRecordList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="33" endcolumn="85" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="InspectionRecordMapper" method="findByProductSn" priority="3">
+接口方法【findByProductSn】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="9" endcolumn="49" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="InspectionRecordMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="22" endcolumn="50" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="InspectionRecordMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="49" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="InspectionRecordMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="27" endline="27" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="InspectionRecordMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\MaterialMapper.java">
+<violation beginline="15" endline="26" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="MaterialMapper" priority="3">
+【MaterialMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="25" endcolumn="38" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="MaterialMapper" method="materialList" priority="3">
+接口方法【materialList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="33" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="MaterialMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="14" endcolumn="42" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="MaterialMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="33" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="MaterialMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="MaterialMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\ProcessRouteMapper.java">
+<violation beginline="15" endline="26" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProcessRouteMapper" priority="3">
+【ProcessRouteMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="29" endcolumn="46" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProcessRouteMapper" method="processRouteList" priority="3">
+接口方法【processRouteList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProcessRouteMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="18" endcolumn="46" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProcessRouteMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProcessRouteMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProcessRouteMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\ProductBomMapper.java">
+<violation beginline="15" endline="26" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductBomMapper" priority="3">
+【ProductBomMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="27" endcolumn="42" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductBomMapper" method="productBomList" priority="3">
+接口方法【productBomList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="37" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductBomMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="16" endcolumn="44" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductBomMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="37" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductBomMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductBomMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\ProductModelMapper.java">
+<violation beginline="15" endline="26" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductModelMapper" priority="3">
+【ProductModelMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="29" endcolumn="46" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductModelMapper" method="productModelList" priority="3">
+接口方法【productModelList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductModelMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="18" endcolumn="46" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductModelMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductModelMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductModelMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\ProductionOrderMapper.java">
+<violation beginline="15" endline="26" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionOrderMapper" priority="3">
+【ProductionOrderMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="32" endcolumn="52" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionOrderMapper" method="productionOrderList" priority="3">
+接口方法【productionOrderList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="47" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionOrderMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="21" endcolumn="49" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionOrderMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="47" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionOrderMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionOrderMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\ProductionTaskMapper.java">
+<violation beginline="15" endline="26" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionTaskMapper" priority="3">
+【ProductionTaskMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="31" endcolumn="50" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionTaskMapper" method="productionTaskList" priority="3">
+接口方法【productionTaskList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="45" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionTaskMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="20" endcolumn="48" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionTaskMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="9" endcolumn="45" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionTaskMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ProductionTaskMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\ReworkOrderMapper.java">
+<violation beginline="15" endline="28" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ReworkOrderMapper" priority="3">
+【ReworkOrderMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="28" endcolumn="44" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ReworkOrderMapper" method="reworkOrderList" priority="3">
+接口方法【reworkOrderList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="28" endcolumn="80" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ReworkOrderMapper" method="findByProductSn" priority="3">
+接口方法【findByProductSn】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="9" endcolumn="39" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ReworkOrderMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="17" endcolumn="45" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ReworkOrderMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="39" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ReworkOrderMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="27" endline="27" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="ReworkOrderMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\SysUserMapper.java">
+<violation beginline="15" endline="28" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="SysUserMapper" priority="3">
+【SysUserMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="24" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="SysUserMapper" method="sysUserList" priority="3">
+接口方法【sysUserList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="9" endcolumn="31" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="SysUserMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="13" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="SysUserMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="13" endcolumn="67" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="SysUserMapper" method="getByEmployeeNo" priority="3">
+接口方法【getByEmployeeNo】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="31" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="SysUserMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="27" endline="27" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="SysUserMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\repository\WorkReportMapper.java">
+<violation beginline="15" endline="28" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="WorkReportMapper" priority="3">
+【WorkReportMapper】注释缺少@author信息
+</violation>
+<violation beginline="17" endline="17" begincolumn="27" endcolumn="42" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="WorkReportMapper" method="workReportList" priority="3">
+接口方法【workReportList】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="27" endcolumn="79" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="WorkReportMapper" method="findByProductSn" priority="3">
+接口方法【findByProductSn】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="9" endcolumn="37" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="WorkReportMapper" method="insert" priority="3">
+接口方法【insert】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="16" endcolumn="44" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="WorkReportMapper" method="getById" priority="3">
+接口方法【getById】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="37" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="WorkReportMapper" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="27" endline="27" begincolumn="9" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.repository" class="WorkReportMapper" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\AuthSessionService.java">
+<violation beginline="26" endline="150" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="AuthSessionService" priority="3">
+【AuthSessionService】注释缺少@author信息
+</violation>
+<violation beginline="109" endline="109" begincolumn="42" endcolumn="50" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.service" class="AuthSessionService" method="resolveSessionId" priority="3">
+魔法值【"Bearer "】
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\InspectionRecordService.java">
+<violation beginline="12" endline="27" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="InspectionRecordService" priority="3">
+【InspectionRecordService】注释缺少@author信息
+</violation>
+<violation beginline="14" endline="14" begincolumn="33" endcolumn="54" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="InspectionRecordService" method="inspectionRecordList" priority="3">
+接口方法【inspectionRecordList】必须使用javadoc注释
+</violation>
+<violation beginline="16" endline="16" begincolumn="31" endcolumn="49" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="InspectionRecordService" method="inspectionOptions" priority="3">
+接口方法【inspectionOptions】必须使用javadoc注释
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="51" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="InspectionRecordService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="20" endline="20" begincolumn="22" endcolumn="53" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="InspectionRecordService" method="getInspectionRecordById" priority="3">
+接口方法【getInspectionRecordById】必须使用javadoc注释
+</violation>
+<violation beginline="22" endline="22" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="InspectionRecordService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="24" endline="24" begincolumn="13" endcolumn="53" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="InspectionRecordService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="26" endline="26" begincolumn="22" endcolumn="62" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="InspectionRecordService" method="submit" priority="3">
+接口方法【submit】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\MaterialService.java">
+<violation beginline="10" endline="21" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="MaterialService" priority="3">
+【MaterialService】注释缺少@author信息
+</violation>
+<violation beginline="12" endline="12" begincolumn="25" endcolumn="38" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="MaterialService" method="materialList" priority="3">
+接口方法【materialList】必须使用javadoc注释
+</violation>
+<violation beginline="14" endline="14" begincolumn="13" endcolumn="35" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="MaterialService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="16" endline="16" begincolumn="14" endcolumn="37" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="MaterialService" method="getMaterialById" priority="3">
+接口方法【getMaterialById】必须使用javadoc注释
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="MaterialService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="20" endline="20" begincolumn="13" endcolumn="37" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="MaterialService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\ProcessRouteService.java">
+<violation beginline="10" endline="21" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProcessRouteService" priority="3">
+【ProcessRouteService】注释缺少@author信息
+</violation>
+<violation beginline="12" endline="12" begincolumn="29" endcolumn="46" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProcessRouteService" method="processRouteList" priority="3">
+接口方法【processRouteList】必须使用javadoc注释
+</violation>
+<violation beginline="14" endline="14" begincolumn="13" endcolumn="43" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProcessRouteService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="16" endline="16" begincolumn="18" endcolumn="45" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProcessRouteService" method="getProcessRouteById" priority="3">
+接口方法【getProcessRouteById】必须使用javadoc注释
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProcessRouteService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="20" endline="20" begincolumn="13" endcolumn="45" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProcessRouteService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\ProductBomService.java">
+<violation beginline="10" endline="21" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductBomService" priority="3">
+【ProductBomService】注释缺少@author信息
+</violation>
+<violation beginline="12" endline="12" begincolumn="27" endcolumn="42" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductBomService" method="productBomList" priority="3">
+接口方法【productBomList】必须使用javadoc注释
+</violation>
+<violation beginline="14" endline="14" begincolumn="13" endcolumn="39" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductBomService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="16" endline="16" begincolumn="16" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductBomService" method="getProductBomById" priority="3">
+接口方法【getProductBomById】必须使用javadoc注释
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductBomService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="20" endline="20" begincolumn="13" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductBomService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\ProductModelService.java">
+<violation beginline="10" endline="21" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductModelService" priority="3">
+【ProductModelService】注释缺少@author信息
+</violation>
+<violation beginline="12" endline="12" begincolumn="29" endcolumn="46" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductModelService" method="productModelList" priority="3">
+接口方法【productModelList】必须使用javadoc注释
+</violation>
+<violation beginline="14" endline="14" begincolumn="13" endcolumn="43" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductModelService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="16" endline="16" begincolumn="18" endcolumn="45" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductModelService" method="getProductModelById" priority="3">
+接口方法【getProductModelById】必须使用javadoc注释
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductModelService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="20" endline="20" begincolumn="13" endcolumn="45" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductModelService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\ProductionOrderService.java">
+<violation beginline="11" endline="24" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionOrderService" priority="3">
+【ProductionOrderService】注释缺少@author信息
+</violation>
+<violation beginline="13" endline="13" begincolumn="32" endcolumn="52" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionOrderService" method="productionOrderList" priority="3">
+接口方法【productionOrderList】必须使用javadoc注释
+</violation>
+<violation beginline="15" endline="15" begincolumn="13" endcolumn="49" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionOrderService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="17" endline="17" begincolumn="21" endcolumn="51" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionOrderService" method="getProductionOrderById" priority="3">
+接口方法【getProductionOrderById】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionOrderService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="13" endcolumn="51" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionOrderService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="31" endcolumn="52" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionOrderService" method="generateTasks" priority="3">
+接口方法【generateTasks】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\ProductionTaskService.java">
+<violation beginline="10" endline="27" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" priority="3">
+【ProductionTaskService】注释缺少@author信息
+</violation>
+<violation beginline="12" endline="12" begincolumn="31" endcolumn="50" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" method="productionTaskList" priority="3">
+接口方法【productionTaskList】必须使用javadoc注释
+</violation>
+<violation beginline="14" endline="14" begincolumn="13" endcolumn="47" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="16" endline="16" begincolumn="20" endcolumn="49" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" method="getProductionTaskById" priority="3">
+接口方法【getProductionTaskById】必须使用javadoc注释
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="20" endline="20" begincolumn="13" endcolumn="49" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="22" endline="22" begincolumn="20" endcolumn="33" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" method="start" priority="3">
+接口方法【start】必须使用javadoc注释
+</violation>
+<violation beginline="24" endline="24" begincolumn="20" endcolumn="33" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" method="pause" priority="3">
+接口方法【pause】必须使用javadoc注释
+</violation>
+<violation beginline="26" endline="26" begincolumn="20" endcolumn="34" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ProductionTaskService" method="finish" priority="3">
+接口方法【finish】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\ReportService.java">
+<violation beginline="8" endline="15" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReportService" priority="3">
+【ReportService】注释缺少@author信息
+</violation>
+<violation beginline="10" endline="10" begincolumn="25" endcolumn="34" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReportService" method="overview" priority="3">
+接口方法【overview】必须使用javadoc注释
+</violation>
+<violation beginline="12" endline="12" begincolumn="25" endcolumn="67" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReportService" method="quality" priority="3">
+接口方法【quality】必须使用javadoc注释
+</violation>
+<violation beginline="14" endline="14" begincolumn="25" endcolumn="51" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReportService" method="orderTracking" priority="3">
+接口方法【orderTracking】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\ReworkOrderService.java">
+<violation beginline="11" endline="26" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReworkOrderService" priority="3">
+【ReworkOrderService】注释缺少@author信息
+</violation>
+<violation beginline="13" endline="13" begincolumn="28" endcolumn="44" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReworkOrderService" method="reworkOrderList" priority="3">
+接口方法【reworkOrderList】必须使用javadoc注释
+</violation>
+<violation beginline="15" endline="15" begincolumn="13" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReworkOrderService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="17" endline="17" begincolumn="17" endcolumn="43" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReworkOrderService" method="getReworkOrderById" priority="3">
+接口方法【getReworkOrderById】必须使用javadoc注释
+</violation>
+<violation beginline="19" endline="19" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReworkOrderService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="21" endline="21" begincolumn="13" endcolumn="43" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReworkOrderService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="23" endline="23" begincolumn="17" endcolumn="56" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReworkOrderService" method="repair" priority="3">
+接口方法【repair】必须使用javadoc注释
+</violation>
+<violation beginline="25" endline="25" begincolumn="17" endcolumn="67" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="ReworkOrderService" method="recheck" priority="3">
+接口方法【recheck】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\SysUserService.java">
+<violation beginline="10" endline="21" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="SysUserService" priority="3">
+【SysUserService】注释缺少@author信息
+</violation>
+<violation beginline="12" endline="12" begincolumn="24" endcolumn="36" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="SysUserService" method="sysUserList" priority="3">
+接口方法【sysUserList】必须使用javadoc注释
+</violation>
+<violation beginline="14" endline="14" begincolumn="13" endcolumn="33" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="SysUserService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="16" endline="16" begincolumn="13" endcolumn="35" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="SysUserService" method="getSysUserById" priority="3">
+接口方法【getSysUserById】必须使用javadoc注释
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="SysUserService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="20" endline="20" begincolumn="13" endcolumn="35" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="SysUserService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\TraceService.java">
+<violation beginline="8" endline="11" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="TraceService" priority="3">
+【TraceService】注释缺少@author信息
+</violation>
+<violation beginline="10" endline="10" begincolumn="17" endcolumn="53" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="TraceService" method="getTraceByProductSn" priority="3">
+接口方法【getTraceByProductSn】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\WorkReportService.java">
+<violation beginline="12" endline="27" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="WorkReportService" priority="3">
+【WorkReportService】注释缺少@author信息
+</violation>
+<violation beginline="14" endline="14" begincolumn="27" endcolumn="42" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="WorkReportService" method="workReportList" priority="3">
+接口方法【workReportList】必须使用javadoc注释
+</violation>
+<violation beginline="16" endline="16" begincolumn="31" endcolumn="45" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="WorkReportService" method="reportOptions" priority="3">
+接口方法【reportOptions】必须使用javadoc注释
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="39" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="WorkReportService" method="save" priority="3">
+接口方法【save】必须使用javadoc注释
+</violation>
+<violation beginline="20" endline="20" begincolumn="16" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="WorkReportService" method="getWorkReportById" priority="3">
+接口方法【getWorkReportById】必须使用javadoc注释
+</violation>
+<violation beginline="22" endline="22" begincolumn="13" endcolumn="27" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="WorkReportService" method="delete" priority="3">
+接口方法【delete】必须使用javadoc注释
+</violation>
+<violation beginline="24" endline="24" begincolumn="13" endcolumn="41" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="WorkReportService" method="update" priority="3">
+接口方法【update】必须使用javadoc注释
+</violation>
+<violation beginline="26" endline="26" begincolumn="16" endcolumn="44" rule="AbstractMethodOrInterfaceMethodMustUseJavadocRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service" class="WorkReportService" method="submit" priority="3">
+接口方法【submit】必须使用javadoc注释
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\InspectionRecordServiceImpl.java">
+<violation beginline="32" endline="205" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="InspectionRecordServiceImpl" priority="3">
+【InspectionRecordServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\MaterialServiceImpl.java">
+<violation beginline="15" endline="56" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="MaterialServiceImpl" priority="3">
+【MaterialServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\ProcessRouteServiceImpl.java">
+<violation beginline="15" endline="56" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="ProcessRouteServiceImpl" priority="3">
+【ProcessRouteServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\ProductBomServiceImpl.java">
+<violation beginline="15" endline="56" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="ProductBomServiceImpl" priority="3">
+【ProductBomServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\ProductModelServiceImpl.java">
+<violation beginline="15" endline="56" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="ProductModelServiceImpl" priority="3">
+【ProductModelServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\ProductionOrderServiceImpl.java">
+<violation beginline="26" endline="128" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="ProductionOrderServiceImpl" priority="3">
+【ProductionOrderServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\ProductionTaskServiceImpl.java">
+<violation beginline="19" endline="129" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="ProductionTaskServiceImpl" priority="3">
+【ProductionTaskServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\ReportServiceImpl.java">
+<violation beginline="42" endline="547" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="ReportServiceImpl" priority="3">
+【ReportServiceImpl】注释缺少@author信息
+</violation>
+<violation beginline="95" endline="95" begincolumn="32" endcolumn="74" rule="MethodTooLongRule" ruleset="AlibabaJavaOthers" package="com.keyboard.mes.service.impl" class="ReportServiceImpl" method="quality" priority="3">
+方法【quality】的总行数不要超过80行。
+</violation>
+<violation beginline="425" endline="425" begincolumn="14" endcolumn="18" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.service.impl" class="ReportServiceImpl" method="normalizePeriod" priority="3">
+魔法值【"day"】
+</violation>
+<violation beginline="425" endline="425" begincolumn="73" endcolumn="79" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.service.impl" class="ReportServiceImpl" method="normalizePeriod" priority="3">
+魔法值【"month"】
+</violation>
+<violation beginline="425" endline="425" begincolumn="43" endcolumn="48" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.service.impl" class="ReportServiceImpl" method="normalizePeriod" priority="3">
+魔法值【"week"】
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\ReworkOrderServiceImpl.java">
+<violation beginline="27" endline="187" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="ReworkOrderServiceImpl" priority="3">
+【ReworkOrderServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\SysUserServiceImpl.java">
+<violation beginline="16" endline="59" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="SysUserServiceImpl" priority="3">
+【SysUserServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\TraceServiceImpl.java">
+<violation beginline="29" endline="119" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="TraceServiceImpl" priority="3">
+【TraceServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\service\impl\WorkReportServiceImpl.java">
+<violation beginline="32" endline="237" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.service.impl" class="WorkReportServiceImpl" priority="3">
+【WorkReportServiceImpl】注释缺少@author信息
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\shiro\MesShiroRealm.java">
+<violation beginline="16" endline="69" begincolumn="8" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.shiro" class="MesShiroRealm" priority="3">
+【MesShiroRealm】注释缺少@author信息
+</violation>
+<violation beginline="42" endline="42" begincolumn="13" endcolumn="19" rule="UndefineMagicConstantRule" ruleset="AlibabaJavaConstants" package="com.keyboard.mes.shiro" class="MesShiroRealm" method="doGetAuthorizationInfo" priority="3">
+魔法值【"admin"】
+</violation>
+</file>
+<file name="program\code\backend\src\main\java\com\keyboard\mes\util\PasswordUtils.java">
+<violation beginline="13" endline="51" begincolumn="14" endcolumn="1" rule="ClassMustHaveAuthorRule" ruleset="AlibabaJavaComments" package="com.keyboard.mes.util" class="PasswordUtils" priority="3">
+【PasswordUtils】注释缺少@author信息
+</violation>
+</file>
+</pmd>

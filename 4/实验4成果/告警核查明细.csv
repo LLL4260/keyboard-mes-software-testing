@@ -1,0 +1,209 @@
+﻿编号,文件,原行号,规则,告警,判定,依据,处理,复查
+P3C-001,com/keyboard/mes/KeyboardMesApplication.java,14,ClassMustHaveAuthorRule,【KeyboardMesApplication】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-002,com/keyboard/mes/config/AuthInterceptor.java,26,ClassMustHaveAuthorRule,【AuthInterceptor】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-003,com/keyboard/mes/config/AuthInterceptor.java,39,UndefineMagicConstantRule,"魔法值【""OPTIONS""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-004,com/keyboard/mes/config/AuthInterceptor.java,60,UndefineMagicConstantRule,"魔法值【""admin""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-005,com/keyboard/mes/config/AuthInterceptor.java,81,UndefineMagicConstantRule,"魔法值【""/api/trace""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-006,com/keyboard/mes/config/AuthInterceptor.java,92,UndefineMagicConstantRule,"魔法值【""GET""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-007,com/keyboard/mes/config/AuthInterceptor.java,95,UndefineMagicConstantRule,"魔法值【""DELETE""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-008,com/keyboard/mes/config/AuthInterceptor.java,98,UndefineMagicConstantRule,"魔法值【""/update""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-009,com/keyboard/mes/config/AuthInterceptor.java,98,UndefineMagicConstantRule,"魔法值【""PUT""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-010,com/keyboard/mes/config/AuthInterceptor.java,101,UndefineMagicConstantRule,"魔法值【"".*/productionTask/\\d+/(start|pause|finish)$""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-011,com/keyboard/mes/config/AuthInterceptor.java,104,UndefineMagicConstantRule,"魔法值【"".*/reworkOrder/\\d+/(repair|recheck)$""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-012,com/keyboard/mes/config/AuthInterceptor.java,107,UndefineMagicConstantRule,"魔法值【""POST""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-013,com/keyboard/mes/config/AuthInterceptor.java,121,CollectionInitShouldAssignCapacityRule,【HashMap】初始化时，尽量指定初始值大小,确认规约不符合,HashMap初始化未指定容量，属于规约不符合。,按固定权限映射规模指定容量,同范围同规则复查未再报出
+P3C-014,com/keyboard/mes/config/AuthInterceptor.java,141,CollectionInitShouldAssignCapacityRule,【HashMap】初始化时，尽量指定初始值大小,确认规约不符合,HashMap初始化未指定容量，属于规约不符合。,按固定权限映射规模指定容量,同范围同规则复查未再报出
+P3C-015,com/keyboard/mes/config/RedisStartupWaiter.java,16,ClassMustHaveAuthorRule,【RedisStartupWaiter】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-016,com/keyboard/mes/config/RedisStartupWaiter.java,49,UndefineMagicConstantRule,"魔法值【""PONG""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-017,com/keyboard/mes/config/ShiroConfiguration.java,23,ClassMustHaveAuthorRule,【ShiroConfiguration】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-018,com/keyboard/mes/config/WebConfig.java,15,ClassMustHaveAuthorRule,【WebConfig】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-019,com/keyboard/mes/controller/ApiInfoController.java,21,ClassMustHaveAuthorRule,【ApiInfoController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-020,com/keyboard/mes/controller/AuthController.java,26,ClassMustHaveAuthorRule,【AuthController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-021,com/keyboard/mes/controller/InspectionRecordController.java,21,ClassMustHaveAuthorRule,【InspectionRecordController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-022,com/keyboard/mes/controller/MaterialController.java,19,ClassMustHaveAuthorRule,【MaterialController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-023,com/keyboard/mes/controller/ProcessRouteController.java,19,ClassMustHaveAuthorRule,【ProcessRouteController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-024,com/keyboard/mes/controller/ProductBomController.java,19,ClassMustHaveAuthorRule,【ProductBomController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-025,com/keyboard/mes/controller/ProductModelController.java,19,ClassMustHaveAuthorRule,【ProductModelController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-026,com/keyboard/mes/controller/ProductionOrderController.java,19,ClassMustHaveAuthorRule,【ProductionOrderController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-027,com/keyboard/mes/controller/ProductionTaskController.java,19,ClassMustHaveAuthorRule,【ProductionTaskController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-028,com/keyboard/mes/controller/ReportController.java,18,ClassMustHaveAuthorRule,【ReportController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-029,com/keyboard/mes/controller/ReworkOrderController.java,20,ClassMustHaveAuthorRule,【ReworkOrderController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-030,com/keyboard/mes/controller/SysUserController.java,19,ClassMustHaveAuthorRule,【SysUserController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-031,com/keyboard/mes/controller/TraceController.java,17,ClassMustHaveAuthorRule,【TraceController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-032,com/keyboard/mes/controller/WorkReportController.java,21,ClassMustHaveAuthorRule,【WorkReportController】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-033,com/keyboard/mes/dto/LoginRequest.java,8,ClassMustHaveAuthorRule,【LoginRequest】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-034,com/keyboard/mes/dto/Result.java,8,ClassMustHaveAuthorRule,【Result】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-035,com/keyboard/mes/dto/TraceResult.java,17,ClassMustHaveAuthorRule,【TraceResult】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-036,com/keyboard/mes/entity/InspectionRecord.java,18,ClassMustHaveAuthorRule,【InspectionRecord】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-037,com/keyboard/mes/entity/Material.java,18,ClassMustHaveAuthorRule,【Material】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-038,com/keyboard/mes/entity/ProcessRoute.java,19,ClassMustHaveAuthorRule,【ProcessRoute】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-039,com/keyboard/mes/entity/ProductBom.java,20,ClassMustHaveAuthorRule,【ProductBom】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-040,com/keyboard/mes/entity/ProductModel.java,18,ClassMustHaveAuthorRule,【ProductModel】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-041,com/keyboard/mes/entity/ProductionOrder.java,19,ClassMustHaveAuthorRule,【ProductionOrder】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-042,com/keyboard/mes/entity/ProductionTask.java,18,ClassMustHaveAuthorRule,【ProductionTask】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-043,com/keyboard/mes/entity/ReworkOrder.java,20,ClassMustHaveAuthorRule,【ReworkOrder】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-044,com/keyboard/mes/entity/SysUser.java,18,ClassMustHaveAuthorRule,【SysUser】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-045,com/keyboard/mes/entity/WorkReport.java,20,ClassMustHaveAuthorRule,【WorkReport】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-046,com/keyboard/mes/exception/BusinessException.java,8,ClassMustHaveAuthorRule,【BusinessException】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-047,com/keyboard/mes/exception/GlobalExceptionHandler.java,23,ClassMustHaveAuthorRule,【GlobalExceptionHandler】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-048,com/keyboard/mes/repository/InspectionRecordMapper.java,15,ClassMustHaveAuthorRule,【InspectionRecordMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-049,com/keyboard/mes/repository/InspectionRecordMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【inspectionRecordList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-050,com/keyboard/mes/repository/InspectionRecordMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【findByProductSn】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-051,com/keyboard/mes/repository/InspectionRecordMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-052,com/keyboard/mes/repository/InspectionRecordMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-053,com/keyboard/mes/repository/InspectionRecordMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-054,com/keyboard/mes/repository/InspectionRecordMapper.java,27,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-055,com/keyboard/mes/repository/MaterialMapper.java,15,ClassMustHaveAuthorRule,【MaterialMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-056,com/keyboard/mes/repository/MaterialMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【materialList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-057,com/keyboard/mes/repository/MaterialMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-058,com/keyboard/mes/repository/MaterialMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-059,com/keyboard/mes/repository/MaterialMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-060,com/keyboard/mes/repository/MaterialMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-061,com/keyboard/mes/repository/ProcessRouteMapper.java,15,ClassMustHaveAuthorRule,【ProcessRouteMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-062,com/keyboard/mes/repository/ProcessRouteMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【processRouteList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-063,com/keyboard/mes/repository/ProcessRouteMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-064,com/keyboard/mes/repository/ProcessRouteMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-065,com/keyboard/mes/repository/ProcessRouteMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-066,com/keyboard/mes/repository/ProcessRouteMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-067,com/keyboard/mes/repository/ProductBomMapper.java,15,ClassMustHaveAuthorRule,【ProductBomMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-068,com/keyboard/mes/repository/ProductBomMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【productBomList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-069,com/keyboard/mes/repository/ProductBomMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-070,com/keyboard/mes/repository/ProductBomMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-071,com/keyboard/mes/repository/ProductBomMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-072,com/keyboard/mes/repository/ProductBomMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-073,com/keyboard/mes/repository/ProductModelMapper.java,15,ClassMustHaveAuthorRule,【ProductModelMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-074,com/keyboard/mes/repository/ProductModelMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【productModelList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-075,com/keyboard/mes/repository/ProductModelMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-076,com/keyboard/mes/repository/ProductModelMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-077,com/keyboard/mes/repository/ProductModelMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-078,com/keyboard/mes/repository/ProductModelMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-079,com/keyboard/mes/repository/ProductionOrderMapper.java,15,ClassMustHaveAuthorRule,【ProductionOrderMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-080,com/keyboard/mes/repository/ProductionOrderMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【productionOrderList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-081,com/keyboard/mes/repository/ProductionOrderMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-082,com/keyboard/mes/repository/ProductionOrderMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-083,com/keyboard/mes/repository/ProductionOrderMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-084,com/keyboard/mes/repository/ProductionOrderMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-085,com/keyboard/mes/repository/ProductionTaskMapper.java,15,ClassMustHaveAuthorRule,【ProductionTaskMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-086,com/keyboard/mes/repository/ProductionTaskMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【productionTaskList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-087,com/keyboard/mes/repository/ProductionTaskMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-088,com/keyboard/mes/repository/ProductionTaskMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-089,com/keyboard/mes/repository/ProductionTaskMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-090,com/keyboard/mes/repository/ProductionTaskMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-091,com/keyboard/mes/repository/ReworkOrderMapper.java,15,ClassMustHaveAuthorRule,【ReworkOrderMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-092,com/keyboard/mes/repository/ReworkOrderMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【reworkOrderList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-093,com/keyboard/mes/repository/ReworkOrderMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【findByProductSn】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-094,com/keyboard/mes/repository/ReworkOrderMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-095,com/keyboard/mes/repository/ReworkOrderMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-096,com/keyboard/mes/repository/ReworkOrderMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-097,com/keyboard/mes/repository/ReworkOrderMapper.java,27,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-098,com/keyboard/mes/repository/SysUserMapper.java,15,ClassMustHaveAuthorRule,【SysUserMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-099,com/keyboard/mes/repository/SysUserMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【sysUserList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-100,com/keyboard/mes/repository/SysUserMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-101,com/keyboard/mes/repository/SysUserMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-102,com/keyboard/mes/repository/SysUserMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getByEmployeeNo】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-103,com/keyboard/mes/repository/SysUserMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-104,com/keyboard/mes/repository/SysUserMapper.java,27,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-105,com/keyboard/mes/repository/WorkReportMapper.java,15,ClassMustHaveAuthorRule,【WorkReportMapper】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-106,com/keyboard/mes/repository/WorkReportMapper.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【workReportList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-107,com/keyboard/mes/repository/WorkReportMapper.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【findByProductSn】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-108,com/keyboard/mes/repository/WorkReportMapper.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【insert】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-109,com/keyboard/mes/repository/WorkReportMapper.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-110,com/keyboard/mes/repository/WorkReportMapper.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-111,com/keyboard/mes/repository/WorkReportMapper.java,27,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-112,com/keyboard/mes/service/AuthSessionService.java,26,ClassMustHaveAuthorRule,【AuthSessionService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-113,com/keyboard/mes/service/AuthSessionService.java,109,UndefineMagicConstantRule,"魔法值【""Bearer ""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-114,com/keyboard/mes/service/InspectionRecordService.java,12,ClassMustHaveAuthorRule,【InspectionRecordService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-115,com/keyboard/mes/service/InspectionRecordService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【inspectionRecordList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-116,com/keyboard/mes/service/InspectionRecordService.java,16,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【inspectionOptions】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-117,com/keyboard/mes/service/InspectionRecordService.java,18,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-118,com/keyboard/mes/service/InspectionRecordService.java,20,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getInspectionRecordById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-119,com/keyboard/mes/service/InspectionRecordService.java,22,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-120,com/keyboard/mes/service/InspectionRecordService.java,24,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-121,com/keyboard/mes/service/InspectionRecordService.java,26,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【submit】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-122,com/keyboard/mes/service/MaterialService.java,10,ClassMustHaveAuthorRule,【MaterialService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-123,com/keyboard/mes/service/MaterialService.java,12,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【materialList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-124,com/keyboard/mes/service/MaterialService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-125,com/keyboard/mes/service/MaterialService.java,16,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getMaterialById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-126,com/keyboard/mes/service/MaterialService.java,18,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-127,com/keyboard/mes/service/MaterialService.java,20,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-128,com/keyboard/mes/service/ProcessRouteService.java,10,ClassMustHaveAuthorRule,【ProcessRouteService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-129,com/keyboard/mes/service/ProcessRouteService.java,12,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【processRouteList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-130,com/keyboard/mes/service/ProcessRouteService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-131,com/keyboard/mes/service/ProcessRouteService.java,16,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getProcessRouteById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-132,com/keyboard/mes/service/ProcessRouteService.java,18,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-133,com/keyboard/mes/service/ProcessRouteService.java,20,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-134,com/keyboard/mes/service/ProductBomService.java,10,ClassMustHaveAuthorRule,【ProductBomService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-135,com/keyboard/mes/service/ProductBomService.java,12,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【productBomList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-136,com/keyboard/mes/service/ProductBomService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-137,com/keyboard/mes/service/ProductBomService.java,16,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getProductBomById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-138,com/keyboard/mes/service/ProductBomService.java,18,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-139,com/keyboard/mes/service/ProductBomService.java,20,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-140,com/keyboard/mes/service/ProductModelService.java,10,ClassMustHaveAuthorRule,【ProductModelService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-141,com/keyboard/mes/service/ProductModelService.java,12,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【productModelList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-142,com/keyboard/mes/service/ProductModelService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-143,com/keyboard/mes/service/ProductModelService.java,16,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getProductModelById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-144,com/keyboard/mes/service/ProductModelService.java,18,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-145,com/keyboard/mes/service/ProductModelService.java,20,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-146,com/keyboard/mes/service/ProductionOrderService.java,11,ClassMustHaveAuthorRule,【ProductionOrderService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-147,com/keyboard/mes/service/ProductionOrderService.java,13,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【productionOrderList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-148,com/keyboard/mes/service/ProductionOrderService.java,15,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-149,com/keyboard/mes/service/ProductionOrderService.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getProductionOrderById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-150,com/keyboard/mes/service/ProductionOrderService.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-151,com/keyboard/mes/service/ProductionOrderService.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-152,com/keyboard/mes/service/ProductionOrderService.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【generateTasks】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-153,com/keyboard/mes/service/ProductionTaskService.java,10,ClassMustHaveAuthorRule,【ProductionTaskService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-154,com/keyboard/mes/service/ProductionTaskService.java,12,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【productionTaskList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-155,com/keyboard/mes/service/ProductionTaskService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-156,com/keyboard/mes/service/ProductionTaskService.java,16,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getProductionTaskById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-157,com/keyboard/mes/service/ProductionTaskService.java,18,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-158,com/keyboard/mes/service/ProductionTaskService.java,20,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-159,com/keyboard/mes/service/ProductionTaskService.java,22,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【start】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-160,com/keyboard/mes/service/ProductionTaskService.java,24,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【pause】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-161,com/keyboard/mes/service/ProductionTaskService.java,26,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【finish】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-162,com/keyboard/mes/service/ReportService.java,8,ClassMustHaveAuthorRule,【ReportService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-163,com/keyboard/mes/service/ReportService.java,10,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【overview】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-164,com/keyboard/mes/service/ReportService.java,12,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【quality】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-165,com/keyboard/mes/service/ReportService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【orderTracking】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-166,com/keyboard/mes/service/ReworkOrderService.java,11,ClassMustHaveAuthorRule,【ReworkOrderService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-167,com/keyboard/mes/service/ReworkOrderService.java,13,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【reworkOrderList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-168,com/keyboard/mes/service/ReworkOrderService.java,15,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-169,com/keyboard/mes/service/ReworkOrderService.java,17,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getReworkOrderById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-170,com/keyboard/mes/service/ReworkOrderService.java,19,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-171,com/keyboard/mes/service/ReworkOrderService.java,21,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-172,com/keyboard/mes/service/ReworkOrderService.java,23,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【repair】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-173,com/keyboard/mes/service/ReworkOrderService.java,25,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【recheck】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-174,com/keyboard/mes/service/SysUserService.java,10,ClassMustHaveAuthorRule,【SysUserService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-175,com/keyboard/mes/service/SysUserService.java,12,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【sysUserList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-176,com/keyboard/mes/service/SysUserService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-177,com/keyboard/mes/service/SysUserService.java,16,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getSysUserById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-178,com/keyboard/mes/service/SysUserService.java,18,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-179,com/keyboard/mes/service/SysUserService.java,20,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-180,com/keyboard/mes/service/TraceService.java,8,ClassMustHaveAuthorRule,【TraceService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-181,com/keyboard/mes/service/TraceService.java,10,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getTraceByProductSn】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-182,com/keyboard/mes/service/WorkReportService.java,12,ClassMustHaveAuthorRule,【WorkReportService】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-183,com/keyboard/mes/service/WorkReportService.java,14,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【workReportList】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-184,com/keyboard/mes/service/WorkReportService.java,16,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【reportOptions】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-185,com/keyboard/mes/service/WorkReportService.java,18,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【save】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-186,com/keyboard/mes/service/WorkReportService.java,20,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【getWorkReportById】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-187,com/keyboard/mes/service/WorkReportService.java,22,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【delete】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-188,com/keyboard/mes/service/WorkReportService.java,24,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【update】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-189,com/keyboard/mes/service/WorkReportService.java,26,AbstractMethodOrInterfaceMethodMustUseJavadocRule,接口方法【submit】必须使用javadoc注释,确认规约不符合,接口方法缺少符合规则的Javadoc，属于规约不符合。,补充方法用途、参数与返回值说明,同范围同规则复查未再报出
+P3C-190,com/keyboard/mes/service/impl/InspectionRecordServiceImpl.java,32,ClassMustHaveAuthorRule,【InspectionRecordServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-191,com/keyboard/mes/service/impl/MaterialServiceImpl.java,15,ClassMustHaveAuthorRule,【MaterialServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-192,com/keyboard/mes/service/impl/ProcessRouteServiceImpl.java,15,ClassMustHaveAuthorRule,【ProcessRouteServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-193,com/keyboard/mes/service/impl/ProductBomServiceImpl.java,15,ClassMustHaveAuthorRule,【ProductBomServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-194,com/keyboard/mes/service/impl/ProductModelServiceImpl.java,15,ClassMustHaveAuthorRule,【ProductModelServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-195,com/keyboard/mes/service/impl/ProductionOrderServiceImpl.java,26,ClassMustHaveAuthorRule,【ProductionOrderServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-196,com/keyboard/mes/service/impl/ProductionTaskServiceImpl.java,19,ClassMustHaveAuthorRule,【ProductionTaskServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-197,com/keyboard/mes/service/impl/ReportServiceImpl.java,42,ClassMustHaveAuthorRule,【ReportServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-198,com/keyboard/mes/service/impl/ReportServiceImpl.java,95,MethodTooLongRule,方法【quality】的总行数不要超过80行。,确认规约不符合,quality方法超过规则建议的80行，属于维护性问题。,提取缺陷统计和趋势统计方法,同范围同规则复查未再报出
+P3C-199,com/keyboard/mes/service/impl/ReportServiceImpl.java,425,UndefineMagicConstantRule,"魔法值【""day""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-200,com/keyboard/mes/service/impl/ReportServiceImpl.java,425,UndefineMagicConstantRule,"魔法值【""month""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-201,com/keyboard/mes/service/impl/ReportServiceImpl.java,425,UndefineMagicConstantRule,"魔法值【""week""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-202,com/keyboard/mes/service/impl/ReworkOrderServiceImpl.java,27,ClassMustHaveAuthorRule,【ReworkOrderServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-203,com/keyboard/mes/service/impl/SysUserServiceImpl.java,16,ClassMustHaveAuthorRule,【SysUserServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-204,com/keyboard/mes/service/impl/TraceServiceImpl.java,29,ClassMustHaveAuthorRule,【TraceServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-205,com/keyboard/mes/service/impl/WorkReportServiceImpl.java,32,ClassMustHaveAuthorRule,【WorkReportServiceImpl】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-206,com/keyboard/mes/shiro/MesShiroRealm.java,16,ClassMustHaveAuthorRule,【MesShiroRealm】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出
+P3C-207,com/keyboard/mes/shiro/MesShiroRealm.java,42,UndefineMagicConstantRule,"魔法值【""admin""】",确认规约不符合,直接使用规则要求命名的常量，属于可读性问题。,提取具名常量,同范围同规则复查未再报出
+P3C-208,com/keyboard/mes/util/PasswordUtils.java,13,ClassMustHaveAuthorRule,【PasswordUtils】注释缺少@author信息,确认规约不符合,类或接口注释缺少作者标注，属于规约不符合。,统一标注Keyboard MES项目组,同范围同规则复查未再报出

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1791356253581" analysisTimestamp="1791356255092" release="">
+  <Project projectName="">
+    <Jar>C:/Users/LZL/AppData/Local/Temp/mes-lab4-tools/analysis-classes</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 7 Oct 2026 14:57:33 +0800" total_classes="14" referenced_classes="37" total_bugs="0" total_size="762" num_packages="3" java_version="1.8.0_504" vm_version="25.504-b01" cpu_seconds="13.30" clock_seconds="2.01" peak_mbytes="195.41" alloc_mbytes="7104.00" gc_seconds="0.03">
+    <FileStats path="com/keyboard/mes/dto/LoginRequest.java" bugCount="0" size="15"/>
+    <FileStats path="com/keyboard/mes/dto/Result.java" bugCount="0" size="35"/>
+    <FileStats path="com/keyboard/mes/dto/TraceResult.java" bugCount="0" size="31"/>
+    <FileStats path="com/keyboard/mes/entity/InspectionRecord.java" bugCount="0" size="80"/>
+    <FileStats path="com/keyboard/mes/entity/Material.java" bugCount="0" size="52"/>
+    <FileStats path="com/keyboard/mes/entity/ProcessRoute.java" bugCount="0" size="68"/>
+    <FileStats path="com/keyboard/mes/entity/ProductBom.java" bugCount="0" size="52"/>
+    <FileStats path="com/keyboard/mes/entity/ProductModel.java" bugCount="0" size="48"/>
+    <FileStats path="com/keyboard/mes/entity/ProductionOrder.java" bugCount="0" size="80"/>
+    <FileStats path="com/keyboard/mes/entity/ProductionTask.java" bugCount="0" size="76"/>
+    <FileStats path="com/keyboard/mes/entity/ReworkOrder.java" bugCount="0" size="80"/>
+    <FileStats path="com/keyboard/mes/entity/SysUser.java" bugCount="0" size="60"/>
+    <FileStats path="com/keyboard/mes/entity/WorkReport.java" bugCount="0" size="64"/>
+    <FileStats path="com/keyboard/mes/util/PasswordUtils.java" bugCount="0" size="21"/>
+    <PackageStats package="com.keyboard.mes.dto" total_bugs="0" total_types="3" total_size="81">
+      <ClassStats class="com.keyboard.mes.dto.LoginRequest" sourceFile="LoginRequest.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.dto.Result" sourceFile="Result.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.dto.TraceResult" sourceFile="TraceResult.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.entity" total_bugs="0" total_types="10" total_size="660">
+      <ClassStats class="com.keyboard.mes.entity.InspectionRecord" sourceFile="InspectionRecord.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.Material" sourceFile="Material.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProcessRoute" sourceFile="ProcessRoute.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProductBom" sourceFile="ProductBom.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProductModel" sourceFile="ProductModel.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProductionOrder" sourceFile="ProductionOrder.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProductionTask" sourceFile="ProductionTask.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ReworkOrder" sourceFile="ReworkOrder.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.SysUser" sourceFile="SysUser.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.WorkReport" sourceFile="WorkReport.java" interface="false" size="64" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.util" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="com.keyboard.mes.util.PasswordUtils" sourceFile="PasswordUtils.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="803" invocations="470" avgMicrosecondsPerInvocation="1708" maxMicrosecondsPerInvocation="7719" standardDeviationMircosecondsPerInvocation="883"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="123" invocations="468" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="13269" standardDeviationMircosecondsPerInvocation="804"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="48" invocations="37" avgMicrosecondsPerInvocation="1311" maxMicrosecondsPerInvocation="9432" standardDeviationMircosecondsPerInvocation="2043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="44" invocations="379" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="11780" standardDeviationMircosecondsPerInvocation="703"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="44" invocations="378" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="3271" standardDeviationMircosecondsPerInvocation="382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="40" invocations="378" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="4617" standardDeviationMircosecondsPerInvocation="378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="37" invocations="378" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="3747" standardDeviationMircosecondsPerInvocation="341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="35" invocations="379" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="5374" standardDeviationMircosecondsPerInvocation="372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="34" invocations="378" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="6750" standardDeviationMircosecondsPerInvocation="398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="26" invocations="378" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="17810" standardDeviationMircosecondsPerInvocation="915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="26" invocations="37" avgMicrosecondsPerInvocation="708" maxMicrosecondsPerInvocation="2680" standardDeviationMircosecondsPerInvocation="737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="25" invocations="482" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="2431" standardDeviationMircosecondsPerInvocation="159"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

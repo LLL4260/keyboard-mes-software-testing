@@ -1,0 +1,36 @@
+原版FindBugs3.0.1分析项目Java17字节码的错误摘录
+The following errors occurred during analysis:
+  Error scanning com/keyboard/mes/KeyboardMesApplication for referenced classes
+    java.lang.IllegalArgumentException
+      At org.objectweb.asm.ClassReader.<init>(ClassReader.java:170)
+      At org.objectweb.asm.ClassReader.<init>(ClassReader.java:153)
+      At edu.umd.cs.findbugs.asm.FBClassReader.<init>(FBClassReader.java:35)
+      At edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine.analyze(ClassReaderAnalysisEngine.java:48)
+      At edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine.analyze(ClassReaderAnalysisEngine.java:34)
+      At edu.umd.cs.findbugs.classfile.impl.AnalysisCache.getClassAnalysis(AnalysisCache.java:262)
+      At edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine.analyze(ClassInfoAnalysisEngine.java:75)
+      At edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine.analyze(ClassInfoAnalysisEngine.java:38)
+      At edu.umd.cs.findbugs.classfile.impl.AnalysisCache.getClassAnalysis(AnalysisCache.java:262)
+      At edu.umd.cs.findbugs.FindBugs2.buildReferencedClassSet(FindBugs2.java:774)
+      At edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:222)
+      At edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:402)
+      At edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1200)
+  Error scanning com/keyboard/mes/config/AuthInterceptor for referenced classes
+    java.lang.IllegalArgumentException
+      At org.objectweb.asm.ClassReader.<init>(ClassReader.java:170)
+      At org.objectweb.asm.ClassReader.<init>(ClassReader.java:153)
+      At edu.umd.cs.findbugs.asm.FBClassReader.<init>(FBClassReader.java:35)
+      At edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine.analyze(ClassReaderAnalysisEngine.java:48)
+      At edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine.analyze(ClassReaderAnalysisEngine.java:34)
+      At edu.umd.cs.findbugs.classfile.impl.AnalysisCache.getClassAnalysis(AnalysisCache.java:262)
+      At edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine.analyze(ClassInfoAnalysisEngine.java:75)
+      At edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine.analyze(ClassInfoAnalysisEngine.java:38)
+      At edu.umd.cs.findbugs.classfile.impl.AnalysisCache.getClassAnalysis(AnalysisCache.java:262)
+      At edu.umd.cs.findbugs.FindBugs2.buildReferencedClassSet(FindBugs2.java:774)
+      At edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:222)
+      At edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:402)
+      At edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1200)
+  Error scanning com/keyboard/mes/config/LegacyMetaObjectHandlerPlaceholder for referenced classes
+    java.lang.IllegalArgumentException
+      At org.objectweb.asm.ClassReader.<init>(ClassReader.java:170)
+      At org.objectweb.asm.ClassReader.<init>(ClassReader.java:153)
