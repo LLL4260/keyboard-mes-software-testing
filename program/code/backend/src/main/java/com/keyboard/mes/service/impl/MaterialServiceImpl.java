@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 /**
  * 物料表业务实现。
+ *
+ * @author Keyboard MES项目组
  */
 @Service
 public class MaterialServiceImpl implements MaterialService {

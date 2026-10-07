@@ -24,6 +24,8 @@ import java.util.Set;
 
 /**
  * 产品追溯业务实现。
+ *
+ * @author Keyboard MES项目组
  */
 @Service
 public class TraceServiceImpl implements TraceService {

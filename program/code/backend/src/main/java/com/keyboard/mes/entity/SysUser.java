@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
  * 系统用户表实体。
  *
  * <p>合并员工、角色、权限关联，仅保留登录账号、岗位角色和操作范围。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class SysUser implements Serializable {

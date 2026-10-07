@@ -21,9 +21,23 @@ import java.util.Set;
  * 登录态拦截器。
  *
  * <p>替代 Shiro Web Filter，适配 Spring Boot 3 的 Jakarta Servlet。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Component
 public class AuthInterceptor implements HandlerInterceptor {
+
+    private static final String METHOD_OPTIONS = "OPTIONS";
+    private static final String ROLE_ADMIN = "admin";
+    private static final String TRACE_PATH_PREFIX = "/api/trace";
+    private static final String METHOD_GET = "GET";
+    private static final String METHOD_DELETE = "DELETE";
+    private static final String UPDATE_PATH_SUFFIX = "/update";
+    private static final String METHOD_PUT = "PUT";
+    private static final String TASK_ACTION_PATH_PATTERN = ".*/productionTask/\\d+/(start|pause|finish)$";
+    private static final String REWORK_ACTION_PATH_PATTERN = ".*/reworkOrder/\\d+/(repair|recheck)$";
+    private static final String METHOD_POST = "POST";
+
 
     private static final Logger log = LoggerFactory.getLogger(AuthInterceptor.class);
 
@@ -36,7 +50,7 @@ public class AuthInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
-        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+        if (METHOD_OPTIONS.equalsIgnoreCase(request.getMethod())) {
             return true;
         }
         Map<String, Object> currentUser = authSessionService.getCurrentUser(request);
@@ -57,7 +71,7 @@ public class AuthInterceptor implements HandlerInterceptor {
 
     private boolean isAllowed(HttpServletRequest request, Map<String, Object> currentUser) {
         String roleCode = String.valueOf(currentUser.getOrDefault("roleCode", "")).trim().toLowerCase();
-        if ("admin".equals(roleCode)) {
+        if (ROLE_ADMIN.equals(roleCode)) {
             return true;
         }
         String resource = resolveResource(request);
@@ -78,7 +92,7 @@ public class AuthInterceptor implements HandlerInterceptor {
         if (contextPath != null && !contextPath.isEmpty() && path.startsWith(contextPath)) {
             path = path.substring(contextPath.length());
         }
-        if (path.startsWith("/api/trace")) {
+        if (path.startsWith(TRACE_PATH_PREFIX)) {
             return "trace";
         }
         String normalized = path.startsWith("/api/") ? path.substring(5) : path.substring(1);
@@ -89,22 +103,22 @@ public class AuthInterceptor implements HandlerInterceptor {
     private String resolveAction(HttpServletRequest request) {
         String method = request.getMethod();
         String path = request.getRequestURI();
-        if ("GET".equalsIgnoreCase(method)) {
+        if (METHOD_GET.equalsIgnoreCase(method)) {
             return "read";
         }
-        if ("DELETE".equalsIgnoreCase(method)) {
+        if (METHOD_DELETE.equalsIgnoreCase(method)) {
             return "delete";
         }
-        if ("PUT".equalsIgnoreCase(method) || path.endsWith("/update")) {
+        if (METHOD_PUT.equalsIgnoreCase(method) || path.endsWith(UPDATE_PATH_SUFFIX)) {
             return "update";
         }
-        if (path.matches(".*/productionTask/\\d+/(start|pause|finish)$")) {
+        if (path.matches(TASK_ACTION_PATH_PATTERN)) {
             return "taskAction";
         }
-        if (path.matches(".*/reworkOrder/\\d+/(repair|recheck)$")) {
+        if (path.matches(REWORK_ACTION_PATH_PATTERN)) {
             return "update";
         }
-        if ("POST".equalsIgnoreCase(method)) {
+        if (METHOD_POST.equalsIgnoreCase(method)) {
             return "create";
         }
         return "read";
@@ -118,7 +132,7 @@ public class AuthInterceptor implements HandlerInterceptor {
     }
 
     private Map<String, Map<String, Set<String>>> buildRoleRules() {
-        Map<String, Map<String, Set<String>>> rules = new HashMap<>();
+        Map<String, Map<String, Set<String>>> rules = new HashMap<>(32);
         allow(rules, "trace", allActions(), roles("planner", "operator", "inspector", "repair"));
         allow(rules, "report", actions("read"), roles("planner", "operator", "inspector", "repair"));
         allow(rules, "sysUser", actions("read", "create", "update", "delete"), roles());
@@ -138,7 +152,7 @@ public class AuthInterceptor implements HandlerInterceptor {
     }
 
     private void allow(Map<String, Map<String, Set<String>>> rules, String resource, Set<String> actions, Set<String> roles) {
-        Map<String, Set<String>> actionRules = rules.computeIfAbsent(resource, key -> new HashMap<>());
+        Map<String, Set<String>> actionRules = rules.computeIfAbsent(resource, key -> new HashMap<>(8));
         for (String action : actions) {
             actionRules.computeIfAbsent(action, key -> new HashSet<>()).addAll(roles);
         }

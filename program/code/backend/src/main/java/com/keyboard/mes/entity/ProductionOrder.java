@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
  * 生产工单表实体。
  *
  * <p>合并生产订单、生产计划和派工单头信息，作为生产执行主线。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class ProductionOrder implements Serializable {

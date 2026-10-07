@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
  * 产品型号表实体。
  *
  * <p>维护定制化键盘型号及关键配置，是 BOM、工艺路线和测试要求的主索引。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class ProductModel implements Serializable {

@@ -20,6 +20,8 @@ import java.util.Map;
  * 登录认证接口。
  *
  * <p>Shiro 负责认证，登录态通过 Redis 保存。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @RestController
 @RequestMapping("/api/auth")

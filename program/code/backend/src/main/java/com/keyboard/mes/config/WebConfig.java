@@ -10,6 +10,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * Web 层通用配置。
  *
  * <p>为前后端分离联调开放跨域访问，允许前端开发服务器调用 /api 下的后端接口。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {

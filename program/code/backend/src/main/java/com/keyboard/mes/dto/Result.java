@@ -4,6 +4,8 @@ package com.keyboard.mes.dto;
  * 统一接口返回结果。
  *
  * <p>参考 code-files 项目写法，使用 code、msg、data 三个字段承载接口返回值。</p>
+ *
+ * @author Keyboard MES项目组
  */
 public class Result {
 

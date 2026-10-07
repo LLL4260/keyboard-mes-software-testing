@@ -21,12 +21,15 @@ import java.util.UUID;
  * 登录 Session 服务。
  *
  * <p>使用 Redis 保存前后端分离登录态，Shiro 负责认证，Redis 负责状态持久化。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Service
 public class AuthSessionService {
 
     public static final String COOKIE_NAME = "MES_SESSION_ID";
     public static final String HEADER_NAME = "Authorization";
+    private static final String BEARER_PREFIX = "Bearer ";
     private static final String KEY_PREFIX = "keyboard_mes:login:";
 
     private final StringRedisTemplate redisTemplate;
@@ -106,8 +109,8 @@ public class AuthSessionService {
     private String resolveSessionId(HttpServletRequest request) {
         String authorization = request.getHeader(HEADER_NAME);
         if (StringUtils.hasText(authorization)) {
-            if (authorization.startsWith("Bearer ")) {
-                return authorization.substring(7);
+            if (authorization.startsWith(BEARER_PREFIX)) {
+                return authorization.substring(BEARER_PREFIX.length());
             }
             return authorization;
         }

@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 /**
  * 产品型号表业务实现。
+ *
+ * @author Keyboard MES项目组
  */
 @Service
 public class ProductModelServiceImpl implements ProductModelService {

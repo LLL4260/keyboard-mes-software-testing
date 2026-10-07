@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
  * 报工记录表实体。
  *
  * <p>记录操作员按任务提交的完工数量、产品条码、工时和不良信息。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class WorkReport implements Serializable {

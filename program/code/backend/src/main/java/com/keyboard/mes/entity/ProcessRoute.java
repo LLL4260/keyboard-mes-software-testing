@@ -14,6 +14,8 @@ import java.math.BigDecimal;
  * 工艺路线表实体。
  *
  * <p>合并工序、路线步骤、工位和检验标准；用 inspection_config 保存检验项目配置。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class ProcessRoute implements Serializable {

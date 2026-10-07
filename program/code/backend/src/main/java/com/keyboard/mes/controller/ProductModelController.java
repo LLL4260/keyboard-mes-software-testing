@@ -13,6 +13,8 @@ import java.util.ArrayList;
  * 产品型号表接口。
  *
  * <p>参考 code-files 项目的 Controller 写法，提供列表、新增、查询、删除和更新接口。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @RestController
 @RequestMapping({"/productModel", "/api/productModel"})

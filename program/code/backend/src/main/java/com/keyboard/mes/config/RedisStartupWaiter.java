@@ -11,9 +11,15 @@ import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 
-/** Waits for Redis before the application is marked as ready. */
+/** Waits for Redis before the application is marked as ready.
+ *
+ * @author Keyboard MES项目组
+ */
 @Component
 public class RedisStartupWaiter implements ApplicationRunner {
+
+    private static final String REDIS_READY_RESPONSE = "PONG";
+
 
     private static final Logger log = LoggerFactory.getLogger(RedisStartupWaiter.class);
 
@@ -46,7 +52,7 @@ public class RedisStartupWaiter implements ApplicationRunner {
             attempt++;
             try (RedisConnection connection = connectionFactory.getConnection()) {
                 String response = connection.ping();
-                if ("PONG".equalsIgnoreCase(response)) {
+                if (REDIS_READY_RESPONSE.equalsIgnoreCase(response)) {
                     log.info("Redis is ready after {} attempt(s)", attempt);
                     return;
                 }

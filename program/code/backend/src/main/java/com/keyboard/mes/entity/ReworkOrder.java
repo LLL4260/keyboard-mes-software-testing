@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
  * 返修工单表实体。
  *
  * <p>记录不合格产品从返修发起、分发、维修、复检到关闭的闭环过程。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class ReworkOrder implements Serializable {

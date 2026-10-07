@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
  * 生产任务表实体。
  *
  * <p>工序执行任务，同时承载轻量异常记录，避免再建独立异常工单表。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class ProductionTask implements Serializable {

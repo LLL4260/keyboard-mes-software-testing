@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 轻量报表接口。
+ *
+ * @author Keyboard MES项目组
  */
 @RestController
 @RequestMapping("/api/report")

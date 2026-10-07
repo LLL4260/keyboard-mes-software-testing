@@ -18,6 +18,8 @@ import java.util.stream.Collectors;
  * 全局异常处理器。
  *
  * <p>把业务异常和参数校验异常统一转换为 Result，避免接口返回结构不一致。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {

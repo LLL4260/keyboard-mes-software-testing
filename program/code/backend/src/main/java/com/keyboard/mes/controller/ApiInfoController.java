@@ -15,6 +15,8 @@ import java.util.Map;
  * API 元信息接口。
  *
  * <p>供前端联调时快速确认后端服务状态、统一响应结构和可用资源接口。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @RestController
 @RequestMapping("/api")

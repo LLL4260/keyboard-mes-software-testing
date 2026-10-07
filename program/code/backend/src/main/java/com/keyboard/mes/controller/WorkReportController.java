@@ -15,6 +15,8 @@ import java.util.Map;
  * 报工记录表接口。
  *
  * <p>参考 code-files 项目的 Controller 写法，提供列表、新增、查询、删除和更新接口。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @RestController
 @RequestMapping({"/workReport", "/api/workReport"})

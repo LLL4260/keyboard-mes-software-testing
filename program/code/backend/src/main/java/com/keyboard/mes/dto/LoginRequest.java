@@ -4,6 +4,8 @@ import jakarta.validation.constraints.NotBlank;
 
 /**
  * 登录请求参数。
+ *
+ * @author Keyboard MES项目组
  */
 public class LoginRequest {
 

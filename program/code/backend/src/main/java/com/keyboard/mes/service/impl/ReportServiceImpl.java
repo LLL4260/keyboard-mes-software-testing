@@ -37,9 +37,16 @@ import java.util.stream.Collectors;
  * 轻量报表业务实现。
  *
  * <p>当前不新增统计表，直接从已有业务表聚合，满足 Web 和小程序展示页使用。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Service
 public class ReportServiceImpl implements ReportService {
+
+    private static final String PERIOD_DAY = "day";
+    private static final String PERIOD_WEEK = "week";
+    private static final String PERIOD_MONTH = "month";
+
 
     private final ProductionOrderMapper productionOrderMapper;
     private final ProductModelMapper productModelMapper;
@@ -96,13 +103,13 @@ public class ReportServiceImpl implements ReportService {
         String normalizedPeriod = normalizePeriod(period);
         LocalDate today = LocalDate.now();
         LocalDate periodStart = switch (normalizedPeriod) {
-            case "day" -> today;
-            case "month" -> YearMonth.from(today).atDay(1);
+            case PERIOD_DAY -> today;
+            case PERIOD_MONTH -> YearMonth.from(today).atDay(1);
             default -> today.with(TemporalAdjusters.previousOrSame(java.time.DayOfWeek.MONDAY));
         };
         LocalDate periodEnd = switch (normalizedPeriod) {
-            case "day" -> periodStart.plusDays(1);
-            case "month" -> YearMonth.from(today).plusMonths(1).atDay(1);
+            case PERIOD_DAY -> periodStart.plusDays(1);
+            case PERIOD_MONTH -> YearMonth.from(today).plusMonths(1).atDay(1);
             default -> periodStart.plusDays(7);
         };
 
@@ -134,20 +141,8 @@ public class ReportServiceImpl implements ReportService {
                 .filter(record -> matchesProductModel(record.getOrderId(), productModelId, orderMap))
                 .toList();
 
-        Map<String, Integer> defectMap = new LinkedHashMap<>();
-        reports.stream()
-                .filter(report -> value(report.getDefectQuantity()) > 0)
-                .forEach(report -> addDefect(defectMap, report.getDefectReason(), value(report.getDefectQuantity())));
-        inspections.stream()
-                .filter(record -> record.getResult() != null && record.getResult() == 0)
-                .forEach(record -> addDefect(defectMap, record.getDefectReason(), 1));
-
-        Map<LocalDate, Integer> trendMap = new TreeMap<>();
-        for (LocalDate date = periodStart; date.isBefore(periodEnd); date = date.plusDays(1)) {
-            trendMap.put(date, 0);
-        }
-        reports.stream()
-                .forEach(report -> trendMap.merge(report.getReportTime().toLocalDate(), value(report.getReportQuantity()), Integer::sum));
+        Map<String, Integer> defectMap = buildDefectMap(reports, inspections);
+        Map<LocalDate, Integer> trendMap = buildTrendMap(reports, periodStart, periodEnd);
 
         int totalQuantity = reports.stream().mapToInt(report -> value(report.getReportQuantity())).sum();
         int qualifiedQuantity = reports.stream().mapToInt(report -> value(report.getQualifiedQuantity())).sum();
@@ -156,8 +151,8 @@ public class ReportServiceImpl implements ReportService {
         Map<String, Object> data = new LinkedHashMap<>();
         data.put("period", normalizedPeriod);
         data.put("periodLabel", switch (normalizedPeriod) {
-            case "day" -> "本日";
-            case "month" -> "本月";
+            case PERIOD_DAY -> "本日";
+            case PERIOD_MONTH -> "本月";
             default -> "本周";
         });
         data.put("periodStart", periodStart);
@@ -170,11 +165,34 @@ public class ReportServiceImpl implements ReportService {
         data.put("defectQuantity", defectQuantity);
         data.put("qualityRate", percent(qualifiedQuantity, totalQuantity));
         data.put("defectTypes", defectTypes(defectMap));
-        data.put("trendData", "month".equals(normalizedPeriod)
+        data.put("trendData", PERIOD_MONTH.equals(normalizedPeriod)
                 ? monthlyTrendData(trendMap, periodStart, periodEnd)
                 : dailyTrendData(trendMap));
         data.put("productBreakdown", productBreakdown(reports, orderMap, productModels, totalQuantity));
         return data;
+    }
+
+    private Map<String, Integer> buildDefectMap(List<WorkReport> reports, List<InspectionRecord> inspections) {
+        Map<String, Integer> defectMap = new LinkedHashMap<>();
+        reports.stream()
+                .filter(report -> value(report.getDefectQuantity()) > 0)
+                .forEach(report -> addDefect(defectMap, report.getDefectReason(), value(report.getDefectQuantity())));
+        inspections.stream()
+                .filter(record -> record.getResult() != null && record.getResult() == 0)
+                .forEach(record -> addDefect(defectMap, record.getDefectReason(), 1));
+
+        return defectMap;
+    }
+
+    private Map<LocalDate, Integer> buildTrendMap(List<WorkReport> reports, LocalDate periodStart, LocalDate periodEnd) {
+        Map<LocalDate, Integer> trendMap = new TreeMap<>();
+        for (LocalDate date = periodStart; date.isBefore(periodEnd); date = date.plusDays(1)) {
+            trendMap.put(date, 0);
+        }
+        reports.stream()
+                .forEach(report -> trendMap.merge(report.getReportTime().toLocalDate(), value(report.getReportQuantity()), Integer::sum));
+
+        return trendMap;
     }
 
     @Override
@@ -421,8 +439,8 @@ public class ReportServiceImpl implements ReportService {
     }
 
     private String normalizePeriod(String period) {
-        String normalized = StringUtils.hasText(period) ? period.trim().toLowerCase() : "week";
-        if (!"day".equals(normalized) && !"week".equals(normalized) && !"month".equals(normalized)) {
+        String normalized = StringUtils.hasText(period) ? period.trim().toLowerCase() : PERIOD_WEEK;
+        if (!PERIOD_DAY.equals(normalized) && !PERIOD_WEEK.equals(normalized) && !PERIOD_MONTH.equals(normalized)) {
             throw new BusinessException("统计周期仅支持 day、week 或 month");
         }
         return normalized;

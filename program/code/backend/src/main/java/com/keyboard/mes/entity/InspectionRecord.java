@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
  * 检验记录表实体。
  *
  * <p>合并过程质检、成品终检、自动检测和不良处理，标准快照来自工艺路线配置。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class InspectionRecord implements Serializable {

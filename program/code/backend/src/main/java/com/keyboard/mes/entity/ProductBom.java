@@ -15,6 +15,8 @@ import java.time.LocalDate;
  * 产品BOM表实体。
  *
  * <p>将 BOM 主表与明细表压平成一张 BOM 行表，保留版本、生效期和用量。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class ProductBom implements Serializable {

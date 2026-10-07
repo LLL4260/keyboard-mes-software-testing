@@ -27,6 +27,8 @@ import java.util.stream.Collectors;
 
 /**
  * 检验记录表业务实现。
+ *
+ * @author Keyboard MES项目组
  */
 @Service
 public class InspectionRecordServiceImpl implements InspectionRecordService {

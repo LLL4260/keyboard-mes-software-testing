@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 产品追溯接口。
+ *
+ * @author Keyboard MES项目组
  */
 @RestController
 @RequestMapping("/api/trace")

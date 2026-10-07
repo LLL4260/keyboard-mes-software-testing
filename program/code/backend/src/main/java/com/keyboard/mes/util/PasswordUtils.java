@@ -9,6 +9,8 @@ import java.util.Locale;
  * 密码处理工具。
  *
  * <p>当前项目按示例 Shiro 配置使用 MD5 单次散列，后续生产环境建议替换为 BCrypt。</p>
+ *
+ * @author Keyboard MES项目组
  */
 public final class PasswordUtils {
 

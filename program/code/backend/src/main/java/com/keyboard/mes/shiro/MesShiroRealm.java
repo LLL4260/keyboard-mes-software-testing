@@ -12,8 +12,13 @@ import org.apache.shiro.subject.PrincipalCollection;
  * MES 用户认证和授权 Realm。
  *
  * <p>认证数据来自 sys_user 表，角色直接使用 role_code 字段。</p>
+ *
+ * @author Keyboard MES项目组
  */
 public class MesShiroRealm extends AuthorizingRealm {
+
+    private static final String ROLE_ADMIN = "admin";
+
 
     private final SysUserMapper sysUserMapper;
 
@@ -39,7 +44,7 @@ public class MesShiroRealm extends AuthorizingRealm {
             return info;
         }
         info.addRole(user.getRoleCode());
-        if ("admin".equals(user.getRoleCode())) {
+        if (ROLE_ADMIN.equals(user.getRoleCode())) {
             info.addStringPermission("*");
         } else {
             info.addStringPermission("mes:" + user.getRoleCode());

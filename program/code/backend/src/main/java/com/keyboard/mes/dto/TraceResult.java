@@ -12,6 +12,8 @@ import java.util.List;
 
 /**
  * 产品追溯结果。
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class TraceResult {

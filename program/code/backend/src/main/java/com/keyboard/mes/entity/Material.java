@@ -13,6 +13,8 @@ import java.time.LocalDateTime;
  * 物料表实体。
  *
  * <p>维护键盘零部件、辅料、半成品和成品物料档案。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Data
 public class Material implements Serializable {

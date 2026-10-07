@@ -18,6 +18,8 @@ import java.time.Duration;
  *
  * <p>Spring Boot 3 使用 Jakarta Servlet，当前配置保留 Shiro 认证和 Redis 授权缓存，
  * 具体 Web 拦截由 Spring MVC 的 AuthInterceptor 完成，避免引入 Shiro javax Filter。</p>
+ *
+ * @author Keyboard MES项目组
  */
 @Configuration
 public class ShiroConfiguration {
