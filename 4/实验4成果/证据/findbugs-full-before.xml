@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1791436267424" analysisTimestamp="1791436448706" release="">
+  <Project projectName="">
+    <Jar>program/code/backend/target/classes</Jar>
+    <AuxClasspathEntry>${TOOLS}\java17-rmi.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${TOOLS}\java17-base.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-web\3.5.11\spring-boot-starter-web-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter\3.5.11\spring-boot-starter-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot\3.5.11\spring-boot-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.11\spring-boot-autoconfigure-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-json\3.5.11\spring-boot-starter-json-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\fasterxml\jackson\core\jackson-databind\2.19.4\jackson-databind-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.4\jackson-annotations-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\fasterxml\jackson\core\jackson-core\2.19.4\jackson-core-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.4\jackson-datatype-jdk8-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.4\jackson-datatype-jsr310-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.4\jackson-module-parameter-names-2.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.11\spring-boot-starter-tomcat-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.52\tomcat-embed-core-10.1.52.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.52\tomcat-embed-websocket-10.1.52.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-web\6.2.16\spring-web-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-beans\6.2.16\spring-beans-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-webmvc\6.2.16\spring-webmvc-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-aop\6.2.16\spring-aop-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-context\6.2.16\spring-context-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-expression\6.2.16\spring-expression-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-validation\3.5.11\spring-boot-starter-validation-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.52\tomcat-embed-el-10.1.52.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\hibernate\validator\hibernate-validator\8.0.3.Final\hibernate-validator-8.0.3.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\jboss\logging\jboss-logging\3.6.2.Final\jboss-logging-3.6.2.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\fasterxml\classmate\1.7.3\classmate-1.7.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\mybatis\spring\boot\mybatis-spring-boot-starter\3.0.5\mybatis-spring-boot-starter-3.0.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-jdbc\3.5.11\spring-boot-starter-jdbc-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\zaxxer\HikariCP\6.3.3\HikariCP-6.3.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-jdbc\6.2.16\spring-jdbc-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\3.0.5\mybatis-spring-boot-autoconfigure-3.0.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\mybatis\mybatis\3.5.19\mybatis-3.5.19.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\mybatis\mybatis-spring\3.0.5\mybatis-spring-3.0.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\mysql\mysql-connector-j\9.6.0\mysql-connector-j-9.6.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\projectlombok\lombok\1.18.42\lombok-1.18.42.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-log4j2\3.5.11\spring-boot-starter-log4j2-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.3\log4j-slf4j2-impl-2.24.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\logging\log4j\log4j-jul\2.24.3\log4j-jul-2.24.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-test\3.5.11\spring-boot-starter-test-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-test\3.5.11\spring-boot-test-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.5.11\spring-boot-test-autoconfigure-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\assertj\assertj-core\3.27.7\assertj-core-3.27.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\junit\jupiter\junit-jupiter\5.12.2\junit-jupiter-5.12.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\junit\jupiter\junit-jupiter-api\5.12.2\junit-jupiter-api-5.12.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\junit\platform\junit-platform-commons\1.12.2\junit-platform-commons-1.12.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\junit\jupiter\junit-jupiter-params\5.12.2\junit-jupiter-params-5.12.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\junit\jupiter\junit-jupiter-engine\5.12.2\junit-jupiter-engine-5.12.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\junit\platform\junit-platform-engine\1.12.2\junit-platform-engine-1.12.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\mockito\mockito-junit-jupiter\5.17.0\mockito-junit-jupiter-5.17.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-core\6.2.16\spring-core-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-jcl\6.2.16\spring-jcl-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-test\6.2.16\spring-test-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\xmlunit\xmlunit-core\2.10.4\xmlunit-core-2.10.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-core\2.2.1\shiro-core-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-lang\2.2.1\shiro-lang-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-cache\2.2.1\shiro-cache-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-crypto-hash\2.2.1\shiro-crypto-hash-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-crypto-core\2.2.1\shiro-crypto-core-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\bouncycastle\bcprov-jdk18on\1.84\bcprov-jdk18on-1.84.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\crypto\shiro-hashes-argon2\2.2.1\shiro-hashes-argon2-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\crypto\shiro-hashes-bcrypt\2.2.1\shiro-hashes-bcrypt-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-crypto-cipher\2.2.1\shiro-crypto-cipher-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-config-core\2.2.1\shiro-config-core-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-config-ogdl\2.2.1\shiro-config-ogdl-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-beanutils\commons-beanutils\1.11.0\commons-beanutils-1.11.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\shiro\shiro-event\2.2.1\shiro-event-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\crazycake\shiro-redis\3.3.1\shiro-redis-3.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\plugins\maven-checkstyle-plugin\3.1.0\maven-checkstyle-plugin-3.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-artifact\3.0\maven-artifact-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-core\3.0\maven-core-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-settings-builder\3.0\maven-settings-builder-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-repository-metadata\3.0\maven-repository-metadata-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-model-builder\3.0\maven-model-builder-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-aether-provider\3.0\maven-aether-provider-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\aether\aether-impl\1.7\aether-impl-1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\aether\aether-spi\1.7\aether-spi-1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\aether\aether-api\1.7\aether-api-1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\aether\aether-util\1.7\aether-util-1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\sisu\sisu-inject-plexus\1.4.2\sisu-inject-plexus-1.4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\sisu\sisu-inject-bean\1.4.2\sisu-inject-bean-1.4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\sisu\sisu-guice\2.1.7\sisu-guice-2.1.7-noaop.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-classworlds\2.2.3\plexus-classworlds-2.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\plexus\plexus-sec-dispatcher\1.3\plexus-sec-dispatcher-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\sonatype\plexus\plexus-cipher\1.4\plexus-cipher-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-model\3.0\maven-model-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-plugin-api\3.0\maven-plugin-api-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\reporting\maven-reporting-api\3.0\maven-reporting-api-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\reporting\maven-reporting-impl\2.3\maven-reporting-impl-2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\shared\maven-shared-utils\0.6\maven-shared-utils-0.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\google\code\findbugs\jsr305\2.0.1\jsr305-2.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\doxia\doxia-core\1.2\doxia-core-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\xerces\xercesImpl\2.9.1\xercesImpl-2.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\xml-apis\xml-apis\1.3.04\xml-apis-1.3.04.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-validator\commons-validator\1.3.1\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-digester\commons-digester\1.6\commons-digester-1.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\doxia\doxia-sink-api\1.4\doxia-sink-api-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\doxia\doxia-logging-api\1.4\doxia-logging-api-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\doxia\doxia-decoration-model\1.4\doxia-decoration-model-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\doxia\doxia-site-renderer\1.4\doxia-site-renderer-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\doxia\doxia-module-xhtml\1.4\doxia-module-xhtml-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\doxia\doxia-module-fml\1.4\doxia-module-fml-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-i18n\1.0-beta-7\plexus-i18n-1.0-beta-7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\velocity\velocity-tools\2.0\velocity-tools-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-chain\commons-chain\1.1\commons-chain-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\dom4j\dom4j\1.1\dom4j-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\sslext\sslext\1.2-0\sslext-1.2-0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\struts\struts-core\1.3.8\struts-core-1.3.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\struts\struts-taglib\1.3.8\struts-taglib-1.3.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\struts\struts-tiles\1.3.8\struts-tiles-1.3.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\doxia\doxia-integration-tools\1.6\doxia-integration-tools-1.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-container-default\1.0-alpha-9\plexus-container-default-1.0-alpha-9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\junit\junit\4.13.2\junit-4.13.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\hamcrest\hamcrest-core\3.0\hamcrest-core-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\classworlds\classworlds\1.1-alpha-2\classworlds-1.1-alpha-2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-component-annotations\1.7.1\plexus-component-annotations-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-resources\1.1.0\plexus-resources-1.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-utils\3.0.24\plexus-utils-3.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-interpolation\1.24\plexus-interpolation-1.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-velocity\1.1.8\plexus-velocity-1.1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\puppycrawl\tools\checkstyle\8.19\checkstyle-8.19.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\info\picocli\picocli\3.9.5\picocli-3.9.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\antlr\antlr4-runtime\4.7.2\antlr4-runtime-4.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\google\guava\guava\27.1-jre\guava-27.1-jre.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\checkerframework\checker-qual\2.5.2\checker-qual-2.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\net\sf\saxon\Saxon-HE\9.9.1-2\Saxon-HE-9.9.1-2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\ibm\icu\icu4j\63.1\icu4j-63.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\velocity\velocity\1.5\velocity-1.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-lang\commons-lang\2.1\commons-lang-2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\oro\oro\2.0.8\oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\javax\xml\bind\jaxb-api\2.3.0\jaxb-api-2.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\plugins\maven-source-plugin\3.2.1\maven-source-plugin-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-archiver\3.5.0\maven-archiver-3.5.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-archiver\4.2.1\plexus-archiver-4.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\commons\commons-compress\1.19\commons-compress-1.19.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\iq80\snappy\snappy\0.4\snappy-0.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\tukaani\xz\1.8\xz-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\plugins\maven-javadoc-plugin\3.2.0\maven-javadoc-plugin-3.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-settings\3.0\maven-settings-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\shared\maven-invoker\3.0.0\maven-invoker-3.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\shared\maven-common-artifact-filters\3.0.0\maven-common-artifact-filters-3.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\shared\maven-artifact-transfer\0.10.1\maven-artifact-transfer-0.10.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\wagon\wagon-provider-api\2.4\wagon-provider-api-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-io\commons-io\2.5\commons-io-2.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\httpcomponents\httpclient\4.5.8\httpclient-4.5.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\com\thoughtworks\qdox\qdox\2.0-M10\qdox-2.0-M10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-java\1.0.5\plexus-java-1.0.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-io\3.2.0\plexus-io-3.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\codehaus\plexus\plexus-interactivity-api\1.0-alpha-6\plexus-interactivity-api-1.0-alpha-6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\plugins\maven-surefire-plugin\2.22.0\maven-surefire-plugin-2.22.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\surefire\maven-surefire-common\2.22.0\maven-surefire-common-2.22.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\plugin-tools\maven-plugin-annotations\3.13.1\maven-plugin-annotations-3.13.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\surefire\surefire-api\2.22.0\surefire-api-2.22.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\surefire\surefire-logger-api\2.22.0\surefire-logger-api-2.22.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\surefire\surefire-booter\2.22.0\surefire-booter-2.22.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-plugin-descriptor\2.2.1\maven-plugin-descriptor-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-project\2.2.1\maven-project-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-profile\2.2.1\maven-profile-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-artifact-manager\2.2.1\maven-artifact-manager-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\backport-util-concurrent\backport-util-concurrent\3.1\backport-util-concurrent-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-plugin-registry\2.2.1\maven-plugin-registry-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\maven\maven-toolchain\2.2.1\maven-toolchain-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\redis\clients\jedis\3.6.3\jedis-3.6.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\apache\commons\commons-pool2\2.12.1\commons-pool2-2.12.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-data-redis\3.5.11\spring-boot-starter-data-redis-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\lettuce\lettuce-core\6.6.0.RELEASE\lettuce-core-6.6.0.RELEASE.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\redis\clients\authentication\redis-authx-core\0.1.1-beta2\redis-authx-core-0.1.1-beta2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\netty\netty-common\4.1.131.Final\netty-common-4.1.131.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\netty\netty-handler\4.1.131.Final\netty-handler-4.1.131.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\netty\netty-resolver\4.1.131.Final\netty-resolver-4.1.131.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\netty\netty-buffer\4.1.131.Final\netty-buffer-4.1.131.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\netty\netty-transport-native-unix-common\4.1.131.Final\netty-transport-native-unix-common-4.1.131.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\netty\netty-codec\4.1.131.Final\netty-codec-4.1.131.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\netty\netty-transport\4.1.131.Final\netty-transport-4.1.131.Final.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\projectreactor\reactor-core\3.7.16\reactor-core-3.7.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\data\spring-data-redis\3.5.9\spring-data-redis-3.5.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\data\spring-data-keyvalue\3.5.9\spring-data-keyvalue-3.5.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\data\spring-data-commons\3.5.9\spring-data-commons-3.5.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-tx\6.2.16\spring-tx-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-oxm\6.2.16\spring-oxm-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-cache\3.5.11\spring-boot-starter-cache-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\spring-context-support\6.2.16\spring-context-support-6.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-starter-actuator\3.5.11\spring-boot-starter-actuator-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.5.11\spring-boot-actuator-autoconfigure-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\springframework\boot\spring-boot-actuator\3.5.11\spring-boot-actuator-3.5.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\micrometer\micrometer-observation\1.15.9\micrometer-observation-1.15.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\micrometer\micrometer-commons\1.15.9\micrometer-commons-1.15.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\micrometer\micrometer-jakarta9\1.15.9\micrometer-jakarta9-1.15.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\io\micrometer\micrometer-core\1.15.9\micrometer-core-1.15.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>${M2}\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar</AuxClasspathEntry>
+  </Project>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="6b6dad31bd3cead93a0d33d21f5b4e57" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in com.keyboard.mes.config.AuthInterceptor.isAllowed(HttpServletRequest, Map)</LongMessage>
+    <Class classname="com.keyboard.mes.config.AuthInterceptor" primary="true">
+      <SourceLine classname="com.keyboard.mes.config.AuthInterceptor" start="42" end="170" sourcefile="AuthInterceptor.java" sourcepath="com/keyboard/mes/config/AuthInterceptor.java">
+        <Message>At AuthInterceptor.java:[lines 42-170]</Message>
+      </SourceLine>
+      <Message>In class com.keyboard.mes.config.AuthInterceptor</Message>
+    </Class>
+    <Method classname="com.keyboard.mes.config.AuthInterceptor" name="isAllowed" signature="(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Z" isStatic="false" primary="true">
+      <SourceLine classname="com.keyboard.mes.config.AuthInterceptor" start="73" end="86" startBytecode="0" endBytecode="302" sourcefile="AuthInterceptor.java" sourcepath="com/keyboard/mes/config/AuthInterceptor.java"/>
+      <Message>In method com.keyboard.mes.config.AuthInterceptor.isAllowed(HttpServletRequest, Map)</Message>
+    </Method>
+    <SourceLine classname="com.keyboard.mes.config.AuthInterceptor" primary="true" start="73" end="73" startBytecode="16" endBytecode="16" sourcefile="AuthInterceptor.java" sourcepath="com/keyboard/mes/config/AuthInterceptor.java">
+      <Message>At AuthInterceptor.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE" instanceHash="fb3d7a33271c187ff28b8b31709baa16" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of resource, which is known to be non-null in com.keyboard.mes.config.AuthInterceptor.isAllowed(HttpServletRequest, Map)</LongMessage>
+    <Class classname="com.keyboard.mes.config.AuthInterceptor" primary="true">
+      <SourceLine classname="com.keyboard.mes.config.AuthInterceptor" start="42" end="170" sourcefile="AuthInterceptor.java" sourcepath="com/keyboard/mes/config/AuthInterceptor.java">
+        <Message>At AuthInterceptor.java:[lines 42-170]</Message>
+      </SourceLine>
+      <Message>In class com.keyboard.mes.config.AuthInterceptor</Message>
+    </Class>
+    <Method classname="com.keyboard.mes.config.AuthInterceptor" name="isAllowed" signature="(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Z" isStatic="false" primary="true">
+      <SourceLine classname="com.keyboard.mes.config.AuthInterceptor" start="73" end="86" startBytecode="0" endBytecode="302" sourcefile="AuthInterceptor.java" sourcepath="com/keyboard/mes/config/AuthInterceptor.java"/>
+      <Message>In method com.keyboard.mes.config.AuthInterceptor.isAllowed(HttpServletRequest, Map)</Message>
+    </Method>
+    <LocalVariable name="resource" register="4" pc="38" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from resource</Message>
+    </LocalVariable>
+    <Method classname="com.keyboard.mes.config.AuthInterceptor" name="resolveResource" signature="(Ljakarta/servlet/http/HttpServletRequest;)Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.keyboard.mes.config.AuthInterceptor" start="90" end="100" startBytecode="0" endBytecode="263" sourcefile="AuthInterceptor.java" sourcepath="com/keyboard/mes/config/AuthInterceptor.java"/>
+      <Message>Return value of com.keyboard.mes.config.AuthInterceptor.resolveResource(HttpServletRequest) of type String</Message>
+    </Method>
+    <SourceLine classname="com.keyboard.mes.config.AuthInterceptor" primary="true" start="78" end="78" startBytecode="40" endBytecode="40" sourcefile="AuthInterceptor.java" sourcepath="com/keyboard/mes/config/AuthInterceptor.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at AuthInterceptor.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="bfb5aae49b364aff730e8485c18b1491" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of connection, which is known to be non-null in com.keyboard.mes.config.RedisStartupWaiter.run(ApplicationArguments)</LongMessage>
+    <Class classname="com.keyboard.mes.config.RedisStartupWaiter" primary="true">
+      <SourceLine classname="com.keyboard.mes.config.RedisStartupWaiter" start="24" end="71" sourcefile="RedisStartupWaiter.java" sourcepath="com/keyboard/mes/config/RedisStartupWaiter.java">
+        <Message>At RedisStartupWaiter.java:[lines 24-71]</Message>
+      </SourceLine>
+      <Message>In class com.keyboard.mes.config.RedisStartupWaiter</Message>
+    </Class>
+    <Method classname="com.keyboard.mes.config.RedisStartupWaiter" name="run" signature="(Lorg/springframework/boot/ApplicationArguments;)V" isStatic="false" primary="true">
+      <SourceLine classname="com.keyboard.mes.config.RedisStartupWaiter" start="43" end="71" startBytecode="0" endBytecode="586" sourcefile="RedisStartupWaiter.java" sourcepath="com/keyboard/mes/config/RedisStartupWaiter.java"/>
+      <Message>In method com.keyboard.mes.config.RedisStartupWaiter.run(ApplicationArguments)</Message>
+    </Method>
+    <LocalVariable name="connection" register="6" pc="134" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from connection</Message>
+    </LocalVariable>
+    <Method classname="org.springframework.data.redis.connection.RedisConnectionFactory" name="getConnection" signature="()Lorg/springframework/data/redis/connection/RedisConnection;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.springframework.data.redis.connection.RedisConnectionFactory" sourcefile="RedisConnectionFactory.java" sourcepath="org/springframework/data/redis/connection/RedisConnectionFactory.java"/>
+      <Message>Return value of org.springframework.data.redis.connection.RedisConnectionFactory.getConnection() of type org.springframework.data.redis.connection.RedisConnection</Message>
+    </Method>
+    <SourceLine classname="com.keyboard.mes.config.RedisStartupWaiter" primary="true" start="53" end="53" startBytecode="136" endBytecode="136" sourcefile="RedisStartupWaiter.java" sourcepath="com/keyboard/mes/config/RedisStartupWaiter.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at RedisStartupWaiter.java:[line 53]</Message>
+    </SourceLine>
+    <SourceLine classname="com.keyboard.mes.config.RedisStartupWaiter" start="60" end="60" startBytecode="119" endBytecode="119" sourcefile="RedisStartupWaiter.java" sourcepath="com/keyboard/mes/config/RedisStartupWaiter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at RedisStartupWaiter.java:[line 60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="1334300959e008475f787c645eb97c48" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class com.keyboard.mes.service.AuthSessionService$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="com.keyboard.mes.service.AuthSessionService$1" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.AuthSessionService$1" start="88" end="88" sourcefile="AuthSessionService.java" sourcepath="com/keyboard/mes/service/AuthSessionService.java">
+        <Message>At AuthSessionService.java:[line 88]</Message>
+      </SourceLine>
+      <Message>In class com.keyboard.mes.service.AuthSessionService$1</Message>
+    </Class>
+    <SourceLine classname="com.keyboard.mes.service.AuthSessionService$1" start="88" end="88" sourcefile="AuthSessionService.java" sourcepath="com/keyboard/mes/service/AuthSessionService.java" synthetic="true">
+      <Message>At AuthSessionService.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BX_UNBOXING_IMMEDIATELY_REBOXED" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE" instanceHash="fe66ced1de4490327b5de90106763108" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxed value is unboxed and then immediately reboxed</ShortMessage>
+    <LongMessage>Boxed value is unboxed and then immediately reboxed in com.keyboard.mes.service.impl.ProductionOrderServiceImpl.buildTaskNo(ProductionOrder, ProcessRoute)</LongMessage>
+    <Class classname="com.keyboard.mes.service.impl.ProductionOrderServiceImpl" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.impl.ProductionOrderServiceImpl" start="28" end="128" sourcefile="ProductionOrderServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ProductionOrderServiceImpl.java">
+        <Message>At ProductionOrderServiceImpl.java:[lines 28-128]</Message>
+      </SourceLine>
+      <Message>In class com.keyboard.mes.service.impl.ProductionOrderServiceImpl</Message>
+    </Class>
+    <Method classname="com.keyboard.mes.service.impl.ProductionOrderServiceImpl" name="buildTaskNo" signature="(Lcom/keyboard/mes/entity/ProductionOrder;Lcom/keyboard/mes/entity/ProcessRoute;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.impl.ProductionOrderServiceImpl" start="126" end="128" startBytecode="0" endBytecode="179" sourcefile="ProductionOrderServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ProductionOrderServiceImpl.java"/>
+      <Message>In method com.keyboard.mes.service.impl.ProductionOrderServiceImpl.buildTaskNo(ProductionOrder, ProcessRoute)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)Ljava/lang/Integer;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1079" end="1081" startBytecode="0" endBytecode="90" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.valueOf(int)</Message>
+    </Method>
+    <SourceLine classname="com.keyboard.mes.service.impl.ProductionOrderServiceImpl" primary="true" start="127" end="127" startBytecode="43" endBytecode="43" sourcefile="ProductionOrderServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ProductionOrderServiceImpl.java">
+      <Message>At ProductionOrderServiceImpl.java:[line 127]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BX_UNBOXING_IMMEDIATELY_REBOXED" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE" instanceHash="de9d9a1152ad16a9f07d2f0c60681470" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxed value is unboxed and then immediately reboxed</ShortMessage>
+    <LongMessage>Boxed value is unboxed and then immediately reboxed in com.keyboard.mes.service.impl.ProductionTaskServiceImpl.finish(Long)</LongMessage>
+    <Class classname="com.keyboard.mes.service.impl.ProductionTaskServiceImpl" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.impl.ProductionTaskServiceImpl" start="21" end="130" sourcefile="ProductionTaskServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ProductionTaskServiceImpl.java">
+        <Message>At ProductionTaskServiceImpl.java:[lines 21-130]</Message>
+      </SourceLine>
+      <Message>In class com.keyboard.mes.service.impl.ProductionTaskServiceImpl</Message>
+    </Class>
+    <Method classname="com.keyboard.mes.service.impl.ProductionTaskServiceImpl" name="finish" signature="(Ljava/lang/Long;)Lcom/keyboard/mes/entity/ProductionTask;" isStatic="false" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.impl.ProductionTaskServiceImpl" start="87" end="107" startBytecode="0" endBytecode="368" sourcefile="ProductionTaskServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ProductionTaskServiceImpl.java"/>
+      <Message>In method com.keyboard.mes.service.impl.ProductionTaskServiceImpl.finish(Long)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)Ljava/lang/Integer;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1079" end="1081" startBytecode="0" endBytecode="90" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.valueOf(int)</Message>
+    </Method>
+    <SourceLine classname="com.keyboard.mes.service.impl.ProductionTaskServiceImpl" primary="true" start="101" end="101" startBytecode="134" endBytecode="134" sourcefile="ProductionTaskServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ProductionTaskServiceImpl.java">
+      <Message>At ProductionTaskServiceImpl.java:[line 101]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="45eef0bd4f9f7554c208dd85c0436f7e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in com.keyboard.mes.service.impl.ReportServiceImpl.normalizePeriod(String)</LongMessage>
+    <Class classname="com.keyboard.mes.service.impl.ReportServiceImpl" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.impl.ReportServiceImpl" start="63" end="563" sourcefile="ReportServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ReportServiceImpl.java">
+        <Message>At ReportServiceImpl.java:[lines 63-563]</Message>
+      </SourceLine>
+      <Message>In class com.keyboard.mes.service.impl.ReportServiceImpl</Message>
+    </Class>
+    <Method classname="com.keyboard.mes.service.impl.ReportServiceImpl" name="normalizePeriod" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.impl.ReportServiceImpl" start="442" end="446" startBytecode="0" endBytecode="154" sourcefile="ReportServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ReportServiceImpl.java"/>
+      <Message>In method com.keyboard.mes.service.impl.ReportServiceImpl.normalizePeriod(String)</Message>
+    </Method>
+    <SourceLine classname="com.keyboard.mes.service.impl.ReportServiceImpl" primary="true" start="442" end="442" startBytecode="11" endBytecode="11" sourcefile="ReportServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ReportServiceImpl.java">
+      <Message>At ReportServiceImpl.java:[line 442]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BX_UNBOXING_IMMEDIATELY_REBOXED" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE" instanceHash="e9f9faeafbf559ab99410a79923b42a1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxed value is unboxed and then immediately reboxed</ShortMessage>
+    <LongMessage>Boxed value is unboxed and then immediately reboxed in com.keyboard.mes.service.impl.ReworkOrderServiceImpl.repair(Long, ReworkOrder)</LongMessage>
+    <Class classname="com.keyboard.mes.service.impl.ReworkOrderServiceImpl" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.impl.ReworkOrderServiceImpl" start="29" end="188" sourcefile="ReworkOrderServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ReworkOrderServiceImpl.java">
+        <Message>At ReworkOrderServiceImpl.java:[lines 29-188]</Message>
+      </SourceLine>
+      <Message>In class com.keyboard.mes.service.impl.ReworkOrderServiceImpl</Message>
+    </Class>
+    <Method classname="com.keyboard.mes.service.impl.ReworkOrderServiceImpl" name="repair" signature="(Ljava/lang/Long;Lcom/keyboard/mes/entity/ReworkOrder;)Lcom/keyboard/mes/entity/ReworkOrder;" isStatic="false" primary="true">
+      <SourceLine classname="com.keyboard.mes.service.impl.ReworkOrderServiceImpl" start="83" end="92" startBytecode="0" endBytecode="297" sourcefile="ReworkOrderServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ReworkOrderServiceImpl.java"/>
+      <Message>In method com.keyboard.mes.service.impl.ReworkOrderServiceImpl.repair(Long, ReworkOrder)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)Ljava/lang/Integer;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1079" end="1081" startBytecode="0" endBytecode="90" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.valueOf(int)</Message>
+    </Method>
+    <SourceLine classname="com.keyboard.mes.service.impl.ReworkOrderServiceImpl" primary="true" start="90" end="90" startBytecode="86" endBytecode="86" sourcefile="ReworkOrderServiceImpl.java" sourcepath="com/keyboard/mes/service/impl/ReworkOrderServiceImpl.java">
+      <Message>At ReworkOrderServiceImpl.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BX_UNBOXING_IMMEDIATELY_REBOXED" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Boxed value is unboxed and then immediately reboxed</ShortDescription>
+    <Details><![CDATA[
+
+  <p>A boxed value is unboxed and then immediately reboxed.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 8 Oct 2026 13:11:07 +0800" total_classes="73" referenced_classes="274" total_bugs="8" total_size="2927" num_packages="11" java_version="1.8.0_504" vm_version="25.504-b01" cpu_seconds="24.14" clock_seconds="3.31" peak_mbytes="380.01" alloc_mbytes="7104.00" gc_seconds="0.06" priority_3="4" priority_2="4">
+    <FileStats path="com/keyboard/mes/KeyboardMesApplication.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/config/AuthInterceptor.java" bugCount="2" size="112" bugHash="21f10706dd760fb829130cbfab8e2b97"/>
+    <FileStats path="com/keyboard/mes/config/MybatisPlusMetaObjectHandler.java" bugCount="0" size="3"/>
+    <FileStats path="com/keyboard/mes/config/RedisStartupWaiter.java" bugCount="1" size="39" bugHash="208381abbd84db738f87aa09f326cdb4"/>
+    <FileStats path="com/keyboard/mes/config/ShiroConfiguration.java" bugCount="0" size="35"/>
+    <FileStats path="com/keyboard/mes/config/WebConfig.java" bugCount="0" size="20"/>
+    <FileStats path="com/keyboard/mes/controller/ApiInfoController.java" bugCount="0" size="88"/>
+    <FileStats path="com/keyboard/mes/controller/AuthController.java" bugCount="0" size="29"/>
+    <FileStats path="com/keyboard/mes/controller/InspectionRecordController.java" bugCount="0" size="38"/>
+    <FileStats path="com/keyboard/mes/controller/MaterialController.java" bugCount="0" size="33"/>
+    <FileStats path="com/keyboard/mes/controller/ProcessRouteController.java" bugCount="0" size="33"/>
+    <FileStats path="com/keyboard/mes/controller/ProductBomController.java" bugCount="0" size="33"/>
+    <FileStats path="com/keyboard/mes/controller/ProductModelController.java" bugCount="0" size="33"/>
+    <FileStats path="com/keyboard/mes/controller/ProductionOrderController.java" bugCount="0" size="35"/>
+    <FileStats path="com/keyboard/mes/controller/ProductionTaskController.java" bugCount="0" size="39"/>
+    <FileStats path="com/keyboard/mes/controller/ReportController.java" bugCount="0" size="18"/>
+    <FileStats path="com/keyboard/mes/controller/ReworkOrderController.java" bugCount="0" size="37"/>
+    <FileStats path="com/keyboard/mes/controller/SysUserController.java" bugCount="0" size="33"/>
+    <FileStats path="com/keyboard/mes/controller/TraceController.java" bugCount="0" size="12"/>
+    <FileStats path="com/keyboard/mes/controller/WorkReportController.java" bugCount="0" size="38"/>
+    <FileStats path="com/keyboard/mes/dto/LoginRequest.java" bugCount="0" size="15"/>
+    <FileStats path="com/keyboard/mes/dto/Result.java" bugCount="0" size="35"/>
+    <FileStats path="com/keyboard/mes/dto/TraceResult.java" bugCount="0" size="31"/>
+    <FileStats path="com/keyboard/mes/entity/InspectionRecord.java" bugCount="0" size="80"/>
+    <FileStats path="com/keyboard/mes/entity/Material.java" bugCount="0" size="52"/>
+    <FileStats path="com/keyboard/mes/entity/ProcessRoute.java" bugCount="0" size="68"/>
+    <FileStats path="com/keyboard/mes/entity/ProductBom.java" bugCount="0" size="52"/>
+    <FileStats path="com/keyboard/mes/entity/ProductModel.java" bugCount="0" size="48"/>
+    <FileStats path="com/keyboard/mes/entity/ProductionOrder.java" bugCount="0" size="80"/>
+    <FileStats path="com/keyboard/mes/entity/ProductionTask.java" bugCount="0" size="76"/>
+    <FileStats path="com/keyboard/mes/entity/ReworkOrder.java" bugCount="0" size="80"/>
+    <FileStats path="com/keyboard/mes/entity/SysUser.java" bugCount="0" size="60"/>
+    <FileStats path="com/keyboard/mes/entity/WorkReport.java" bugCount="0" size="64"/>
+    <FileStats path="com/keyboard/mes/exception/BusinessException.java" bugCount="0" size="11"/>
+    <FileStats path="com/keyboard/mes/exception/GlobalExceptionHandler.java" bugCount="0" size="30"/>
+    <FileStats path="com/keyboard/mes/repository/InspectionRecordMapper.java" bugCount="0" size="7"/>
+    <FileStats path="com/keyboard/mes/repository/MaterialMapper.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/repository/ProcessRouteMapper.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/repository/ProductBomMapper.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/repository/ProductModelMapper.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/repository/ProductionOrderMapper.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/repository/ProductionTaskMapper.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/repository/ReworkOrderMapper.java" bugCount="0" size="7"/>
+    <FileStats path="com/keyboard/mes/repository/SysUserMapper.java" bugCount="0" size="7"/>
+    <FileStats path="com/keyboard/mes/repository/WorkReportMapper.java" bugCount="0" size="7"/>
+    <FileStats path="com/keyboard/mes/service/AuthSessionService.java" bugCount="1" size="80" bugHash="99ed79951e8af761851fb754f9b7a17e"/>
+    <FileStats path="com/keyboard/mes/service/InspectionRecordService.java" bugCount="0" size="8"/>
+    <FileStats path="com/keyboard/mes/service/MaterialService.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/service/ProcessRouteService.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/service/ProductBomService.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/service/ProductModelService.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/service/ProductionOrderService.java" bugCount="0" size="7"/>
+    <FileStats path="com/keyboard/mes/service/ProductionTaskService.java" bugCount="0" size="9"/>
+    <FileStats path="com/keyboard/mes/service/ReportService.java" bugCount="0" size="4"/>
+    <FileStats path="com/keyboard/mes/service/ReworkOrderService.java" bugCount="0" size="8"/>
+    <FileStats path="com/keyboard/mes/service/SysUserService.java" bugCount="0" size="6"/>
+    <FileStats path="com/keyboard/mes/service/TraceService.java" bugCount="0" size="2"/>
+    <FileStats path="com/keyboard/mes/service/WorkReportService.java" bugCount="0" size="8"/>
+    <FileStats path="com/keyboard/mes/service/impl/InspectionRecordServiceImpl.java" bugCount="0" size="126"/>
+    <FileStats path="com/keyboard/mes/service/impl/MaterialServiceImpl.java" bugCount="0" size="23"/>
+    <FileStats path="com/keyboard/mes/service/impl/ProcessRouteServiceImpl.java" bugCount="0" size="23"/>
+    <FileStats path="com/keyboard/mes/service/impl/ProductBomServiceImpl.java" bugCount="0" size="23"/>
+    <FileStats path="com/keyboard/mes/service/impl/ProductModelServiceImpl.java" bugCount="0" size="23"/>
+    <FileStats path="com/keyboard/mes/service/impl/ProductionOrderServiceImpl.java" bugCount="1" size="72" bugHash="2311d40f0dd1262f88153ec57a2c0334"/>
+    <FileStats path="com/keyboard/mes/service/impl/ProductionTaskServiceImpl.java" bugCount="1" size="67" bugHash="35730a0c60d71c66f6587adff92ca7f2"/>
+    <FileStats path="com/keyboard/mes/service/impl/ReportServiceImpl.java" bugCount="1" size="457" bugHash="9ccc45e1f2e194bf5429b4881dfa3b4f"/>
+    <FileStats path="com/keyboard/mes/service/impl/ReworkOrderServiceImpl.java" bugCount="1" size="109" bugHash="4da82a12ed50d2ae5e778fd2b84ab679"/>
+    <FileStats path="com/keyboard/mes/service/impl/SysUserServiceImpl.java" bugCount="0" size="25"/>
+    <FileStats path="com/keyboard/mes/service/impl/TraceServiceImpl.java" bugCount="0" size="69"/>
+    <FileStats path="com/keyboard/mes/service/impl/WorkReportServiceImpl.java" bugCount="0" size="144"/>
+    <FileStats path="com/keyboard/mes/shiro/MesShiroRealm.java" bugCount="0" size="29"/>
+    <FileStats path="com/keyboard/mes/util/PasswordUtils.java" bugCount="0" size="21"/>
+    <PackageStats package="com.keyboard.mes" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.keyboard.mes.KeyboardMesApplication" sourceFile="KeyboardMesApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.config" total_bugs="3" total_types="5" total_size="209" priority_3="2" priority_2="1">
+      <ClassStats class="com.keyboard.mes.config.AuthInterceptor" sourceFile="AuthInterceptor.java" interface="false" size="112" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="com.keyboard.mes.config.LegacyMetaObjectHandlerPlaceholder" sourceFile="MybatisPlusMetaObjectHandler.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.config.RedisStartupWaiter" sourceFile="RedisStartupWaiter.java" interface="false" size="39" bugs="1" priority_3="1"/>
+      <ClassStats class="com.keyboard.mes.config.ShiroConfiguration" sourceFile="ShiroConfiguration.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.config.WebConfig" sourceFile="WebConfig.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.controller" total_bugs="0" total_types="14" total_size="499">
+      <ClassStats class="com.keyboard.mes.controller.ApiInfoController" sourceFile="ApiInfoController.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.AuthController" sourceFile="AuthController.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.InspectionRecordController" sourceFile="InspectionRecordController.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.MaterialController" sourceFile="MaterialController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.ProcessRouteController" sourceFile="ProcessRouteController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.ProductBomController" sourceFile="ProductBomController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.ProductModelController" sourceFile="ProductModelController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.ProductionOrderController" sourceFile="ProductionOrderController.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.ProductionTaskController" sourceFile="ProductionTaskController.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.ReportController" sourceFile="ReportController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.ReworkOrderController" sourceFile="ReworkOrderController.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.SysUserController" sourceFile="SysUserController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.TraceController" sourceFile="TraceController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.controller.WorkReportController" sourceFile="WorkReportController.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.dto" total_bugs="0" total_types="3" total_size="81">
+      <ClassStats class="com.keyboard.mes.dto.LoginRequest" sourceFile="LoginRequest.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.dto.Result" sourceFile="Result.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.dto.TraceResult" sourceFile="TraceResult.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.entity" total_bugs="0" total_types="10" total_size="660">
+      <ClassStats class="com.keyboard.mes.entity.InspectionRecord" sourceFile="InspectionRecord.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.Material" sourceFile="Material.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProcessRoute" sourceFile="ProcessRoute.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProductBom" sourceFile="ProductBom.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProductModel" sourceFile="ProductModel.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProductionOrder" sourceFile="ProductionOrder.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ProductionTask" sourceFile="ProductionTask.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.ReworkOrder" sourceFile="ReworkOrder.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.SysUser" sourceFile="SysUser.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.entity.WorkReport" sourceFile="WorkReport.java" interface="false" size="64" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.exception" total_bugs="0" total_types="2" total_size="41">
+      <ClassStats class="com.keyboard.mes.exception.BusinessException" sourceFile="BusinessException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.exception.GlobalExceptionHandler" sourceFile="GlobalExceptionHandler.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.repository" total_bugs="0" total_types="10" total_size="64">
+      <ClassStats class="com.keyboard.mes.repository.InspectionRecordMapper" sourceFile="InspectionRecordMapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.MaterialMapper" sourceFile="MaterialMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.ProcessRouteMapper" sourceFile="ProcessRouteMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.ProductBomMapper" sourceFile="ProductBomMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.ProductModelMapper" sourceFile="ProductModelMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.ProductionOrderMapper" sourceFile="ProductionOrderMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.ProductionTaskMapper" sourceFile="ProductionTaskMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.ReworkOrderMapper" sourceFile="ReworkOrderMapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.SysUserMapper" sourceFile="SysUserMapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.repository.WorkReportMapper" sourceFile="WorkReportMapper.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.service" total_bugs="1" total_types="14" total_size="156" priority_3="1">
+      <ClassStats class="com.keyboard.mes.service.AuthSessionService" sourceFile="AuthSessionService.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.AuthSessionService$1" sourceFile="AuthSessionService.java" interface="false" size="4" bugs="1" priority_3="1"/>
+      <ClassStats class="com.keyboard.mes.service.InspectionRecordService" sourceFile="InspectionRecordService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.MaterialService" sourceFile="MaterialService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.ProcessRouteService" sourceFile="ProcessRouteService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.ProductBomService" sourceFile="ProductBomService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.ProductModelService" sourceFile="ProductModelService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.ProductionOrderService" sourceFile="ProductionOrderService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.ProductionTaskService" sourceFile="ProductionTaskService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.ReportService" sourceFile="ReportService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.ReworkOrderService" sourceFile="ReworkOrderService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.SysUserService" sourceFile="SysUserService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.TraceService" sourceFile="TraceService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.WorkReportService" sourceFile="WorkReportService.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.service.impl" total_bugs="4" total_types="12" total_size="1161" priority_3="1" priority_2="3">
+      <ClassStats class="com.keyboard.mes.service.impl.InspectionRecordServiceImpl" sourceFile="InspectionRecordServiceImpl.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.impl.MaterialServiceImpl" sourceFile="MaterialServiceImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.impl.ProcessRouteServiceImpl" sourceFile="ProcessRouteServiceImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.impl.ProductBomServiceImpl" sourceFile="ProductBomServiceImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.impl.ProductModelServiceImpl" sourceFile="ProductModelServiceImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.impl.ProductionOrderServiceImpl" sourceFile="ProductionOrderServiceImpl.java" interface="false" size="72" bugs="1" priority_2="1"/>
+      <ClassStats class="com.keyboard.mes.service.impl.ProductionTaskServiceImpl" sourceFile="ProductionTaskServiceImpl.java" interface="false" size="67" bugs="1" priority_2="1"/>
+      <ClassStats class="com.keyboard.mes.service.impl.ReportServiceImpl" sourceFile="ReportServiceImpl.java" interface="false" size="457" bugs="1" priority_3="1"/>
+      <ClassStats class="com.keyboard.mes.service.impl.ReworkOrderServiceImpl" sourceFile="ReworkOrderServiceImpl.java" interface="false" size="109" bugs="1" priority_2="1"/>
+      <ClassStats class="com.keyboard.mes.service.impl.SysUserServiceImpl" sourceFile="SysUserServiceImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.impl.TraceServiceImpl" sourceFile="TraceServiceImpl.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.keyboard.mes.service.impl.WorkReportServiceImpl" sourceFile="WorkReportServiceImpl.java" interface="false" size="144" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.shiro" total_bugs="0" total_types="1" total_size="29">
+      <ClassStats class="com.keyboard.mes.shiro.MesShiroRealm" sourceFile="MesShiroRealm.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.keyboard.mes.util" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="com.keyboard.mes.util.PasswordUtils" sourceFile="PasswordUtils.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="708" invocations="1512" avgMicrosecondsPerInvocation="468" maxMicrosecondsPerInvocation="6669" standardDeviationMircosecondsPerInvocation="300"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="251" invocations="1505" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="14088" standardDeviationMircosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="111" invocations="225" avgMicrosecondsPerInvocation="495" maxMicrosecondsPerInvocation="14195" standardDeviationMircosecondsPerInvocation="923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="110" invocations="274" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="8588" standardDeviationMircosecondsPerInvocation="994"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="92" invocations="744" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="16708" standardDeviationMircosecondsPerInvocation="671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="85" invocations="744" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="17125" standardDeviationMircosecondsPerInvocation="692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="79" invocations="274" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="8042" standardDeviationMircosecondsPerInvocation="666"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="64" invocations="748" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="5857" standardDeviationMircosecondsPerInvocation="313"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="60" invocations="744" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="6819" standardDeviationMircosecondsPerInvocation="304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="55" invocations="748" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="6114" standardDeviationMircosecondsPerInvocation="290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="49" invocations="1144" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="1663" standardDeviationMircosecondsPerInvocation="101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="49" invocations="744" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="6659" standardDeviationMircosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="46" invocations="389" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="9909" standardDeviationMircosecondsPerInvocation="526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="37" invocations="860" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="18776" standardDeviationMircosecondsPerInvocation="642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="36" invocations="274" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="9913" standardDeviationMircosecondsPerInvocation="652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="36" invocations="274" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="4086" standardDeviationMircosecondsPerInvocation="353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="33" invocations="1455" avgMicrosecondsPerInvocation="22" maxMicrosecondsPerInvocation="1598" standardDeviationMircosecondsPerInvocation="61"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="32" invocations="415" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="2370" standardDeviationMircosecondsPerInvocation="181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="28" invocations="274" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="15829" standardDeviationMircosecondsPerInvocation="962"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

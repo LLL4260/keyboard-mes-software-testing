@@ -1,0 +1,9 @@
+﻿编号,类型,文件,行号,人工判断,依据,处理,复查
+FB-001,DM_CONVERT_CASE,com/keyboard/mes/config/AuthInterceptor.java,73,确认问题,标识符应使用固定地区规则，默认地区会改变大小写转换结果,已修正,复查消失
+FB-002,RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE,com/keyboard/mes/config/AuthInterceptor.java,78,确认问题,resolveResource各返回路径均为字符串，后续空值分支不可达,已修正,复查消失
+FB-003,RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE,com/keyboard/mes/config/RedisStartupWaiter.java,53,误报,告警定位try-with-resources的隐式关闭检查，源码没有该空值检查；保留自动资源关闭语义,保留，无需修改,保留1项告警
+FB-004,SIC_INNER_SHOULD_BE_STATIC_ANON,com/keyboard/mes/service/AuthSessionService.java,88,确认问题,匿名TypeReference无需捕获服务实例，可使用具名静态嵌套类,已修正,复查消失
+FB-005,BX_UNBOXING_IMMEDIATELY_REBOXED,com/keyboard/mes/service/impl/ProductionOrderServiceImpl.java,127,确认问题,三元表达式混合基本类型和包装类型，引发无必要的拆装箱,已修正,复查消失
+FB-006,BX_UNBOXING_IMMEDIATELY_REBOXED,com/keyboard/mes/service/impl/ProductionTaskServiceImpl.java,101,确认问题,三元表达式混合基本类型和包装类型，引发无必要的拆装箱,已修正,复查消失
+FB-007,DM_CONVERT_CASE,com/keyboard/mes/service/impl/ReportServiceImpl.java,442,确认问题,标识符应使用固定地区规则，默认地区会改变大小写转换结果,已修正,复查消失
+FB-008,BX_UNBOXING_IMMEDIATELY_REBOXED,com/keyboard/mes/service/impl/ReworkOrderServiceImpl.java,90,确认问题,三元表达式混合基本类型和包装类型，引发无必要的拆装箱,已修正,复查消失

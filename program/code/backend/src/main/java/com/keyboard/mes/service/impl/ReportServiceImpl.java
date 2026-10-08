@@ -28,6 +28,7 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.TreeMap;
 import java.util.function.Function;
@@ -439,7 +440,7 @@ public class ReportServiceImpl implements ReportService {
     }
 
     private String normalizePeriod(String period) {
-        String normalized = StringUtils.hasText(period) ? period.trim().toLowerCase() : PERIOD_WEEK;
+        String normalized = StringUtils.hasText(period) ? period.trim().toLowerCase(Locale.ROOT) : PERIOD_WEEK;
         if (!PERIOD_DAY.equals(normalized) && !PERIOD_WEEK.equals(normalized) && !PERIOD_MONTH.equals(normalized)) {
             throw new BusinessException("统计周期仅支持 day、week 或 month");
         }

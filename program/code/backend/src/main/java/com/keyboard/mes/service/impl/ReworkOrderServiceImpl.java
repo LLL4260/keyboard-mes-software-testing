@@ -87,7 +87,7 @@ public class ReworkOrderServiceImpl implements ReworkOrderService {
         rework.setRepairHours(input.getRepairHours());
         rework.setRepairResult(input.getRepairResult());
         rework.setRepairTime(input.getRepairTime() == null ? LocalDateTime.now() : input.getRepairTime());
-        rework.setStatus(input.getStatus() == null ? 2 : input.getStatus());
+        rework.setStatus(input.getStatus() == null ? Integer.valueOf(2) : input.getStatus());
         updateOrThrow(rework);
         return reworkOrderMapper.getById(id);
     }

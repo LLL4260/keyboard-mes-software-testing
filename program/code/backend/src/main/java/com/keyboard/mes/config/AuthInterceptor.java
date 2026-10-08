@@ -15,6 +15,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Locale;
 import java.util.Set;
 
 /**
@@ -70,14 +71,11 @@ public class AuthInterceptor implements HandlerInterceptor {
     }
 
     private boolean isAllowed(HttpServletRequest request, Map<String, Object> currentUser) {
-        String roleCode = String.valueOf(currentUser.getOrDefault("roleCode", "")).trim().toLowerCase();
+        String roleCode = String.valueOf(currentUser.getOrDefault("roleCode", "")).trim().toLowerCase(Locale.ROOT);
         if (ROLE_ADMIN.equals(roleCode)) {
             return true;
         }
         String resource = resolveResource(request);
-        if (resource == null) {
-            return true;
-        }
         Map<String, Set<String>> actionRules = roleRules.get(resource);
         if (actionRules == null) {
             return false;

@@ -86,7 +86,7 @@ public class ProductionTaskServiceImpl implements ProductionTaskService {
     public ProductionTask finish(Long id) {
         ProductionTask task = requireTask(id);
         int completed = task.getCompletedQuantity() == null ? 0 : task.getCompletedQuantity();
-        int planned = task.getPlannedQuantity() == null ? 0 : task.getPlannedQuantity();
+        int planned = task.getPlannedQuantity() == null ? Integer.valueOf(0) : task.getPlannedQuantity();
         if (completed < planned) {
             throw new BusinessException("任务累计完成数（" + completed + "）未达到计划数（" + planned + "），不能完工");
         }
@@ -98,7 +98,7 @@ public class ProductionTaskServiceImpl implements ProductionTaskService {
             task.setFinishTime(LocalDateTime.now());
         }
         if (task.getCompletedQuantity() == null) {
-            task.setCompletedQuantity(task.getPlannedQuantity() == null ? 0 : task.getPlannedQuantity());
+            task.setCompletedQuantity(task.getPlannedQuantity() == null ? Integer.valueOf(0) : task.getPlannedQuantity());
         }
         if (task.getDefectQuantity() == null) {
             task.setDefectQuantity(0);

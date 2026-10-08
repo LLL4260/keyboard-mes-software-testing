@@ -32,6 +32,9 @@ public class AuthSessionService {
     private static final String BEARER_PREFIX = "Bearer ";
     private static final String KEY_PREFIX = "keyboard_mes:login:";
 
+    private static final class LoginUserTypeReference extends TypeReference<Map<String, Object>> {
+    }
+
     private final StringRedisTemplate redisTemplate;
     private final ObjectMapper objectMapper;
 
@@ -85,8 +88,7 @@ public class AuthSessionService {
         }
         redisTemplate.expire(key, Duration.ofSeconds(sessionTimeoutSeconds));
         try {
-            return objectMapper.readValue(value, new TypeReference<Map<String, Object>>() {
-            });
+            return objectMapper.readValue(value, new LoginUserTypeReference());
         } catch (JsonProcessingException exception) {
             return null;
         }

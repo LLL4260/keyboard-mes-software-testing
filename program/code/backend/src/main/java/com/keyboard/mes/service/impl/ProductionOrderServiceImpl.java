@@ -124,7 +124,7 @@ public class ProductionOrderServiceImpl implements ProductionOrderService {
 
     private String buildTaskNo(ProductionOrder order, ProcessRoute route) {
         String orderNo = StringUtils.hasText(order.getOrderNo()) ? order.getOrderNo() : String.valueOf(order.getId());
-        Integer sequenceNo = route.getSequenceNo() == null ? 0 : route.getSequenceNo();
+        Integer sequenceNo = route.getSequenceNo() == null ? Integer.valueOf(0) : route.getSequenceNo();
         return "TASK-" + orderNo + "-" + String.format("%03d", sequenceNo);
     }
 }
