@@ -1,0 +1,16 @@
+﻿编号,规则,文件,行号,字段,人工判断,依据,处理,复查
+SB-001,EI_EXPOSE_REP2,com/keyboard/mes/config/WebConfig.java,25,authInterceptor,框架场景误报,Spring注入同一个AuthInterceptor，并交给MVC注册；共享拦截器是框架设计，字段private final，无外部取回接口,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-002,EI_EXPOSE_REP2,com/keyboard/mes/service/AuthSessionService.java,46,objectMapper,设计风险保留,Spring管理的共享JSON组件；本项目仅读写JSON，未发现运行期重新配置调用。组件可变风险客观存在，故不列为误报；后续必须维持初始化后配置稳定,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-003,EI_EXPOSE_REP2,com/keyboard/mes/service/AuthSessionService.java,45,redisTemplate,设计风险保留,Spring管理的Redis模板；本项目执行数据读写但不重配置连接工厂或序列化器。配置可变风险保留，维持初始化后配置稳定,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-004,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/ReportServiceImpl.java,69,inspectionRecordMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-005,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/ReportServiceImpl.java,66,productModelMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-006,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/ReportServiceImpl.java,65,productionOrderMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-007,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/ReportServiceImpl.java,67,productionTaskMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-008,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/ReportServiceImpl.java,70,reworkOrderMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-009,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/ReportServiceImpl.java,68,workReportMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-010,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/TraceServiceImpl.java,45,inspectionRecordMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-011,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/TraceServiceImpl.java,48,productionOrderMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-012,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/TraceServiceImpl.java,47,productionTaskMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-013,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/TraceServiceImpl.java,46,reworkOrderMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-014,EI_EXPOSE_REP2,com/keyboard/mes/service/impl/TraceServiceImpl.java,44,workReportMapper,框架场景误报,构造器注入MyBatis @Mapper代理，字段private final；服务调用代理执行查询，没有对外暴露代理，复制会破坏容器协作语义,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制
+SB-015,EI_EXPOSE_REP2,com/keyboard/mes/shiro/MesShiroRealm.java,26,sysUserMapper,框架场景误报,ShiroConfiguration通过@Bean工厂注入SysUserMapper代理；不是调用者提供的内部数据容器，不应复制数据库代理,保留现有注入，不修改源码,同范围复查仍报告；未设置过滤或抑制

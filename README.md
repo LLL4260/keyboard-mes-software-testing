@@ -10,7 +10,7 @@
 | [实验2历史版本](2/实验2成果/历史版本/) | 报告旧稿及原始执行明细，仅供追溯 |
 | [实验3实验报告](3/实验3成果/实验3实验报告.docx) | JUnit/Mockito 单元测试、基本路径分析及 JaCoCo 实测结果；同目录 Markdown 为正文源 |
 | [实验3方案](3/实验3方案.md) | 测试范围、实施步骤与验收记录 |
-| [实验4静态分析方案](4/实验4方案.md) | P3C与FindBugs兼容分析、告警核查、修正及复查 |
+| [实验4静态分析方案](4/实验4方案.md) | SpotBugs与Alibaba Java Coding Guidelines实测、人工核查和复查；FindBugs保留历史证据 |
 | [实验5接口测试](5/README.md) | Postman集合、Newman实测和实验报告 |
 | [实验6性能测试](6/README.md) | JMeter负载实测与Badboy真实录制、导出及回放 |
 | [开发环境工具下载](program/docs/development/开发环境工具下载.md) | Maven、JDK 17 官方下载链接、校验和及配置说明 |
