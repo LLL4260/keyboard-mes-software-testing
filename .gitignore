@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+*.local.properties
+工具材料/*.properties
+*.local.json
+*.log
+*.jtl
+*.postman_environment.json
+**/target/
+**/node_modules/
+**/dist/
+**/project.private.config.json
+.idea/
+.vscode/
+~$*

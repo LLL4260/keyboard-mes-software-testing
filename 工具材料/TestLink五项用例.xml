@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="Keyboard MES 五人报告用例">
+  <testcase name="KMES-F003 退出后会话失效">
+    <node_order>3</node_order>
+    <version>1</version>
+    <summary>需求 FR-01；来源 需求规约及上机1功能正确性</summary>
+    <preconditions>U001已登录并保存会话</preconditions>
+    <execution_type>1</execution_type>
+    <importance>3</importance>
+    <steps>
+      <step>
+        <step_number>1</step_number>
+        <actions>调用/auth/logout；使用退出前会话调用/auth/current</actions>
+        <expectedresults>退出成功；旧会话被拒绝，业务码401</expectedresults>
+        <execution_type>1</execution_type>
+      </step>
+    </steps>
+    <requirements>
+      <requirement>
+        <req_spec_title>Keyboard MES 系统测试需求</req_spec_title>
+        <doc_id>FR-01</doc_id>
+        <title>登录与会话</title>
+      </requirement>
+    </requirements>
+  </testcase>
+  <testcase name="KMES-F010 合法工单创建">
+    <node_order>10</node_order>
+    <version>1</version>
+    <summary>需求 FR-04；来源 需求规约及上机1功能正确性</summary>
+    <preconditions>U002已登录；型号和对应启用路线存在</preconditions>
+    <execution_type>1</execution_type>
+    <importance>3</importance>
+    <steps>
+      <step>
+        <step_number>1</step_number>
+        <actions>创建LAB2_ORDER01，数量100，绑定本型号路线版本；查询详情</actions>
+        <expectedresults>工单成功保存；数量、型号、路线版本与输入一致</expectedresults>
+        <execution_type>1</execution_type>
+      </step>
+    </steps>
+    <requirements>
+      <requirement>
+        <req_spec_title>Keyboard MES 系统测试需求</req_spec_title>
+        <doc_id>FR-04</doc_id>
+        <title>生产工单</title>
+      </requirement>
+    </requirements>
+  </testcase>
+  <testcase name="KMES-F014 重复生成任务">
+    <node_order>14</node_order>
+    <version>1</version>
+    <summary>需求 FR-05；来源 需求规约及上机1功能正确性</summary>
+    <preconditions>上一场景的工单已生成3条任务</preconditions>
+    <execution_type>1</execution_type>
+    <importance>3</importance>
+    <steps>
+      <step>
+        <step_number>1</step_number>
+        <actions>再次调用generateTasks；核对任务数</actions>
+        <expectedresults>不新增第二批；任务总数仍为3</expectedresults>
+        <execution_type>1</execution_type>
+      </step>
+    </steps>
+    <requirements>
+      <requirement>
+        <req_spec_title>Keyboard MES 系统测试需求</req_spec_title>
+        <doc_id>FR-05</doc_id>
+        <title>任务生成与执行</title>
+      </requirement>
+    </requirements>
+  </testcase>
+  <testcase name="KMES-F018 报工剩余数量边界">
+    <node_order>18</node_order>
+    <version>1</version>
+    <summary>需求 FR-06；来源 需求规约及上机1功能正确性</summary>
+    <preconditions>两份独立任务均计划100、完成60</preconditions>
+    <execution_type>1</execution_type>
+    <importance>3</importance>
+    <steps>
+      <step>
+        <step_number>1</step_number>
+        <actions>任务A提交40；任务B提交41；分别核对数量</actions>
+        <expectedresults>A达到100；B被拒绝且仍为60；无超量写入</expectedresults>
+        <execution_type>1</execution_type>
+      </step>
+    </steps>
+    <requirements>
+      <requirement>
+        <req_spec_title>Keyboard MES 系统测试需求</req_spec_title>
+        <doc_id>FR-06</doc_id>
+        <title>现场报工</title>
+      </requirement>
+    </requirements>
+  </testcase>
+  <testcase name="KMES-F026 绕过质量门直接完工">
+    <node_order>26</node_order>
+    <version>1</version>
+    <summary>需求 FR-08；来源 需求规约及上机1功能正确性</summary>
+    <preconditions>任务存在未闭合返修或报废检验</preconditions>
+    <execution_type>1</execution_type>
+    <importance>3</importance>
+    <steps>
+      <step>
+        <step_number>1</step_number>
+        <actions>分别调用finish和通用更新尝试设为正常完成</actions>
+        <expectedresults>均不得绕过质量约束；保留原质量事实</expectedresults>
+        <execution_type>1</execution_type>
+      </step>
+    </steps>
+    <requirements>
+      <requirement>
+        <req_spec_title>Keyboard MES 系统测试需求</req_spec_title>
+        <doc_id>FR-08</doc_id>
+        <title>返修与复检</title>
+      </requirement>
+    </requirements>
+  </testcase>
+</testsuite>

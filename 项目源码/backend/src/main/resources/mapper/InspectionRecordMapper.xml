@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.keyboard.mes.repository.InspectionRecordMapper">
+    <resultMap id="InspectionRecordMap" type="InspectionRecord">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="inspection_no" jdbcType="VARCHAR" property="inspectionNo"/>
+        <result column="inspection_type" jdbcType="VARCHAR" property="inspectionType"/>
+        <result column="task_id" jdbcType="BIGINT" property="taskId"/>
+        <result column="order_id" jdbcType="BIGINT" property="orderId"/>
+        <result column="product_sn" jdbcType="VARCHAR" property="productSn"/>
+        <result column="process_route_id" jdbcType="BIGINT" property="processRouteId"/>
+        <result column="standard_snapshot" jdbcType="LONGVARCHAR" property="standardSnapshot"/>
+        <result column="inspector_id" jdbcType="BIGINT" property="inspectorId"/>
+        <result column="source_type" jdbcType="VARCHAR" property="sourceType"/>
+        <result column="equipment_no" jdbcType="VARCHAR" property="equipmentNo"/>
+        <result column="inspection_time" jdbcType="TIMESTAMP" property="inspectionTime"/>
+        <result column="result" jdbcType="TINYINT" property="result"/>
+        <result column="measured_data" jdbcType="LONGVARCHAR" property="measuredData"/>
+        <result column="defect_reason" jdbcType="VARCHAR" property="defectReason"/>
+        <result column="handling_method" jdbcType="TINYINT" property="handlingMethod"/>
+        <result column="approval_status" jdbcType="TINYINT" property="approvalStatus"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+
+    <select id="getById" resultMap="InspectionRecordMap">
+        select `id`, `inspection_no`, `inspection_type`, `task_id`, `order_id`, `product_sn`, `process_route_id`, `standard_snapshot`, `inspector_id`, `source_type`, `equipment_no`, `inspection_time`, `result`, `measured_data`, `defect_reason`, `handling_method`, `approval_status`, `remark` from `inspection_record` where `id` = #{id}
+    </select>
+
+    <select id="inspectionRecordList" resultMap="InspectionRecordMap">
+        select `id`, `inspection_no`, `inspection_type`, `task_id`, `order_id`, `product_sn`, `process_route_id`, `standard_snapshot`, `inspector_id`, `source_type`, `equipment_no`, `inspection_time`, `result`, `measured_data`, `defect_reason`, `handling_method`, `approval_status`, `remark` from `inspection_record`
+    </select>
+
+    <select id="findByProductSn" resultMap="InspectionRecordMap">
+        select `id`, `inspection_no`, `inspection_type`, `task_id`, `order_id`, `product_sn`, `process_route_id`, `standard_snapshot`, `inspector_id`, `source_type`, `equipment_no`, `inspection_time`, `result`, `measured_data`, `defect_reason`, `handling_method`, `approval_status`, `remark` from `inspection_record` where `product_sn` = #{productSn}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into `inspection_record`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="inspectionNo != null and inspectionNo != ''">
+                `inspection_no`,
+            </if>
+            <if test="inspectionType != null and inspectionType != ''">
+                `inspection_type`,
+            </if>
+            <if test="taskId != null">
+                `task_id`,
+            </if>
+            <if test="orderId != null">
+                `order_id`,
+            </if>
+            <if test="productSn != null and productSn != ''">
+                `product_sn`,
+            </if>
+            <if test="processRouteId != null">
+                `process_route_id`,
+            </if>
+            <if test="standardSnapshot != null and standardSnapshot != ''">
+                `standard_snapshot`,
+            </if>
+            <if test="inspectorId != null">
+                `inspector_id`,
+            </if>
+            <if test="sourceType != null and sourceType != ''">
+                `source_type`,
+            </if>
+            <if test="equipmentNo != null and equipmentNo != ''">
+                `equipment_no`,
+            </if>
+            <if test="inspectionTime != null">
+                `inspection_time`,
+            </if>
+            <if test="result != null">
+                `result`,
+            </if>
+            <if test="measuredData != null and measuredData != ''">
+                `measured_data`,
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                `defect_reason`,
+            </if>
+            <if test="handlingMethod != null">
+                `handling_method`,
+            </if>
+            <if test="approvalStatus != null">
+                `approval_status`,
+            </if>
+            <if test="remark != null and remark != ''">
+                `remark`,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="inspectionNo != null and inspectionNo != ''">
+                #{inspectionNo},
+            </if>
+            <if test="inspectionType != null and inspectionType != ''">
+                #{inspectionType},
+            </if>
+            <if test="taskId != null">
+                #{taskId},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="productSn != null and productSn != ''">
+                #{productSn},
+            </if>
+            <if test="processRouteId != null">
+                #{processRouteId},
+            </if>
+            <if test="standardSnapshot != null and standardSnapshot != ''">
+                #{standardSnapshot},
+            </if>
+            <if test="inspectorId != null">
+                #{inspectorId},
+            </if>
+            <if test="sourceType != null and sourceType != ''">
+                #{sourceType},
+            </if>
+            <if test="equipmentNo != null and equipmentNo != ''">
+                #{equipmentNo},
+            </if>
+            <if test="inspectionTime != null">
+                #{inspectionTime},
+            </if>
+            <if test="result != null">
+                #{result},
+            </if>
+            <if test="measuredData != null and measuredData != ''">
+                #{measuredData},
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                #{defectReason},
+            </if>
+            <if test="handlingMethod != null">
+                #{handlingMethod},
+            </if>
+            <if test="approvalStatus != null">
+                #{approvalStatus},
+            </if>
+            <if test="remark != null and remark != ''">
+                #{remark},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update">
+        update `inspection_record`
+        <set>
+            <if test="inspectionNo != null and inspectionNo != ''">
+                `inspection_no` = #{inspectionNo},
+            </if>
+            <if test="inspectionType != null and inspectionType != ''">
+                `inspection_type` = #{inspectionType},
+            </if>
+            <if test="taskId != null">
+                `task_id` = #{taskId},
+            </if>
+            <if test="orderId != null">
+                `order_id` = #{orderId},
+            </if>
+            <if test="productSn != null and productSn != ''">
+                `product_sn` = #{productSn},
+            </if>
+            <if test="processRouteId != null">
+                `process_route_id` = #{processRouteId},
+            </if>
+            <if test="standardSnapshot != null and standardSnapshot != ''">
+                `standard_snapshot` = #{standardSnapshot},
+            </if>
+            <if test="inspectorId != null">
+                `inspector_id` = #{inspectorId},
+            </if>
+            <if test="sourceType != null and sourceType != ''">
+                `source_type` = #{sourceType},
+            </if>
+            <if test="equipmentNo != null and equipmentNo != ''">
+                `equipment_no` = #{equipmentNo},
+            </if>
+            <if test="inspectionTime != null">
+                `inspection_time` = #{inspectionTime},
+            </if>
+            <if test="result != null">
+                `result` = #{result},
+            </if>
+            <if test="measuredData != null and measuredData != ''">
+                `measured_data` = #{measuredData},
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                `defect_reason` = #{defectReason},
+            </if>
+            <if test="handlingMethod != null">
+                `handling_method` = #{handlingMethod},
+            </if>
+            <if test="approvalStatus != null">
+                `approval_status` = #{approvalStatus},
+            </if>
+            <if test="remark != null and remark != ''">
+                `remark` = #{remark},
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from `inspection_record` where `id` = #{id}
+    </delete>
+</mapper>

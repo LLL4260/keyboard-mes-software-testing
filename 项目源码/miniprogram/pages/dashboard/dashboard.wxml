@@ -1,0 +1,62 @@
+<view class="container">
+  <!-- 顶部状态轮播提示 -->
+  <view class="banner">
+    <view class="banner-main">
+      <view class="status-tag">生产中</view>
+      <view class="banner-copy">
+        <text class="banner-text">当前班次：2026早班 | 产线：键盘总装一线</text>
+        <text class="banner-user">{{currentUserName}}</text>
+      </view>
+    </view>
+    <button class="logout-btn" bindtap="logout" loading="{{loggingOut}}" disabled="{{loggingOut}}">退出</button>
+  </view>
+
+  <!-- 核心数据 4 宫格 -->
+  <view class="grid-box">
+    <view class="card card-blue">
+      <text class="num blue">{{targetQuantity}}</text>
+      <text class="label">今日目标 (把)</text>
+    </view>
+    <view class="card card-green">
+      <text class="num green">{{reportQuantity}}</text>
+      <text class="label">实时产出 (把)</text>
+    </view>
+    <view class="card card-orange">
+      <text class="num orange">{{qualityRate}}%</text>
+      <text class="label">实时合格率</text>
+    </view>
+    <view class="card card-red">
+      <text class="num red">{{defectQuantity}}</text>
+      <text class="label">不良品 (把)</text>
+    </view>
+  </view>
+
+  <!-- 实时生产进度条 -->
+  <view class="section">
+    <view class="sec-title">产线综合进度</view>
+    <view class="progress-box">
+      <view class="progress-bar" style="{{ 'width: ' + progressRate + '%' }}"></view>
+    </view>
+    <view class="progress-info">
+      <text>当前达成率：{{progressRate}}%</text>
+      <text class="refresh-btn" bindtap="refreshData">刷新实时数据</text>
+    </view>
+  </view>
+
+  <!-- 各工位实时监控列表 -->
+  <view class="section">
+    <view class="sec-title">车间工位实时监控</view>
+    <block wx:for="{{workstations}}" wx:key="index">
+      <view class="station-item">
+        <view class="st-left">
+          <text class="st-name">{{item.name}}</text>
+          <text class="st-op">不良数：{{item.defectQuantity}}</text>
+        </view>
+        <view class="st-right">
+          <text class="st-qty">已报工: {{item.reportQuantity}}</text>
+          <view class="st-status {{item.status === '正常' ? 'st-normal' : 'st-warn'}}">{{item.status}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

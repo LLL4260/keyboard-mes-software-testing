@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>MES Badboy recording page</title></head>
+<body><h1>MES接口录制辅助页面</h1><p>用于旧版Badboy录制只读请求，不是MES产品界面。页面与MES后端同源，避免直接导航JSON响应。</p>
+<button id="health" onclick="request('/api/health')">健康检查</button>
+<button id="endpoints" onclick="request('/api/endpoints')">接口索引</button>
+<button id="contract" onclick="request('/api-contract.json')">接口契约</button>
+<pre id="result">等待请求</pre>
+<script type="text/javascript">
+function request(path){var xhr=window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHTTP');xhr.onreadystatechange=function(){if(xhr.readyState==4){document.getElementById('result').innerText=path+' HTTP '+xhr.status+'\r\n'+xhr.responseText;}};xhr.open('GET',path,true);xhr.send(null);}
+</script></body></html>

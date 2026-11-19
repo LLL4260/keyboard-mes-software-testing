@@ -1,0 +1,10 @@
+﻿类,统计范围,覆盖行,可执行行,已覆盖分支,总分支
+ProductionOrderServiceImpl,六个核心服务,56,56,24,24
+ProductionTaskServiceImpl,六个核心服务,52,52,30,32
+WorkReportServiceImpl,六个核心服务,113,115,65,72
+InspectionRecordServiceImpl,六个核心服务,98,98,58,62
+ReworkOrderServiceImpl,六个核心服务,86,87,44,50
+TraceServiceImpl,六个核心服务,55,55,14,16
+AuthSessionService,补充观察,51,60,9,16
+AuthInterceptor,补充观察,0,84,0,40
+ProductionOrderController,补充观察,4,25,0,10

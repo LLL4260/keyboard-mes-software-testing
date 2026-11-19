@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.keyboard.mes.repository.ReworkOrderMapper">
+    <resultMap id="ReworkOrderMap" type="ReworkOrder">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="rework_no" jdbcType="VARCHAR" property="reworkNo"/>
+        <result column="source_inspection_id" jdbcType="BIGINT" property="sourceInspectionId"/>
+        <result column="order_id" jdbcType="BIGINT" property="orderId"/>
+        <result column="task_id" jdbcType="BIGINT" property="taskId"/>
+        <result column="product_sn" jdbcType="VARCHAR" property="productSn"/>
+        <result column="defect_reason" jdbcType="VARCHAR" property="defectReason"/>
+        <result column="rework_requirement" jdbcType="VARCHAR" property="reworkRequirement"/>
+        <result column="assignee_id" jdbcType="BIGINT" property="assigneeId"/>
+        <result column="deadline" jdbcType="TIMESTAMP" property="deadline"/>
+        <result column="status" jdbcType="TINYINT" property="status"/>
+        <result column="repair_action" jdbcType="VARCHAR" property="repairAction"/>
+        <result column="replaced_material" jdbcType="VARCHAR" property="replacedMaterial"/>
+        <result column="repair_hours" jdbcType="DECIMAL" property="repairHours"/>
+        <result column="repair_result" jdbcType="VARCHAR" property="repairResult"/>
+        <result column="repair_time" jdbcType="TIMESTAMP" property="repairTime"/>
+        <result column="recheck_inspection_id" jdbcType="BIGINT" property="recheckInspectionId"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+
+    <select id="getById" resultMap="ReworkOrderMap">
+        select `id`, `rework_no`, `source_inspection_id`, `order_id`, `task_id`, `product_sn`, `defect_reason`, `rework_requirement`, `assignee_id`, `deadline`, `status`, `repair_action`, `replaced_material`, `repair_hours`, `repair_result`, `repair_time`, `recheck_inspection_id`, `create_time` from `rework_order` where `id` = #{id}
+    </select>
+
+    <select id="reworkOrderList" resultMap="ReworkOrderMap">
+        select `id`, `rework_no`, `source_inspection_id`, `order_id`, `task_id`, `product_sn`, `defect_reason`, `rework_requirement`, `assignee_id`, `deadline`, `status`, `repair_action`, `replaced_material`, `repair_hours`, `repair_result`, `repair_time`, `recheck_inspection_id`, `create_time` from `rework_order`
+    </select>
+
+    <select id="findByProductSn" resultMap="ReworkOrderMap">
+        select `id`, `rework_no`, `source_inspection_id`, `order_id`, `task_id`, `product_sn`, `defect_reason`, `rework_requirement`, `assignee_id`, `deadline`, `status`, `repair_action`, `replaced_material`, `repair_hours`, `repair_result`, `repair_time`, `recheck_inspection_id`, `create_time` from `rework_order` where `product_sn` = #{productSn}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into `rework_order`
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="reworkNo != null and reworkNo != ''">
+                `rework_no`,
+            </if>
+            <if test="sourceInspectionId != null">
+                `source_inspection_id`,
+            </if>
+            <if test="orderId != null">
+                `order_id`,
+            </if>
+            <if test="taskId != null">
+                `task_id`,
+            </if>
+            <if test="productSn != null and productSn != ''">
+                `product_sn`,
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                `defect_reason`,
+            </if>
+            <if test="reworkRequirement != null and reworkRequirement != ''">
+                `rework_requirement`,
+            </if>
+            <if test="assigneeId != null">
+                `assignee_id`,
+            </if>
+            <if test="deadline != null">
+                `deadline`,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+            <if test="repairAction != null and repairAction != ''">
+                `repair_action`,
+            </if>
+            <if test="replacedMaterial != null and replacedMaterial != ''">
+                `replaced_material`,
+            </if>
+            <if test="repairHours != null">
+                `repair_hours`,
+            </if>
+            <if test="repairResult != null and repairResult != ''">
+                `repair_result`,
+            </if>
+            <if test="repairTime != null">
+                `repair_time`,
+            </if>
+            <if test="recheckInspectionId != null">
+                `recheck_inspection_id`,
+            </if>
+            <if test="createTime != null">
+                `create_time`,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="reworkNo != null and reworkNo != ''">
+                #{reworkNo},
+            </if>
+            <if test="sourceInspectionId != null">
+                #{sourceInspectionId},
+            </if>
+            <if test="orderId != null">
+                #{orderId},
+            </if>
+            <if test="taskId != null">
+                #{taskId},
+            </if>
+            <if test="productSn != null and productSn != ''">
+                #{productSn},
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                #{defectReason},
+            </if>
+            <if test="reworkRequirement != null and reworkRequirement != ''">
+                #{reworkRequirement},
+            </if>
+            <if test="assigneeId != null">
+                #{assigneeId},
+            </if>
+            <if test="deadline != null">
+                #{deadline},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+            <if test="repairAction != null and repairAction != ''">
+                #{repairAction},
+            </if>
+            <if test="replacedMaterial != null and replacedMaterial != ''">
+                #{replacedMaterial},
+            </if>
+            <if test="repairHours != null">
+                #{repairHours},
+            </if>
+            <if test="repairResult != null and repairResult != ''">
+                #{repairResult},
+            </if>
+            <if test="repairTime != null">
+                #{repairTime},
+            </if>
+            <if test="recheckInspectionId != null">
+                #{recheckInspectionId},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update">
+        update `rework_order`
+        <set>
+            <if test="reworkNo != null and reworkNo != ''">
+                `rework_no` = #{reworkNo},
+            </if>
+            <if test="sourceInspectionId != null">
+                `source_inspection_id` = #{sourceInspectionId},
+            </if>
+            <if test="orderId != null">
+                `order_id` = #{orderId},
+            </if>
+            <if test="taskId != null">
+                `task_id` = #{taskId},
+            </if>
+            <if test="productSn != null and productSn != ''">
+                `product_sn` = #{productSn},
+            </if>
+            <if test="defectReason != null and defectReason != ''">
+                `defect_reason` = #{defectReason},
+            </if>
+            <if test="reworkRequirement != null and reworkRequirement != ''">
+                `rework_requirement` = #{reworkRequirement},
+            </if>
+            <if test="assigneeId != null">
+                `assignee_id` = #{assigneeId},
+            </if>
+            <if test="deadline != null">
+                `deadline` = #{deadline},
+            </if>
+            <if test="status != null">
+                `status` = #{status},
+            </if>
+            <if test="repairAction != null and repairAction != ''">
+                `repair_action` = #{repairAction},
+            </if>
+            <if test="replacedMaterial != null and replacedMaterial != ''">
+                `replaced_material` = #{replacedMaterial},
+            </if>
+            <if test="repairHours != null">
+                `repair_hours` = #{repairHours},
+            </if>
+            <if test="repairResult != null and repairResult != ''">
+                `repair_result` = #{repairResult},
+            </if>
+            <if test="repairTime != null">
+                `repair_time` = #{repairTime},
+            </if>
+            <if test="recheckInspectionId != null">
+                `recheck_inspection_id` = #{recheckInspectionId},
+            </if>
+            <if test="createTime != null">
+                `create_time` = #{createTime},
+            </if>
+        </set>
+        where `id` = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from `rework_order` where `id` = #{id}
+    </delete>
+</mapper>

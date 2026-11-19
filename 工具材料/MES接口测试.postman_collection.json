@@ -1,0 +1,328 @@
+{
+  "info": {
+    "name": "实验5 Keyboard MES 接口测试",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8088"
+    },
+    {
+      "key": "employeeNo",
+      "value": ""
+    },
+    {
+      "key": "password",
+      "value": ""
+    },
+    {
+      "key": "sessionId",
+      "value": ""
+    },
+    {
+      "key": "orderId",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "01 健康检查",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/health"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"服务状态正常\",()=>pm.expect(json.data.status).to.eql(\"UP\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 登录",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"employeeNo\": \"{{employeeNo}}\", \"password\": \"{{password}}\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"登录成功\",()=>{pm.expect(json.code).to.eql(200);pm.expect(json.data.sessionId).to.be.a(\"string\").and.not.empty;});",
+              "if(json.code===200) pm.collectionVariables.set(\"sessionId\",json.data.sessionId);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 工单列表",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/productionOrder/list"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"工单数据结构\",()=>{pm.expect(json.code).to.eql(200);pm.expect(json.data).to.be.an(\"array\").and.not.empty;json.data.forEach(x=>{pm.expect(x).to.have.keys(\"id\",\"orderNo\",\"productModelId\",\"bomVersion\",\"routeVersion\",\"batchNo\",\"quantity\",\"plannedStartTime\",\"plannedEndTime\",\"deliveryDate\",\"lineName\",\"source\",\"priority\",\"plannerId\",\"materialReadyStatus\",\"status\",\"createTime\",\"updateTime\");pm.expect(x.quantity).to.be.above(0);});});",
+              "if(json.data && json.data.length) pm.collectionVariables.set(\"orderId\",json.data[0].id);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "04 工单详情",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/productionOrder/{{orderId}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"详情与列表对应\",()=>{pm.expect(json.code).to.eql(200);pm.expect(String(json.data.id)).to.eql(String(pm.collectionVariables.get(\"orderId\")));});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "05 生产任务列表",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/productionTask/list"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"任务数据结构及状态范围\",()=>{pm.expect(json.code).to.eql(200);pm.expect(json.data).to.be.an(\"array\").and.not.empty;json.data.forEach(x=>{pm.expect(x.id).to.be.a(\"number\");pm.expect(x.status).to.be.within(0,5);pm.expect(x.orderId).to.be.a(\"number\");});});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "06 生产概览",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/report/overview"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"概览业务字段\",()=>{pm.expect(json.code).to.eql(200);pm.expect(json.data).to.have.property(\"reportQuantity\");pm.expect(json.data.reportQuantity).to.be.at.least(0);pm.expect(json.data).to.have.property(\"qualityRate\");});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "07 质量分析",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/report/quality?period=week"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"质量分析周期与趋势数据\",()=>{pm.expect(json.code).to.eql(200);pm.expect(json.data.period).to.eql(\"week\");pm.expect(json.data.trendData).to.be.an(\"array\").with.lengthOf(7);});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "08 不存在工单",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/productionOrder/9223372036854775807"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"不存在数据返回业务失败\",()=>{pm.expect(json.code).to.eql(500);pm.expect(json.data).to.eql(null);});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "09 退出登录",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/auth/logout"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"退出成功\",()=>pm.expect(json.code).to.eql(200));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "10 退出后会话失效",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{sessionId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/api/auth/current"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "pm.test(\"HTTP符合预期\", () => pm.response.to.have.status(200));",
+              "pm.test(\"会话已失效\",()=>{pm.expect(json.code).to.eql(401);pm.expect(json.data).to.eql(null);});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+**/target/
+**/node_modules/
+**/dist/
+**/logs/
+*.log
+.env
+.env.*
+*.local
+*.jtl
+project.private.config.json

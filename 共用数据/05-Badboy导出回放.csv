@@ -1,0 +1,9 @@
+﻿场景,路径,HTTP状态,响应毫秒,结果
+原始导出回放,/badboy-lab6.html,200,33,通过
+原始导出回放,/api/health,200,4,通过
+原始导出回放,/api/endpoints,200,4,通过
+原始导出回放,/api-contract.json,200,5,通过
+响应断言回放,/badboy-lab6.html,200,33,通过
+响应断言回放,/api/health,200,5,通过
+响应断言回放,/api/endpoints,200,4,通过
+响应断言回放,/api-contract.json,200,5,通过
